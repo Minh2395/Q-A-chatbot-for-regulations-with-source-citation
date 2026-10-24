@@ -1,50 +1,57 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+import { ChatWindow } from "./components/chat/ChatWindow";
 
-type HealthResponse = {
-  status: string;
-  service: string;
-};
+type TabType = "chat" | "docs";
 
-function App() {
-  const [backendStatus, setBackendStatus] = useState("Đang kiểm tra...");
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/health")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Backend trả về lỗi");
-        }
-        return response.json() as Promise<HealthResponse>;
-      })
-      .then((data) => {
-        setBackendStatus(
-          data.status === "ok" ? "Đã kết nối Backend" : "Backend chưa sẵn sàng",
-        );
-      })
-      .catch(() => {
-        setBackendStatus("Không thể kết nối Backend");
-      });
-  }, []);
+export default function App() {
+  const [activeTab, setActiveTab] = useState<TabType>("chat");
 
   return (
-    <main className="app">
-      <header className="header">
-        <h1>Trợ lý quy chế nhà ở và đất đai</h1>
-        <p>Hỏi đáp dựa trên văn bản được duyệt, có trích dẫn nguồn.</p>
-      </header>
+    <div className="min-h-screen bg-slate-100 p-6 font-sans">
+      <div className="max-w-4xl mx-auto space-y-4">
+        {/* Thanh Điều Hướng Chức Năng */}
+        <div className="flex space-x-2 bg-white p-2 rounded-lg shadow-sm border border-slate-200">
+          <button
+            onClick={() => setActiveTab("chat")}
+            className={`px-4 py-2 rounded-md font-medium text-sm transition-colors ${
+              activeTab === "chat"
+                ? "bg-blue-600 text-white"
+                : "text-slate-600 hover:bg-slate-100"
+            }`}
+          >
+            💬 Hỏi đáp AI
+          </button>
 
-      <section className="status-card">
-        <h2>Trạng thái hệ thống</h2>
-        <p>{backendStatus}</p>
-      </section>
+          <button
+            onClick={() => setActiveTab("docs")}
+            className={`px-4 py-2 rounded-md font-medium text-sm transition-colors ${
+              activeTab === "docs"
+                ? "bg-blue-600 text-white"
+                : "text-slate-600 hover:bg-slate-100"
+            }`}
+          >
+            📁 Cổng Pháp chế (Upload & Duyệt quy chế)
+          </button>
+        </div>
 
-      <section className="chat-card">
-        <h2>Hỏi đáp quy chế</h2>
-        <p>Giao diện hỏi đáp sẽ được phát triển ở bước tiếp theo.</p>
-      </section>
-    </main>
+        {/* Nội dung Màn hình chính */}
+        {activeTab === "chat" ? (
+          <ChatWindow />
+        ) : (
+          <div className="bg-white p-6 rounded-lg shadow border border-slate-200 text-slate-700">
+            <h3 className="font-bold text-lg mb-2">Phân hệ Cổng Pháp chế</h3>
+
+            <p className="text-sm text-slate-500">
+              Chức năng dành cho Chuyên viên upload file PDF/Word quy chế mới và
+              bấm duyệt để kích hoạt cờ{" "}
+              <code className="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-mono">
+                is_active = 1
+              </code>
+              .
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
-
-export default App;
