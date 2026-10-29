@@ -1,118 +1,318 @@
 import asyncio
+import hashlib
+import json
+import os
+import struct
 from pathlib import Path
 
 import httpx
+import pyodbc
 
 
-# Xác định thư mục gốc của project, không phụ thuộc thư mục chạy lệnh.
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# ============================================================
+# 1. CẤU HÌNH
+# ============================================================
 
-# Thư mục chứa HTML Bộ Pháp điển.
-PHAPDIEN_DIR = PROJECT_ROOT / "data_phapdien" / "demuc"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+ENV_FILE = ROOT_DIR / "backend" / ".env"
+DATA_FILE = ROOT_DIR / "data_phapdien" / "phapdien_housing_land.json"
 
-# API upload của FastAPI.
-API_UPLOAD_URL = "http://127.0.0.1:8000/api/v1/documents/upload"
+VERSION_ID = "PB_PHAPDIEN_2026"
+DOCUMENT_ID = "PD_PHAPDIEN"
+TOPIC = "Xây dựng, nhà ở, đô thị"
 
-# Cấu hình nạp dữ liệu.
-SO_PHIEN_BAN = "Bộ Pháp Điển 2026"
-MA_ND = "ADMIN_PHAPDIEN"
-TIMEOUT_SECONDS = 300.0
+OLLAMA_URL = "http://127.0.0.1:11434"
+EMBED_MODEL = "nomic-embed-text"
 
 
-async def batch_ingest_phapdien():
-    """Quét và nạp tuần tự các file HTML qua API FastAPI."""
+def load_env(path: Path) -> dict:
+    """Đọc file .env mà không cần phụ thuộc python-dotenv."""
+    config = {}
 
-    if not PHAPDIEN_DIR.exists():
-        print(f"❌ Không tìm thấy thư mục: {PHAPDIEN_DIR}")
-        return
+    if not path.exists():
+        raise FileNotFoundError(f"Không tìm thấy file cấu hình: {path}")
 
-    # Tìm HTML/HTM trong cả các thư mục con.
-    html_files = sorted(
-        path
-        for path in PHAPDIEN_DIR.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".html", ".htm"}
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        line = line.strip()
+
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+
+        key, value = line.split("=", 1)
+        config[key.strip()] = value.strip().strip("\"'")
+
+    return config
+
+
+CONFIG = load_env(ENV_FILE)
+
+
+
+def get_connection():
+    server = CONFIG.get(
+        "DB_SERVER", r"localhost\SQLEXPRESS"
+    ).strip().replace("\\\\", "\\")
+
+    driver = CONFIG.get(
+        "DB_DRIVER", "ODBC Driver 17 for SQL Server"
+    ).strip()
+
+    database = CONFIG.get(
+        "DB_BUSINESS", "Db_QuyChe_Business"
+    ).strip()
+
+    encrypt = CONFIG.get("DB_ENCRYPT", "yes").strip()
+    trust_cert = CONFIG.get(
+        "DB_TRUST_SERVER_CERTIFICATE", "yes"
+    ).strip()
+
+    windows_auth = (
+        CONFIG.get("DB_WINDOWS_AUTH", "true")
+        .strip()
+        .lower() == "true"
     )
 
-    if not html_files:
-        print(f"❌ Không tìm thấy file HTML trong: {PHAPDIEN_DIR}")
-        return
+    parts = [
+        f"DRIVER={{{driver}}}",
+        f"SERVER={server}",
+        f"DATABASE={database}",
+        f"Encrypt={encrypt}",
+        f"TrustServerCertificate={trust_cert}",
+    ]
 
-    print(f"📂 Thư mục dữ liệu: {PHAPDIEN_DIR}")
-    print(f"🚀 Tổng số file cần nạp: {len(html_files)}")
-    print("-" * 60)
+    if windows_auth:
+        parts.append("Trusted_Connection=yes")
+    else:
+        parts.extend([
+            f"UID={CONFIG['DB_USERNAME']}",
+            f"PWD={CONFIG['DB_PASSWORD']}",
+        ])
 
-    success_count = 0
-    failed_count = 0
+    connection_string = ";".join(parts) + ";"
 
-    timeout = httpx.Timeout(TIMEOUT_SECONDS)
+    print(f"SQL Server: {server}")
+    print(f"Database: {database}")
+    print(f"Driver: {driver}")
 
-    async with httpx.AsyncClient(timeout=timeout) as client:
-        for idx, file_path in enumerate(html_files, start=1):
-            filename = file_path.name
+    return pyodbc.connect(connection_string, timeout=15)
 
-            # Mã tài liệu phải khớp với dữ liệu đã tạo trong TAI_LIEU.
-            ma_tai_lieu = f"PD_{idx:04d}"
 
-            print(f"[{idx}/{len(html_files)}] 📄 {filename}")
 
-            try:
-                with file_path.open("rb") as file:
-                    files = {
-                        "file": (filename, file, "text/html")
+# ============================================================
+# 2. TẠO EMBEDDING
+# ============================================================
+
+async def generate_embedding(client: httpx.AsyncClient, text: str) -> bytes:
+    response = await client.post(
+        f"{OLLAMA_URL}/api/embeddings",
+        json={
+            "model": EMBED_MODEL,
+            "prompt": text,
+        },
+    )
+    response.raise_for_status()
+
+    vector = response.json().get("embedding")
+
+    if not vector:
+        raise ValueError("Ollama không trả về embedding.")
+
+    if len(vector) != 768:
+        raise ValueError(
+            f"Vector có {len(vector)} chiều, yêu cầu 768 chiều."
+        )
+
+    return struct.pack("<" + "f" * len(vector), *vector)
+
+
+# ============================================================
+# 3. TẠO TÀI LIỆU VÀ PHIÊN BẢN NẾU CHƯA CÓ
+# ============================================================
+
+def ensure_document_and_version(cursor):
+    cursor.execute(
+        """
+        IF NOT EXISTS (
+            SELECT 1 FROM dbo.TAI_LIEU
+            WHERE MaTaiLieu = ?
+        )
+        BEGIN
+            INSERT INTO dbo.TAI_LIEU
+                (MaTaiLieu, TieuDe, LoaiVanBan, LinhVuc, CoQuanBanHanh)
+            VALUES (?, ?, ?, ?, ?)
+        END
+        """,
+        DOCUMENT_ID,
+        DOCUMENT_ID,
+        "Bộ Pháp điển - Xây dựng, nhà ở, đô thị",
+        "HTML",
+        TOPIC,
+        "Bộ Tư pháp - Bộ Pháp điển",
+    )
+
+    cursor.execute(
+        """
+        IF NOT EXISTS (
+            SELECT 1 FROM dbo.PHIEN_BAN_TAI_LIEU
+            WHERE MaPhienBan = ?
+        )
+        BEGIN
+            INSERT INTO dbo.PHIEN_BAN_TAI_LIEU
+                (
+                    MaPhienBan, MaTaiLieu, MaND, SoPhienBan,
+                    NgayHieuLuc, TrangThai, DuongDanFile, is_active
+                )
+            VALUES (?, ?, NULL, ?, NULL, N'Draft', ?, 0)
+        END
+        """,
+        VERSION_ID,
+        VERSION_ID,
+        DOCUMENT_ID,
+        "2026",
+        str(DATA_FILE),
+    )
+
+    cursor.execute(
+        """
+        SELECT MaTaiLieu
+        FROM dbo.PHIEN_BAN_TAI_LIEU
+        WHERE MaPhienBan = ?
+        """,
+        VERSION_ID,
+    )
+    row = cursor.fetchone()
+
+    if not row or row[0] != DOCUMENT_ID:
+        raise RuntimeError(
+            f"Phiên bản {VERSION_ID} không liên kết đúng tài liệu "
+            f"{DOCUMENT_ID}. Hãy kiểm tra dữ liệu hiện có."
+        )
+
+
+# ============================================================
+# 4. NẠP CÁC ĐOẠN VĂN BẢN VÀ VECTOR
+# ============================================================
+
+async def ingest():
+    if not DATA_FILE.exists():
+        raise FileNotFoundError(f"Không tìm thấy dữ liệu: {DATA_FILE}")
+
+    records = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+
+    records = [
+        record for record in records
+        if record.get("topic_title_vi") == TOPIC
+        and record.get("article_id")
+        and record.get("content_text", "").strip()
+    ]
+
+    print(f"Số bản ghi hợp lệ: {len(records)}")
+
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    inserted = 0
+    skipped = 0
+    failed = 0
+
+    try:
+        ensure_document_and_version(cursor)
+        connection.commit()
+
+        async with httpx.AsyncClient(
+            timeout=httpx.Timeout(120.0)
+        ) as client:
+
+            for index, record in enumerate(records, start=1):
+                article_id = record["article_id"]
+                content = record["content_text"].strip()
+
+                # ID ổn định, tối đa 20 ký tự.
+                identity = f"{VERSION_ID}|{article_id}"
+                chunk_id = "PD" + hashlib.sha256(
+                    identity.encode("utf-8")
+                ).hexdigest()[:18]
+
+                cursor.execute(
+                    """
+                    SELECT 1
+                    FROM dbo.DOAN_VAN_BAN
+                    WHERE MaDoan = ?
+                    """,
+                    chunk_id,
+                )
+
+                if cursor.fetchone():
+                    skipped += 1
+                    print(f"[{index}/{len(records)}] Bỏ qua: {article_id}")
+                    continue
+
+                try:
+                    embedding_bytes = await generate_embedding(
+                        client, content
+                    )
+
+                    metadata = {
+                        "record_id": record.get("record_id"),
+                        "article_id": article_id,
+                        "article_title": record.get("article_title"),
+                        "chapter_title": record.get("chapter_title"),
+                        "topic_title_vi": record.get("topic_title_vi"),
+                        "subject_title_vi": record.get("subject_title_vi"),
+                        "source_note_text": record.get("source_note_text"),
+                        "source_links": record.get("source_links", []),
+                        "source_url": record.get("source_url"),
+                        "scraped_at": record.get("scraped_at"),
                     }
 
-                    data = {
-                        "ma_tai_lieu": ma_tai_lieu,
-                        "so_phien_ban": SO_PHIEN_BAN,
-                        "ma_nd": MA_ND,
-                    }
-
-                    response = await client.post(
-                        API_UPLOAD_URL,
-                        files=files,
-                        data=data,
+                    cursor.execute(
+                        """
+                        EXEC dbo.sp_InsertChunkAndVector
+                            @MaDoan = ?,
+                            @MaPhienBan = ?,
+                            @ThuTu = ?,
+                            @DieuKhoan = ?,
+                            @NoiDung = ?,
+                            @SoTrang = ?,
+                            @VectorData = ?,
+                            @IndexMetadata = ?
+                        """,
+                        chunk_id,
+                        VERSION_ID,
+                        index,
+                        article_id[:100],
+                        content,
+                        None,
+                        pyodbc.Binary(embedding_bytes),
+                        json.dumps(metadata, ensure_ascii=False),
                     )
 
-                if response.status_code == 201:
-                    result = response.json()
-                    success_count += 1
+                    connection.commit()
+                    inserted += 1
 
-                    print("   ✅ Nạp thành công")
                     print(
-                        f"   Mã tài liệu: {ma_tai_lieu}"
-                    )
-                    print(
-                        f"   Mã phiên bản: "
-                        f"{result.get('ma_phien_ban', 'N/A')}"
-                    )
-                    print(
-                        f"   Số đoạn: {result.get('so_doan', 'N/A')}"
+                        f"[{index}/{len(records)}] Đã nạp: "
+                        f"{article_id}"
                     )
 
-                else:
-                    failed_count += 1
-                    print(
-                        f"   ❌ HTTP {response.status_code}: "
-                        f"{response.text[:1000]}"
-                    )
+                except Exception as error:
+                    connection.rollback()
+                    failed += 1
+                    print(f"[{index}/{len(records)}] LỖI {article_id}: {error}")
 
-            except httpx.RequestError as exc:
-                failed_count += 1
-                print(f"   ❌ Lỗi kết nối API: {exc}")
+    finally:
+        cursor.close()
+        connection.close()
 
-            except (OSError, ValueError) as exc:
-                failed_count += 1
-                print(f"   ❌ Lỗi đọc file hoặc phản hồi: {exc}")
+    print("\n========== KẾT QUẢ ==========")
+    print(f"Tổng bản ghi hợp lệ : {len(records)}")
+    print(f"Đã nạp mới          : {inserted}")
+    print(f"Đã bỏ qua           : {skipped}")
+    print(f"Thất bại             : {failed}")
 
-            print()
-
-    print("=" * 60)
-    print("📊 KẾT QUẢ NẠP DỮ LIỆU")
-    print(f"   Tổng số file: {len(html_files)}")
-    print(f"   Thành công:   {success_count}")
-    print(f"   Thất bại:     {failed_count}")
-    print("=" * 60)
+    if failed:
+        print("Có bản ghi lỗi. Kiểm tra thông báo bên trên trước khi chạy lại.")
 
 
 if __name__ == "__main__":
-    asyncio.run(batch_ingest_phapdien())
+    asyncio.run(ingest())
