@@ -1,319 +1,291 @@
-import { useRef, useState } from "react";
-import { uploadDocument, approveDocumentVersion } from "../../services/api";
-
-interface UploadResponse {
-  message: string;
-  ma_phien_ban: string;
-  so_phien_ban: string;
-  trang_thai: string;
-}
+import { useEffect, useRef, useState } from "react";
+import type { FormEvent } from "react";
+import {
+  approveDocumentVersion,
+  getApiErrorMessage,
+  uploadDocument,
+} from "../../services/api";
+import type { UploadResponse } from "../../services/api";
 
 interface DocumentUploadProps {
+  maNd: string;
   onSuccess?: () => void;
 }
 
-export default function DocumentUpload({ onSuccess }: DocumentUploadProps) {
-  const fileInputRef = useRef<HTMLInputElement>(null);
+interface ProcessedDocument {
+  result: UploadResponse;
+  filename: string;
+  maTaiLieu: string;
+  previewUrl: string;
+}
 
+function getFileExtension(filename: string): string {
+  return filename.split(".").pop()?.toLowerCase() ?? "";
+}
+
+export default function DocumentUpload({
+  maNd,
+  onSuccess,
+}: DocumentUploadProps) {
   const [file, setFile] = useState<File | null>(null);
+  const documentPreviewUrls = useRef(new Set<string>());
   const [maTaiLieu, setMaTaiLieu] = useState("");
   const [soPhienBan, setSoPhienBan] = useState("v1.0");
-  const [maNd, setMaNd] = useState("ADMIN_01");
-
   const [uploading, setUploading] = useState(false);
-  const [approving, setApproving] = useState(false);
-
-  const [result, setResult] = useState<UploadResponse | null>(null);
+  const [approvingId, setApprovingId] = useState<string | null>(null);
+  const [documents, setDocuments] = useState<ProcessedDocument[]>([]);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleFileChange = (selectedFile?: File) => {
-    setFile(selectedFile ?? null);
-    setResult(null);
+  useEffect(
+    () => () => {
+      documentPreviewUrls.current.forEach((url) => URL.revokeObjectURL(url));
+    },
+    [],
+  );
+
+  const handleFileChange = (selectedFile: File | null) => {
+    setFile(selectedFile);
     setError("");
     setSuccessMessage("");
   };
 
-  const handleUpload = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleUpload = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!file || uploading || approvingId) return;
 
-    if (!file) {
-      setError("Vui lòng chọn file PDF hoặc Word.");
+    const extension = getFileExtension(file.name);
+    if (!["pdf", "docx", "html", "htm"].includes(extension)) {
+      setError("Backend hỗ trợ file PDF, DOCX, HTML và HTM.");
       return;
     }
 
-    const extension = file.name.split(".").pop()?.toLowerCase();
-
-    if (!["pdf", "doc", "docx"].includes(extension ?? "")) {
-      setError("Chỉ hỗ trợ file PDF, DOC hoặc DOCX.");
-      return;
-    }
-
-    if (!maTaiLieu.trim() || !soPhienBan.trim() || !maNd.trim()) {
-      setError("Vui lòng nhập đầy đủ thông tin tài liệu.");
+    if (!maTaiLieu.trim() || !soPhienBan.trim()) {
+      setError("Vui lòng nhập mã tài liệu và số phiên bản.");
       return;
     }
 
     setUploading(true);
     setError("");
     setSuccessMessage("");
-    setResult(null);
 
     try {
       const formData = new FormData();
-
       formData.append("file", file);
       formData.append("ma_tai_lieu", maTaiLieu.trim());
       formData.append("so_phien_ban", soPhienBan.trim());
-      formData.append("ma_nd", maNd.trim());
+      formData.append("ma_nd", maNd);
 
       const data = await uploadDocument(formData);
-
-      setResult(data);
-      setSuccessMessage(data.message || "Upload tài liệu thành công.");
-
+      const documentPreviewUrl = URL.createObjectURL(file);
+      documentPreviewUrls.current.add(documentPreviewUrl);
+      setDocuments((previous) => [
+        {
+          result: data,
+          filename: file.name,
+          maTaiLieu: maTaiLieu.trim(),
+          previewUrl: documentPreviewUrl,
+        },
+        ...previous,
+      ]);
+      setSuccessMessage(data.message || "Tải lên và xử lý tài liệu thành công.");
       onSuccess?.();
-    } catch (err: any) {
-      const detail = err?.response?.data?.detail;
-
+    } catch (uploadError: unknown) {
       setError(
-        typeof detail === "string"
-          ? detail
-          : Array.isArray(detail)
-            ? detail.map((item: any) => item.msg).join(", ")
-            : err?.response?.data?.message ||
-              err?.message ||
-              "Không thể upload tài liệu. Vui lòng thử lại.",
+        getApiErrorMessage(uploadError, "Không thể tải lên tài liệu."),
       );
     } finally {
       setUploading(false);
     }
   };
 
-  const handleApprove = async () => {
-    if (!result?.ma_phien_ban) {
-      setError("Không tìm thấy mã phiên bản cần phê duyệt.");
-      return;
-    }
+  const handleApprove = async (document: ProcessedDocument) => {
+    const maPhienBan = document.result.ma_phien_ban;
+    if (!maPhienBan || approvingId) return;
 
     const confirmed = window.confirm(
-      `Bạn có chắc muốn phê duyệt phiên bản ${result.ma_phien_ban}?`,
+      `Xác nhận đã rà soát và phê duyệt phiên bản ${maPhienBan}?`,
     );
-
     if (!confirmed) return;
 
-    setApproving(true);
+    setApprovingId(maPhienBan);
     setError("");
     setSuccessMessage("");
 
     try {
-      const data = await approveDocumentVersion(result.ma_phien_ban);
-
-      setResult((previous) =>
-        previous ? { ...previous, trang_thai: "Approved" } : previous,
+      const data = await approveDocumentVersion(maPhienBan);
+      setDocuments((previous) =>
+        previous.map((item) =>
+          item.result.ma_phien_ban === maPhienBan
+            ? {
+                ...item,
+                result: {
+                  ...item.result,
+                  trang_thai: data.trang_thai || "Approved",
+                },
+              }
+            : item,
+        ),
       );
-
-      setSuccessMessage(data.message || "Phê duyệt tài liệu thành công.");
-
-      onSuccess?.();
-    } catch (err: any) {
-      const detail = err?.response?.data?.detail;
-
+      setSuccessMessage(data.message || "Đã phê duyệt tài liệu.");
+    } catch (approvalError: unknown) {
       setError(
-        typeof detail === "string"
-          ? detail
-          : err?.response?.data?.message ||
-              err?.message ||
-              "Không thể phê duyệt tài liệu.",
+        getApiErrorMessage(approvalError, "Không thể phê duyệt tài liệu."),
       );
     } finally {
-      setApproving(false);
+      setApprovingId(null);
     }
   };
 
+  const fileExtension = file ? getFileExtension(file.name) : "";
+
   return (
-    <section className="mx-auto w-full max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-      <div className="mb-6">
-        <p className="text-sm font-medium text-amber-700">QUẢN LÝ TRI THỨC</p>
+    <div className="document-workspace">
+      <section className="surface-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">QUẢN LÝ TRI THỨC</p>
+            <h2>Nạp tài liệu pháp quy</h2>
+          </div>
+          <span className="info-chip">Người nạp: {maNd}</span>
+        </div>
 
-        <h2 className="mt-2 text-2xl font-bold text-gray-900">
-          Nạp tài liệu quy chế
-        </h2>
-
-        <p className="mt-2 text-sm leading-6 text-gray-500">
-          Tải lên văn bản nhà ở và đất đai để đưa vào quy trình xử lý, kiểm tra
-          và phê duyệt.
+        <p className="muted">
+          Tài liệu được xử lý thành các đoạn và lưu ở trạng thái Draft. Chỉ thao
+          tác phê duyệt bên dưới mới kích hoạt phiên bản.
         </p>
-      </div>
 
-      {error && (
-        <div
-          role="alert"
-          className="mb-5 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700"
-        >
-          {error}
-        </div>
-      )}
+        {error && <div className="notice notice-error" role="alert">{error}</div>}
+        {successMessage && (
+          <div className="notice notice-success" role="status">{successMessage}</div>
+        )}
 
-      {successMessage && (
-        <div
-          role="status"
-          className="mb-5 rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-700"
-        >
-          {successMessage}
-        </div>
-      )}
-
-      <form onSubmit={handleUpload} className="space-y-5">
-        <div>
-          <label
-            htmlFor="document-file"
-            className="mb-2 block text-sm font-semibold text-gray-700"
-          >
-            File văn bản
+        <form onSubmit={handleUpload} className="document-form">
+          <label className="file-picker">
+            <span className="field-label">Tệp pháp quy hoặc tài liệu tham khảo</span>
+            <input
+              type="file"
+              accept=".pdf,.docx,.html,.htm,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/html"
+              onChange={(event) =>
+                handleFileChange(event.target.files?.[0] ?? null)
+              }
+              disabled={uploading || Boolean(approvingId)}
+              required
+            />
+            <span className="field-hint">Định dạng được backend hỗ trợ: PDF, DOCX, HTML, HTM.</span>
           </label>
 
-          <input
-            ref={fileInputRef}
-            id="document-file"
-            type="file"
-            accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            onChange={(event) => handleFileChange(event.target.files?.[0])}
-            disabled={uploading || approving}
-            className="block w-full cursor-pointer rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-700 file:mr-4 file:border-0 file:bg-gray-100 file:px-4 file:py-3 file:font-medium hover:file:bg-gray-200 disabled:opacity-50"
-          />
-
-          <p className="mt-2 text-xs text-gray-500">
-            Định dạng hỗ trợ: PDF, DOC, DOCX.
-          </p>
-
-          {file && (
-            <p className="mt-2 break-all text-sm text-gray-600">
-              File đã chọn: {file.name} ({(file.size / 1024).toFixed(1)} KB)
-            </p>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="ma-tai-lieu"
-              className="mb-2 block text-sm font-semibold text-gray-700"
-            >
+          <div className="form-grid">
+            <label>
               Mã tài liệu
+              <input
+                value={maTaiLieu}
+                onChange={(event) => setMaTaiLieu(event.target.value)}
+                placeholder="TL_DATDAI_2026"
+                required
+                disabled={uploading || Boolean(approvingId)}
+              />
             </label>
-
-            <input
-              id="ma-tai-lieu"
-              value={maTaiLieu}
-              onChange={(event) => setMaTaiLieu(event.target.value)}
-              placeholder="TL_DATDAI_2026"
-              required
-              disabled={uploading || approving}
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100 disabled:bg-gray-100"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="so-phien-ban"
-              className="mb-2 block text-sm font-semibold text-gray-700"
-            >
+            <label>
               Số phiên bản
+              <input
+                value={soPhienBan}
+                onChange={(event) => setSoPhienBan(event.target.value)}
+                placeholder="v1.0"
+                required
+                disabled={uploading || Boolean(approvingId)}
+              />
             </label>
-
-            <input
-              id="so-phien-ban"
-              value={soPhienBan}
-              onChange={(event) => setSoPhienBan(event.target.value)}
-              placeholder="v1.0"
-              required
-              disabled={uploading || approving}
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100 disabled:bg-gray-100"
-            />
           </div>
-        </div>
 
-        <div>
-          <label
-            htmlFor="ma-nguoi-dung"
-            className="mb-2 block text-sm font-semibold text-gray-700"
+          <button
+            className="primary-button"
+            type="submit"
+            disabled={!file || uploading || Boolean(approvingId)}
           >
-            Mã người nạp
-          </label>
+            {uploading ? "Đang tải lên và xử lý…" : "Tải lên và xử lý"}
+          </button>
+        </form>
 
-          <input
-            id="ma-nguoi-dung"
-            value={maNd}
-            onChange={(event) => setMaNd(event.target.value)}
-            placeholder="ADMIN_01"
-            required
-            disabled={uploading || approving}
-            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100 disabled:bg-gray-100"
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={uploading || approving}
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-amber-600 px-5 py-3 font-semibold text-white transition hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {uploading ? (
-            <>
-              <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-              Đang tải lên và xử lý...
-            </>
-          ) : (
-            "Tải lên tài liệu"
-          )}
-        </button>
-      </form>
-
-      {result && (
-        <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-5">
-          <h3 className="font-semibold text-gray-900">Kết quả xử lý</h3>
-
-          <dl className="mt-4 space-y-3 text-sm">
-            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-              <dt className="text-gray-500">Mã phiên bản</dt>
-              <dd className="break-all font-medium text-gray-900">
-                {result.ma_phien_ban}
-              </dd>
+        {file && (
+          <div className="file-summary">
+            <span className="file-type-icon" aria-hidden="true">▤</span>
+            <div>
+              <strong>{file.name}</strong>
+              <span>{(file.size / 1024).toFixed(1)} KB · {fileExtension.toUpperCase()}</span>
             </div>
+          </div>
+        )}
+      </section>
 
-            <div className="flex justify-between gap-4">
-              <dt className="text-gray-500">Phiên bản</dt>
-              <dd className="font-medium text-gray-900">
-                {result.so_phien_ban}
-              </dd>
-            </div>
+      {documents.map((document) => {
+        const { result: processed } = document;
+        const documentExtension = getFileExtension(document.filename);
+        const isApproving = approvingId === processed.ma_phien_ban;
 
-            <div className="flex justify-between gap-4">
-              <dt className="text-gray-500">Trạng thái</dt>
-              <dd
-                className={`font-semibold ${
-                  result.trang_thai === "Approved"
-                    ? "text-green-700"
-                    : "text-amber-700"
-                }`}
+        return (
+          <section
+            className="surface-card review-card"
+            key={processed.ma_phien_ban}
+          >
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">RÀ SOÁT TRƯỚC KHI KÍCH HOẠT</p>
+                <h2>{document.filename}</h2>
+              </div>
+              <span
+                className={`status-pill ${processed.trang_thai === "Approved" ? "status-approved" : "status-draft"}`}
               >
-                {result.trang_thai}
-              </dd>
+                {processed.trang_thai}
+              </span>
             </div>
-          </dl>
 
-          {result.trang_thai !== "Approved" && (
-            <button
-              type="button"
-              onClick={handleApprove}
-              disabled={uploading || approving}
-              className="mt-5 w-full rounded-lg bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {approving ? "Đang phê duyệt..." : "Phê duyệt phiên bản"}
-            </button>
-          )}
-        </div>
-      )}
-    </section>
+            <dl className="document-details">
+              <div><dt>Mã tài liệu</dt><dd>{document.maTaiLieu}</dd></div>
+              <div><dt>Mã phiên bản</dt><dd>{processed.ma_phien_ban}</dd></div>
+              <div><dt>Số phiên bản</dt><dd>{processed.so_phien_ban}</dd></div>
+              <div><dt>Số đoạn đã xử lý</dt><dd>{processed.so_doan}</dd></div>
+              <div><dt>Trạng thái hiện tại</dt><dd>{processed.trang_thai}</dd></div>
+            </dl>
+
+            {["pdf", "html", "htm"].includes(documentExtension) ? (
+              <div className="document-preview">
+                <p className="field-label">Bản gốc để đối chiếu</p>
+                <iframe
+                  title={`Bản xem trước ${document.filename}`}
+                  src={document.previewUrl}
+                  sandbox=""
+                />
+                <p className="field-hint">
+                  Đây là bản gốc trong trình duyệt. Backend hiện chỉ trả mã phiên
+                  bản và số đoạn, chưa có API trả nội dung từng đoạn đã trích xuất.
+                </p>
+              </div>
+            ) : (
+              <div className="notice notice-info">
+                Trình duyệt không xem trực tiếp DOCX.{" "}
+                <a href={document.previewUrl} download={document.filename}>
+                  Tải bản gốc để rà soát
+                </a>
+                . Backend chưa cung cấp nội dung các đoạn đã trích xuất.
+              </div>
+            )}
+
+            {processed.trang_thai === "Draft" && (
+              <button
+                type="button"
+                onClick={() => handleApprove(document)}
+                disabled={uploading || Boolean(approvingId)}
+                className="approve-button"
+              >
+                {isApproving
+                  ? "Đang phê duyệt…"
+                  : "Tôi đã rà soát — Phê duyệt"}
+              </button>
+            )}
+          </section>
+        );
+      })}
+    </div>
   );
 }

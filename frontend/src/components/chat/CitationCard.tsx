@@ -1,34 +1,25 @@
-import React from "react";
-
-interface Citation {
-  ten_tai_lieu: string;
-  so_trang: number;
-  dieu_khoan: string;
-  noi_dung_trich: string;
-}
+import type { Citation } from "../../services/api";
 
 interface CitationCardProps {
   citation: Citation;
 }
 
-export const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
+export function CitationCard({ citation }: CitationCardProps) {
   return (
-    <div className="bg-blue-50 border-l-4 border-blue-600 p-3 my-2 rounded text-sm text-slate-800 shadow-sm">
-      <div className="flex items-center justify-between font-semibold text-blue-900 mb-1">
-        <span>📄 {citation.ten_tai_lieu}</span>
-
-        <span className="bg-blue-200 text-blue-800 px-2 py-0.5 rounded text-xs">
-          Trang {citation.so_trang}
+    <article className="citation-card">
+      <div className="citation-heading">
+        <strong>{citation.ten_tai_lieu || "Tài liệu pháp quy"}</strong>
+        <span>
+          {citation.so_trang ? `Trang ${citation.so_trang}` : "Không rõ trang"}
         </span>
       </div>
-
-      <div className="font-medium text-slate-700 text-xs mb-1">
-        📌 {citation.dieu_khoan}
-      </div>
-
-      <p className="text-slate-600 italic text-xs bg-white p-2 rounded border border-blue-100">
-        "{citation.noi_dung_trich}"
+      <p className="citation-clause">
+        {citation.dieu_khoan || "Chưa có thông tin điều khoản"}
       </p>
-    </div>
+      <blockquote>{citation.noi_dung_trich}</blockquote>
+      {citation.do_tuong_dong !== undefined && (
+        <small>Độ tương đồng: {(citation.do_tuong_dong * 100).toFixed(1)}%</small>
+      )}
+    </article>
   );
-};
+}

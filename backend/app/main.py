@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1 import documents, chat
-
+from app.api.v1 import history
 
 app = FastAPI(
     title="AIK-01 Legal AI Assistant API",
@@ -24,6 +24,7 @@ app.add_middleware(
 # Khai báo Routers
 app.include_router(documents.router, prefix="/api/v1")
 app.include_router(chat.router, prefix="/api/v1")
+app.include_router(history.router, prefix="/api/v1")
 
 
 @app.get("/")
