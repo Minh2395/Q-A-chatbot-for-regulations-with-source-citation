@@ -1,13 +1,16 @@
 import uuid
 import httpx
+import math
 
 from typing import Optional, List
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
 from app.core.config import settings
 from app.core.database import get_business_db_connection
 from app.services.rag_service import retrieve_evidence
+from app.services.audit import generate_trace_id, audit_rag_step, audit_chat_result
+from app.core.security import AuthenticatedUser, get_current_user
 
 
 router = APIRouter()
@@ -235,7 +238,7 @@ def save_chat_result(
         # 2. Kiểm tra phiên hội thoại.
         cursor.execute(
             """
-            SELECT MaPhien
+            SELECT MaND
             FROM PHIEN_HOI_DAP
             WHERE MaPhien = ?
             """,
@@ -243,6 +246,11 @@ def save_chat_result(
         )
 
         session = cursor.fetchone()
+        if session and str(session[0]) != request.ma_nd:
+            raise HTTPException(
+                status_code=403,
+                detail="The chat session belongs to another account.",
+            )
 
         # Nếu chưa có phiên thì tạo mới.
         if not session:
@@ -353,15 +361,39 @@ def save_chat_result(
 # =========================================================
 
 @router.post("", response_model=ChatResponse)
-async def chat_with_rag(request: ChatRequest):
+async def chat_with_rag(
+    request: ChatRequest,
+    current_user: AuthenticatedUser = Depends(get_current_user),
+):
+    if request.ma_nd != current_user.ma_nd:
+        raise HTTPException(
+            status_code=403,
+            detail="The chat user must match the authenticated account.",
+        )
 
     ma_cau_hoi = generate_id("Q")
     ma_cau_tra_loi = generate_id("A")
-    trace_id = str(uuid.uuid4())
+    trace_id = generate_trace_id()
+
+    audit_rag_step(
+        trace_id=trace_id,
+        step="CHAT_RECEIVED",
+        ma_nd=request.ma_nd,
+        ma_phien=request.ma_phien,
+        ma_cau_hoi=ma_cau_hoi
+    )
 
     question = request.noi_dung_cau_hoi.strip()
 
     if not question:
+        audit_rag_step(
+            trace_id=trace_id,
+            step="CHAT_REJECTED",
+            details={"reason": "empty_question"},
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi
+        )
         raise HTTPException(
             status_code=400,
             detail="Nội dung câu hỏi không được để trống."
@@ -374,7 +406,18 @@ async def chat_with_rag(request: ChatRequest):
     try:
         retrieval = await retrieve_evidence(question)
 
+    except HTTPException:
+        raise
+
     except Exception as error:
+        audit_rag_step(
+            trace_id=trace_id,
+            step="RETRIEVAL_FAILED",
+            details={"error_type": type(error).__name__},
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi
+        )
         raise HTTPException(
             status_code=503,
             detail=f"Lỗi truy xuất dữ liệu: {str(error)}"
@@ -385,11 +428,49 @@ async def chat_with_rag(request: ChatRequest):
 
     chunks = retrieval.get("chunks", [])
 
+    audit_rag_step(
+        trace_id=trace_id,
+        step="VECTOR_SEARCH",
+        ma_nd=request.ma_nd,
+        ma_phien=request.ma_phien,
+        ma_cau_hoi=ma_cau_hoi,
+        details={
+            "best_score": best_score,
+            "threshold": threshold,
+            "retrieved_count": len(chunks),
+            "qualified": retrieval.get("qualified"),
+            "total_active_vectors": retrieval.get(
+                "total_active_vectors", 0
+            )
+        }
+    )
+
     # -----------------------------------------------------
     # 2. EVIDENCE GATE - Kiểm tra bằng chứng
     # -----------------------------------------------------
+    audit_rag_step(
+        trace_id=trace_id,
+        step="EVIDENCE_GATE",
+        ma_nd=request.ma_nd,
+        ma_phien=request.ma_phien,
+        ma_cau_hoi=ma_cau_hoi,
+        details={
+            "confidence": best_score,
+            "threshold": threshold,
+            "passed": bool(
+                retrieval.get("qualified") and chunks
+            )
+        }
+    )
 
-    if not retrieval.get("qualified") or not chunks:
+    evidence_gate_passed = (
+        retrieval.get("qualified") is True
+        and bool(chunks)
+        and math.isfinite(best_score)
+        and math.isfinite(threshold)
+        and best_score >= threshold
+    )
+    if not evidence_gate_passed:
 
         refusal_reason = (
             "Không tìm thấy bằng chứng từ tài liệu đã được "
@@ -411,11 +492,36 @@ async def chat_with_rag(request: ChatRequest):
                 chunks=[]
             )
 
+        except HTTPException:
+            raise
+
         except Exception as error:
+            audit_rag_step(
+                trace_id=trace_id,
+                step="PERSISTENCE_FAILED",
+                details={
+                    "result_status": "TuChoi",
+                    "error_type": type(error).__name__
+                },
+                ma_nd=request.ma_nd,
+                ma_phien=request.ma_phien,
+                ma_cau_hoi=ma_cau_hoi
+            )
             raise HTTPException(
                 status_code=500,
                 detail=f"Không thể lưu kết quả từ chối: {str(error)}"
             )
+
+        audit_chat_result(
+            trace_id=trace_id,
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi,
+            status="TuChoi",
+            confidence=best_score,
+            reason=refusal_reason,
+            citation_count=0
+        )
 
         return ChatResponse(
             ma_cau_tra_loi=ma_cau_tra_loi,
@@ -437,7 +543,26 @@ async def chat_with_rag(request: ChatRequest):
             evidence_chunks=chunks
         )
 
+        audit_rag_step(
+            trace_id=trace_id,
+            step="GENERATION_COMPLETED",
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi,
+            details={
+                "answer_length": len(answer)
+            }
+        )
+
     except Exception as error:
+        audit_rag_step(
+            trace_id=trace_id,
+            step="GENERATION_FAILED",
+            details={"error_type": type(error).__name__},
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi
+        )
         raise HTTPException(
             status_code=503,
             detail=f"Lỗi sinh câu trả lời từ Ollama: {str(error)}"
@@ -449,6 +574,16 @@ async def chat_with_rag(request: ChatRequest):
 
     citations = build_citations(chunks)
 
+    audit_rag_step(
+        trace_id=trace_id,
+        step="CITATION_BUILT",
+        ma_nd=request.ma_nd,
+        ma_phien=request.ma_phien,
+        ma_cau_hoi=ma_cau_hoi,
+        details={
+            "citation_count": len(citations)
+        }
+    )
     # -----------------------------------------------------
     # 5. PERSISTENCE - Lưu kết quả
     # -----------------------------------------------------
@@ -466,7 +601,21 @@ async def chat_with_rag(request: ChatRequest):
             chunks=chunks
         )
 
+    except HTTPException:
+        raise
+
     except Exception as error:
+        audit_rag_step(
+            trace_id=trace_id,
+            step="PERSISTENCE_FAILED",
+            details={
+                "result_status": "ThanhCong",
+                "error_type": type(error).__name__
+            },
+            ma_nd=request.ma_nd,
+            ma_phien=request.ma_phien,
+            ma_cau_hoi=ma_cau_hoi
+        )
         raise HTTPException(
             status_code=500,
             detail=f"Không thể lưu câu trả lời: {str(error)}"
@@ -475,6 +624,15 @@ async def chat_with_rag(request: ChatRequest):
     # -----------------------------------------------------
     # 6. RESPONSE
     # -----------------------------------------------------
+    audit_chat_result(
+        trace_id=trace_id,
+        ma_nd=request.ma_nd,
+        ma_phien=request.ma_phien,
+        ma_cau_hoi=ma_cau_hoi,
+        status="ThanhCong",
+        confidence=best_score,
+        citation_count=len(citations)
+    )
 
     return ChatResponse(
         ma_cau_tra_loi=ma_cau_tra_loi,

@@ -4,6 +4,29 @@ const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000/api/v1"
 ).replace(/\/+$/, "");
 
+let accessToken: string | null = null;
+const apiClient = axios.create();
+
+apiClient.interceptors.request.use((config) => {
+  if (accessToken) {
+    config.headers.Authorization = `Bearer ${accessToken}`;
+  }
+  return config;
+});
+
+export interface AuthenticatedUser {
+  ma_nd: string;
+  vai_tro: string;
+  ho_ten: string | null;
+}
+
+export interface LoginResponse {
+  access_token: string;
+  token_type: "bearer";
+  expires_in: number;
+  user: AuthenticatedUser;
+}
+
 export interface Citation {
   ma_doan?: string;
   ten_tai_lieu?: string | null;
@@ -40,11 +63,178 @@ export interface UploadResponse {
   trang_thai: string;
 }
 
+export interface DocumentCatalogItem {
+  ma_tai_lieu: string;
+  tieu_de: string;
+  loai_van_ban: string;
+  linh_vuc: string | null;
+  co_quan_ban_hanh: string | null;
+}
+
+export interface DocumentCatalogInput {
+  tieu_de: string;
+  loai_van_ban: string;
+  linh_vuc?: string;
+  co_quan_ban_hanh?: string;
+}
+
+export interface DocumentVersionItem {
+  ma_phien_ban: string;
+  ma_tai_lieu: string;
+  tieu_de: string;
+  ma_nguoi_tai: string | null;
+  ten_dang_nhap_nguoi_tai: string | null;
+  so_phien_ban: string;
+  trang_thai: string | null;
+  is_active: boolean;
+  duong_dan_file: string | null;
+  ngay_hieu_luc: string | null;
+}
+
+export interface DocumentChunkItem {
+  ma_doan: string;
+  thu_tu: number | null;
+  dieu_khoan: string | null;
+  noi_dung: string;
+  so_trang: number | null;
+}
+
 export interface ApproveResponse {
   message: string;
   ma_phien_ban: string;
   trang_thai: string;
   is_active: number;
+  evaluation_status?: string;
+}
+
+export interface EvaluationPendingQuestion {
+  id: string;
+  question: string;
+  status: string;
+  reason: string;
+}
+
+export interface EvaluationReport {
+  evaluation_id: string;
+  document_version_id: string;
+  started_at: string;
+  completed_at: string | null;
+  status: "Pending" | "Running" | "Completed" | "Failed";
+  official: boolean;
+  dataset_question_count: number;
+  verified_question_count: number;
+  pending_verification_questions: EvaluationPendingQuestion[];
+  failed_questions: Array<{ id: string; question: string; error: string }>;
+  metrics: {
+    accuracy: number | null;
+    faithfulness: number | null;
+    citation_correctness: number | null;
+    correct_refusal_rate?: number | null;
+    scored_questions: number;
+  } | null;
+  database_persistence: { status: string; reason?: string; ma_ket_qua?: string };
+  errors: string[];
+}
+
+export interface AdminUser {
+  ma_nd: string;
+  ten_dang_nhap: string;
+  ho_ten: string | null;
+  email: string | null;
+  vai_tro: string | null;
+}
+
+export interface AdminUserInput {
+  ten_dang_nhap: string;
+  ho_ten: string;
+  email: string;
+  vai_tro: string;
+  mat_khau?: string;
+}
+
+export interface AuditLogRecord {
+  timestamp?: string;
+  event?: string;
+  trace_id?: string;
+  ma_nd?: string | null;
+  ma_phien?: string | null;
+  ma_cau_hoi?: string | null;
+  status?: string | null;
+  confidence?: number | null;
+  details?: Record<string, unknown>;
+  [key: string]: unknown;
+}
+
+export interface AuditLogPage {
+  items: AuditLogRecord[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
+export async function getAdminUsers(): Promise<AdminUser[]> {
+  const response = await apiClient.get<AdminUser[]>(`${API_BASE_URL}/admin/users`);
+  return response.data;
+}
+
+export async function createAdminUser(
+  user: AdminUserInput & { mat_khau: string },
+): Promise<AdminUser> {
+  const response = await apiClient.post<AdminUser>(
+    `${API_BASE_URL}/admin/users`,
+    user,
+  );
+  return response.data;
+}
+
+export async function updateAdminUser(
+  userId: string,
+  user: Partial<AdminUserInput>,
+): Promise<AdminUser> {
+  const response = await apiClient.patch<AdminUser>(
+    `${API_BASE_URL}/admin/users/${encodeURIComponent(userId)}`,
+    user,
+  );
+  return response.data;
+}
+
+export async function deleteAdminUser(userId: string): Promise<void> {
+  await apiClient.delete(
+    `${API_BASE_URL}/admin/users/${encodeURIComponent(userId)}`,
+  );
+}
+
+export async function getAdminAuditLogs(
+  offset = 0,
+  limit = 50,
+): Promise<AuditLogPage> {
+  const response = await apiClient.get<AuditLogPage>(
+    `${API_BASE_URL}/admin/audit-logs`,
+    { params: { offset, limit } },
+  );
+  return response.data;
+}
+
+export async function loginWithCredentials(
+  tenDangNhap: string,
+  matKhau: string,
+): Promise<AuthenticatedUser> {
+  const response = await axios.post<LoginResponse>(
+    `${API_BASE_URL}/auth/login`,
+    {
+      ten_dang_nhap: tenDangNhap,
+      mat_khau: matKhau,
+    },
+  );
+  if (response.data.token_type !== "bearer" || !response.data.access_token) {
+    throw new Error("Máy chủ trả về thông tin xác thực không hợp lệ.");
+  }
+  accessToken = response.data.access_token;
+  return response.data.user;
+}
+
+export function clearAccessToken(): void {
+  accessToken = null;
 }
 
 export function getApiErrorMessage(error: unknown, fallback: string): string {
@@ -70,7 +260,7 @@ export const sendChatQuery = async (
   maNd: string,
   noiDungCauHoi: string,
 ): Promise<ChatQueryResponse> => {
-  const response = await axios.post<ChatQueryResponse>(
+  const response = await apiClient.post<ChatQueryResponse>(
     API_BASE_URL,
     {
       ma_phien: maPhien,
@@ -85,7 +275,7 @@ export const sendChatQuery = async (
 export const uploadDocument = async (
   formData: FormData,
 ): Promise<UploadResponse> => {
-  const response = await axios.post<UploadResponse>(
+  const response = await apiClient.post<UploadResponse>(
     `${API_BASE_URL}/documents/upload`,
     formData,
   );
@@ -96,9 +286,58 @@ export const uploadDocument = async (
 export const approveDocumentVersion = async (
   maPhienBan: string,
 ): Promise<ApproveResponse> => {
-  const response = await axios.put<ApproveResponse>(
+  const response = await apiClient.put<ApproveResponse>(
     `${API_BASE_URL}/documents/approve/${encodeURIComponent(maPhienBan)}`,
   );
 
   return response.data;
+};
+
+export const getDocumentCatalog = async (): Promise<DocumentCatalogItem[]> => {
+  const response = await apiClient.get<DocumentCatalogItem[]>(
+    `${API_BASE_URL}/documents/catalog`,
+  );
+  return response.data;
+};
+
+export const createDocumentCatalogItem = async (
+  item: DocumentCatalogInput,
+): Promise<DocumentCatalogItem> => {
+  const response = await apiClient.post<DocumentCatalogItem>(
+    `${API_BASE_URL}/documents/catalog`,
+    item,
+  );
+  return response.data;
+};
+
+export const getDocumentVersions = async (
+  status?: string,
+): Promise<DocumentVersionItem[]> => {
+  const response = await apiClient.get<DocumentVersionItem[]>(
+    `${API_BASE_URL}/documents/versions`,
+    { params: status ? { trang_thai: status } : undefined },
+  );
+  return response.data;
+};
+
+export const getDocumentVersionChunks = async (
+  versionId: string,
+): Promise<DocumentChunkItem[]> => {
+  const response = await apiClient.get<DocumentChunkItem[]>(
+    `${API_BASE_URL}/documents/versions/${encodeURIComponent(versionId)}/chunks`,
+  );
+  return response.data;
+};
+
+export const getLatestEvaluationReport =
+  async (): Promise<EvaluationReport | null> => {
+    try {
+      const response = await apiClient.get<EvaluationReport>(
+        `${API_BASE_URL}/evaluation/latest`,
+      );
+      return response.data;
+    } catch (error: unknown) {
+      if (isAxiosError(error) && error.response?.status === 404) return null;
+      throw error;
+    }
 };

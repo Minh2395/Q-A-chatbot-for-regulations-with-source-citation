@@ -1,8 +1,9 @@
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional
 
 from app.core.database import get_business_db_connection
+from app.core.security import AuthenticatedUser, get_current_user
 
 router = APIRouter(
     prefix="/history",
@@ -21,12 +22,19 @@ def row_to_dict(cursor, row):
 
 @router.get("/sessions")
 def get_chat_sessions(
-    ma_nd: str = Query(..., description="Mã người dùng"),
+    ma_nd: Optional[str] = Query(None, description="Mã người dùng"),
+    current_user: AuthenticatedUser = Depends(get_current_user),
 ):
     """
     Lấy danh sách phiên hội thoại của một người dùng.
     Mỗi phiên có thời gian bắt đầu, số câu hỏi và câu hỏi gần nhất.
     """
+
+    if ma_nd and ma_nd != current_user.ma_nd:
+        raise HTTPException(
+            status_code=403,
+            detail="The requested user does not match the authenticated account.",
+        )
 
     conn = None
 
@@ -55,7 +63,7 @@ def get_chat_sessions(
             ORDER BY
                 COALESCE(MAX(q.ThoiDiem), p.ThoiGianBatDau) DESC
             """,
-            ma_nd
+            current_user.ma_nd
         )
 
         rows = cursor.fetchall()
@@ -65,7 +73,7 @@ def get_chat_sessions(
         ]
 
         return {
-            "ma_nd": ma_nd,
+            "ma_nd": current_user.ma_nd,
             "tong_so_phien": len(sessions),
             "danh_sach_phien": sessions
         }
@@ -84,12 +92,19 @@ def get_chat_sessions(
 @router.get("/sessions/{ma_phien}")
 def get_chat_session_detail(
     ma_phien: str,
-    ma_nd: str = Query(..., description="Mã người dùng"),
+    ma_nd: Optional[str] = Query(None, description="Mã người dùng"),
+    current_user: AuthenticatedUser = Depends(get_current_user),
 ):
     """
     Lấy toàn bộ câu hỏi, câu trả lời và trích dẫn
     của một phiên hội thoại thuộc người dùng.
     """
+
+    if ma_nd and ma_nd != current_user.ma_nd:
+        raise HTTPException(
+            status_code=403,
+            detail="The requested user does not match the authenticated account.",
+        )
 
     conn = None
 
@@ -110,7 +125,7 @@ def get_chat_session_detail(
               AND MaND = ?
             """,
             ma_phien,
-            ma_nd
+            current_user.ma_nd
         )
 
         session_row = cursor.fetchone()
