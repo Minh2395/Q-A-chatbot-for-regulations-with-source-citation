@@ -21,10 +21,14 @@ def get_connection(database: str):
                 "Thiếu DB_USER hoặc DB_PASSWORD trong cấu hình."
             )
 
-        parts.append(f"UID={settings.DB_USER}")
-        parts.append(f"PWD={settings.DB_PASSWORD}")
+        parts.append(f"UID={_escape_odbc_value(settings.DB_USER)}")
+        parts.append(f"PWD={_escape_odbc_value(settings.DB_PASSWORD)}")
 
     return pyodbc.connect(";".join(parts) + ";", timeout=15)
+
+
+def _escape_odbc_value(value: str) -> str:
+    return "{" + value.replace("}", "}}") + "}"
 
 
 def get_business_db_connection():

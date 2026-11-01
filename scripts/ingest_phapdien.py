@@ -47,6 +47,10 @@ def load_env(path: Path) -> dict:
 CONFIG = load_env(ENV_FILE)
 
 
+def _escape_odbc_value(value: str) -> str:
+    return "{" + value.replace("}", "}}") + "}"
+
+
 
 def get_connection():
     server = CONFIG.get(
@@ -83,9 +87,16 @@ def get_connection():
     if windows_auth:
         parts.append("Trusted_Connection=yes")
     else:
+        db_user = CONFIG.get("DB_USER")
+        db_password = CONFIG.get("DB_PASSWORD")
+        if not db_user or not db_password:
+            raise ValueError(
+                "DB_USER and DB_PASSWORD are required when "
+                "DB_WINDOWS_AUTH is false."
+            )
         parts.extend([
-            f"UID={CONFIG['DB_USERNAME']}",
-            f"PWD={CONFIG['DB_PASSWORD']}",
+            f"UID={_escape_odbc_value(db_user)}",
+            f"PWD={_escape_odbc_value(db_password)}",
         ])
 
     connection_string = ";".join(parts) + ";"

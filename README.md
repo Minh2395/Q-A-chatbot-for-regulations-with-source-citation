@@ -152,6 +152,39 @@ The backend will be available at:
 - Health check: http://127.0.0.1:8000/api/health
 - Interactive API documentation: http://127.0.0.1:8000/docs
 
+### 6.3.1. Configure API Authentication
+
+```text
+AUTH_JWT_SECRET=<shared secret of at least 32 characters>
+AUTH_JWT_ISSUER=aik01
+AUTH_JWT_AUDIENCE=aik01-api
+AUTH_JWT_MAX_TTL_SECONDS=3600
+```
+
+The login endpoint accepts `TenDangNhap` and the user's password, verifies it
+against `NGUOI_DUNG.MatKhauHash`, and issues a short-lived HS256 bearer token.
+Backend settings are loaded from `backend/.env` regardless of the directory
+from which Uvicorn is launched; environment variables take precedence.
+Password hashes must use
+`pbkdf2_sha256$<iterations>$<base64url-salt>$<base64url-digest>` with at least
+600,000 PBKDF2-HMAC-SHA256 iterations, a 16-byte or longer random salt, and a
+32-byte digest. The backend loads the account's current `VaiTro` from SQL
+Server; client-provided roles are never trusted. Missing or invalid signing
+configuration fails closed. Keep the signing secret in the deployment secret
+manager, not source control. The frontend keeps the access token only in tab
+memory.
+
+Document upload and approval require `ChuyenVienPhapChe`; approval also rejects
+self-approval by the uploading account. The evaluation report requires
+`QuanTriVien`. Admin user management is available at `/api/v1/admin/users`
+(GET/POST/PATCH/DELETE), and audit records at `/api/v1/admin/audit-logs`.
+Account deletion is rejected when existing foreign-key relationships reference
+the account. The existing schema has no account-lock field, so locking accounts
+is not exposed as a fake operation. The existing database must contain the
+corresponding user and role. Existing hashes in other formats are rejected;
+migrate credentials through the authorized account-provisioning process before
+enabling login.
+
 ### 6.4. Set Up the Frontend
 
 Open a separate terminal at the project root and navigate to the frontend directory:

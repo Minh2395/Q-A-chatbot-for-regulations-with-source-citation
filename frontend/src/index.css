@@ -738,6 +738,62 @@ button:disabled {
   gap: 13px;
 }
 
+.document-form select {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid #dfe4ec;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #fff;
+  color: #39465b;
+  font: inherit;
+}
+
+.admin-table-wrap {
+  width: 100%;
+  margin: 14px 0;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #4a566b;
+  font-size: 10px;
+  text-align: left;
+}
+
+.admin-table th,
+.admin-table td {
+  border-bottom: 1px solid #edf0f5;
+  padding: 9px 10px;
+  white-space: nowrap;
+}
+
+.admin-table th {
+  color: #718097;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-actions button {
+  border: 0;
+  background: transparent;
+  color: #315fa8;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.admin-actions button:last-child {
+  color: #a34242;
+}
+
 .document-form input:not([type="file"]) {
   width: 100%;
   padding: 10px;
@@ -851,6 +907,112 @@ button:disabled {
   border: 1px solid #e3e8f0;
   border-radius: 7px;
   background: #f5f6f8;
+}
+
+.catalog-create {
+  margin: 14px 0 18px;
+  border: 1px solid #e8ecf2;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfe;
+}
+
+.catalog-create summary {
+  color: #43516a;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.catalog-create[open] summary {
+  margin-bottom: 14px;
+}
+
+.secondary-button {
+  width: fit-content;
+  min-height: 34px;
+  border: 1px solid #dfe5ef;
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: #fff;
+  color: #425675;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.secondary-button:hover:not(:disabled) {
+  border-color: #9eb3d5;
+  background: #f5f8fd;
+}
+
+.secondary-button:disabled,
+.approve-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.review-card {
+  margin-top: 13px;
+  border: 1px solid #e8ecf2;
+  border-radius: 9px;
+  padding: 15px;
+  background: #fff;
+}
+
+.review-card h3 {
+  margin: 0;
+  color: #263650;
+  font-size: 13px;
+}
+
+.document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-items: center;
+}
+
+.document-actions .approve-button {
+  width: fit-content;
+  min-height: 34px;
+  padding: 8px 12px;
+}
+
+.chunk-preview {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  border-top: 1px solid #edf0f5;
+  padding-top: 13px;
+}
+
+.chunk-card {
+  border: 1px solid #e8ecf2;
+  border-radius: 7px;
+  padding: 11px;
+  background: #fafbfd;
+}
+
+.chunk-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: #748198;
+  font-size: 9px;
+}
+
+.chunk-card strong {
+  color: #405675;
+}
+
+.chunk-card p {
+  margin: 9px 0 0;
+  color: #45536a;
+  font-size: 10px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .approve-button {

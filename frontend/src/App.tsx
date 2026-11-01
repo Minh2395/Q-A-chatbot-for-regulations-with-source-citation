@@ -3,6 +3,11 @@ import type { FormEvent } from "react";
 import { ChatWindow } from "./components/chat/ChatWindow";
 import DocumentUpload from "./components/Documents/DocumentUpload";
 import { AdminWorkspace } from "./components/AdminWorkspace";
+import {
+  loginWithCredentials,
+  clearAccessToken,
+  getApiErrorMessage,
+} from "./services/api";
 
 type UserRole = "ChuyenVienPhapChe" | "QuanTriVien" | "NguoiDung";
 type Page = "chat" | "documents" | "admin";
@@ -19,9 +24,11 @@ const roleLabels: Record<UserRole, string> = {
 };
 
 function isUserRole(value: string): value is UserRole {
-  return value === "ChuyenVienPhapChe" ||
+  return (
+    value === "ChuyenVienPhapChe" ||
     value === "QuanTriVien" ||
-    value === "NguoiDung";
+    value === "NguoiDung"
+  );
 }
 
 function createSessionId(): string {
@@ -30,27 +37,53 @@ function createSessionId(): string {
 
 export default function App() {
   const [user, setUser] = useState<WorkspaceUser | null>(null);
-  const [userId, setUserId] = useState("");
-  const [selectedRole, setSelectedRole] = useState<UserRole>("NguoiDung");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const [authenticating, setAuthenticating] = useState(false);
   const [sessionId, setSessionId] = useState("");
   const [activePage, setActivePage] = useState<Page>("chat");
   const [processedCount, setProcessedCount] = useState(0);
 
-  const handleEnterWorkspace = (event: FormEvent<HTMLFormElement>) => {
+  const handleEnterWorkspace = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const maNd = userId.trim();
-    if (!maNd || maNd.length > 20) return;
+    if (authenticating || !username.trim() || !password) return;
 
-    setUser({ maNd, vaiTro: selectedRole });
-    setSessionId(createSessionId());
-    setActivePage("chat");
-    setProcessedCount(0);
+    setAuthenticating(true);
+    setLoginError("");
+    try {
+      const authenticatedUser = await loginWithCredentials(
+        username.trim(),
+        password,
+      );
+      if (!isUserRole(authenticatedUser.vai_tro)) {
+        clearAccessToken();
+        throw new Error("Tài khoản không có vai trò được hỗ trợ.");
+      }
+
+      setUser({
+        maNd: authenticatedUser.ma_nd,
+        vaiTro: authenticatedUser.vai_tro,
+      });
+      setSessionId(createSessionId());
+      setActivePage("chat");
+      setProcessedCount(0);
+      setPassword("");
+    } catch (error: unknown) {
+      clearAccessToken();
+      setLoginError(getApiErrorMessage(error, "Không thể xác thực tài khoản."));
+      setPassword("");
+    } finally {
+      setAuthenticating(false);
+    }
   };
 
   const handleSignOut = () => {
+    clearAccessToken();
     setUser(null);
     setSessionId("");
-    setUserId("");
+    setUsername("");
+    setPassword("");
     setActivePage("chat");
   };
 
@@ -58,52 +91,61 @@ export default function App() {
     return (
       <main className="login-shell">
         <section className="login-card">
-          <div className="brand-mark" aria-hidden="true">PL</div>
+          <div className="brand-mark" aria-hidden="true">
+            PL
+          </div>
           <p className="eyebrow">AIK-01 · TRỢ LÝ PHÁP QUY</p>
           <h1>Không gian làm việc</h1>
           <p className="muted">
-            Nhập mã người dùng và chọn vai trò <code>VaiTro</code> để mở các
-            chức năng tương ứng.
+            Đăng nhập bằng tài khoản hiện có. Vai trò được đọc từ hồ sơ backend,
+            không thể chọn hoặc tự sửa tại giao diện.
           </p>
 
           <form onSubmit={handleEnterWorkspace} className="login-form">
             <label>
-              Mã người dùng (MaND)
+              Tên đăng nhập
               <input
                 autoComplete="username"
-                maxLength={20}
-                value={userId}
-                onChange={(event) => setUserId(event.target.value)}
-                placeholder="Nhập mã đã có trong hệ thống"
+                maxLength={50}
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+                placeholder="Tên đăng nhập"
                 required
               />
             </label>
 
             <label>
-              Vai trò (VaiTro)
-              <select
-                value={selectedRole}
-                onChange={(event) => {
-                  if (isUserRole(event.target.value)) {
-                    setSelectedRole(event.target.value);
-                  }
-                }}
-              >
-                <option value="NguoiDung">Người dùng</option>
-                <option value="ChuyenVienPhapChe">Chuyên viên pháp chế</option>
-                <option value="QuanTriVien">Quản trị viên</option>
-              </select>
+              Mật khẩu
+              <input
+                type="password"
+                autoComplete="current-password"
+                maxLength={1024}
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Mật khẩu tài khoản"
+                required
+              />
             </label>
 
-            <button className="primary-button" type="submit">
-              Mở không gian
+            {loginError && (
+              <div className="notice notice-error" role="alert">
+                {loginError}
+              </div>
+            )}
+
+            <button
+              className="primary-button"
+              type="submit"
+              disabled={authenticating || !username.trim() || !password}
+            >
+              {authenticating ? "Đang đăng nhập…" : "Đăng nhập"}
             </button>
           </form>
 
           <div className="notice notice-warning" role="note">
-            Backend hiện chưa có API đăng nhập hoặc xác thực <code>VaiTro</code>.
-            Lựa chọn vai trò tại đây chỉ điều khiển giao diện, không phải cơ chế
-            bảo mật; hãy chỉ dùng trong môi trường tin cậy.
+            Mật khẩu được xác minh với <code>MatKhauHash</code> trong backend.
+            Phiên đăng nhập chỉ giữ token trong bộ nhớ tab và hết hạn sau tối đa
+            một giờ.
           </div>
         </section>
       </main>
@@ -128,7 +170,9 @@ export default function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark" aria-hidden="true">PL</div>
+          <div className="brand-mark" aria-hidden="true">
+            PL
+          </div>
           <div>
             <strong>Pháp Luật AI</strong>
             <span>Trợ lý quy chế</span>
@@ -145,7 +189,9 @@ export default function App() {
               className={`nav-item ${activePage === page.id ? "is-active" : ""}`}
               aria-current={activePage === page.id ? "page" : undefined}
             >
-              <span className="nav-icon" aria-hidden="true">{page.icon}</span>
+              <span className="nav-icon" aria-hidden="true">
+                {page.icon}
+              </span>
               {page.label}
             </button>
           ))}
@@ -161,7 +207,11 @@ export default function App() {
               <span>{roleLabels[user.vaiTro]}</span>
             </div>
           </div>
-          <button type="button" className="signout-button" onClick={handleSignOut}>
+          <button
+            type="button"
+            className="signout-button"
+            onClick={handleSignOut}
+          >
             Đổi hồ sơ / thoát
           </button>
         </div>
@@ -180,29 +230,26 @@ export default function App() {
         </header>
 
         <div className="role-notice" role="note">
-          Quyền điều hướng được lọc theo hồ sơ <code>VaiTro</code> đã chọn. Backend
-          chưa xác minh hồ sơ hoặc bảo vệ API theo vai trò.
+          Vai trò được đọc từ tài khoản backend đã xác thực; API kiểm tra quyền
+          trên từng thao tác.
         </div>
 
         <section className="page-section" hidden={activePage !== "chat"}>
-            <div className="page-intro">
-              <div>
-                <h2>Tra cứu quy định pháp luật</h2>
-                <p>
-                  Đặt câu hỏi và xem câu trả lời cùng căn cứ được truy xuất từ
-                  tài liệu đã phê duyệt.
-                </p>
-              </div>
-              <span className="info-chip">Tài liệu đã duyệt · RAG</span>
+          <div className="page-intro">
+            <div>
+              <h2>Tra cứu quy định pháp luật</h2>
+              <p>
+                Đặt câu hỏi và xem câu trả lời cùng căn cứ được truy xuất từ tài
+                liệu đã phê duyệt.
+              </p>
             </div>
-            <ChatWindow maNd={user.maNd} maPhien={sessionId} />
+            <span className="info-chip">Tài liệu đã duyệt · RAG</span>
+          </div>
+          <ChatWindow maNd={user.maNd} maPhien={sessionId} />
         </section>
 
         {user.vaiTro === "ChuyenVienPhapChe" && (
-          <section
-            className="page-section"
-            hidden={activePage !== "documents"}
-          >
+          <section className="page-section" hidden={activePage !== "documents"}>
             <div className="page-intro">
               <div>
                 <h2>Tiếp nhận và duyệt tài liệu</h2>
@@ -211,7 +258,9 @@ export default function App() {
                   chủ động phê duyệt.
                 </p>
               </div>
-              <span className="info-chip">{processedCount} tài liệu trong phiên</span>
+              <span className="info-chip">
+                {processedCount} tài liệu trong phiên
+              </span>
             </div>
             <DocumentUpload
               maNd={user.maNd}
@@ -225,9 +274,7 @@ export default function App() {
             <div className="page-intro">
               <div>
                 <h2>Trung tâm quản trị</h2>
-                <p>
-                  Theo dõi tài khoản, hoạt động và chất lượng hệ thống.
-                </p>
+                <p>Theo dõi tài khoản, hoạt động và chất lượng hệ thống.</p>
               </div>
               <span className="info-chip">Dữ liệu backend</span>
             </div>
