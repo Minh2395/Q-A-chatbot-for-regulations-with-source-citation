@@ -23,27 +23,31 @@ The frontend uses the APIs currently exposed by `backend/app/main.py`:
   and create legal-document metadata records
 - `POST /api/v1/documents/upload` for PDF, DOCX, HTML, and HTM uploads
 - `GET /api/v1/documents/versions` to list uploaded versions, optionally
-  filtered with `?trang_thai=Draft`
+  filtered with `?trang_thai=Draft`, `Approved`, `Rejected`, or `Expired`
 - `GET /api/v1/documents/versions/{ma_phien_ban}/chunks` to review extracted
   source text before approval
 - `PUT /api/v1/documents/approve/{ma_phien_ban}` for explicit approval
 - `GET /api/v1/evaluation/latest` for the latest evaluation report
+- `POST /api/v1/evaluation/run-latest` to schedule a benchmark for the newest
+  active, approved document version (runs an unscored preliminary pass when
+  legal references are still pending)
 - `GET /api/v1/auth/me` to validate an upstream bearer token
 
 New document versions remain in Draft until a specialist confirms approval.
 The specialist workspace lets you create a catalog record, select it, upload a
 file (maximum 25 MB), inspect the extracted chunks, and refresh the persistent
 version list. The API validates the selected document ID against `TAI_LIEU`.
-Only a different `ChuyenVienPhapChe` account can approve an uploader's Draft;
-approval activates the version and schedules evaluation in the background.
+Any `ChuyenVienPhapChe` account can review extracted text and approve a Draft,
+including the account that uploaded it. Approval activates the version, marks
+the replaced active version `Expired`, and schedules evaluation in the
+background.
 Catalog creation, upload, and approval are written to the existing audit log.
 
 To test the upload workflow, start SQL Server and the backend, ensure Ollama is
 running with the configured embedding model, log in as `ChuyenVienPhapChe`, and
 open **Tài liệu pháp chế**. Create a catalog record or select an existing one,
 then upload a PDF, DOCX, HTML, or HTM file. Confirm extracted chunks in the
-version list. Approval requires a second specialist account because
-self-approval is intentionally rejected.
+version list. The specialist who uploaded a version can review and approve it.
 
 ## Login and roles
 
@@ -60,16 +64,20 @@ keeps the token in tab memory only. Unsupported existing password-hash formats
 are rejected and must be migrated through the authorized account process.
 
 - All authenticated roles may use chat and their own conversation history.
-- `ChuyenVienPhapChe` may upload and approve documents; the uploader cannot
-  approve their own version.
-- `QuanTriVien` may access evaluation reports.
+- `ChuyenVienPhapChe` may upload, review, and approve documents, including
+  versions they uploaded themselves.
+- `QuanTriVien` may manage accounts, view audit logs with server-side
+  pagination, view evaluation reports, and trigger a benchmark for the newest
+  active approved version.
 
-User CRUD and system-wide audit-log APIs remain unavailable. The admin screen
-reads the latest evaluation report when the evaluation API is reachable.
-
-The benchmark at `backend/data/evaluation_dataset.json` currently contains 50
-draft questions pending legal review without expected answers or source chunk
-references. Automatic evaluation therefore records a pending-verification
-report and does not run RAG or publish official scores until the references
-have been reviewed and verified against active approved documents. Reports are
-written under `backend/reports/`.
+The evaluator reads `backend/data/evaluation_dataset_preliminary_matched.json`.
+Its 50 questions are preliminary only: candidate matches are not verified legal
+references, and expected answers, keywords, and review metadata still require
+legal-officer completion. Questions without a suitable current source must be
+matched to an approved document or removed/replaced during review. Evaluation
+therefore records pending questions and does not publish official scores until
+the benchmark references have been reviewed and verified against active
+approved documents. Administrators may still run an unscored preliminary
+retrieval/answer pass, which reports retrieval coverage and generated answers
+without presenting them as official metrics. Reports are written under
+`backend/reports/`.

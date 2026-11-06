@@ -147,6 +147,20 @@ def test_list_document_versions_returns_existing_version_metadata(monkeypatch):
     assert cursor.statements[0][1] == ("Draft",)
 
 
+def test_list_document_versions_can_filter_expired_versions(monkeypatch):
+    cursor = FakeCursor()
+    connection = FakeConnection(cursor)
+    monkeypatch.setattr(
+        documents,
+        "get_business_db_connection",
+        lambda: connection,
+    )
+
+    documents.list_document_versions("Expired", SPECIALIST)
+
+    assert cursor.statements[0][1] == ("Expired",)
+
+
 def test_get_version_chunks_returns_reviewable_extracted_text(monkeypatch):
     cursor = FakeCursor(
         rows=[("D1", 1, "Article 1", "Legal text", 2)],

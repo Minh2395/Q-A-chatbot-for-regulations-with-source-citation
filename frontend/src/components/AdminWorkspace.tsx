@@ -6,15 +6,16 @@ import {
   getAdminAuditLogs,
   getAdminUsers,
   getApiErrorMessage,
-  getLatestEvaluationReport,
   updateAdminUser,
 } from "../services/api";
 import type {
   AdminUser,
   AdminUserInput,
   AuditLogRecord,
-  EvaluationReport,
 } from "../services/api";
+import { BenchmarkReport } from "./Dashboard/BenchmarkReport";
+
+const AUDIT_PAGE_SIZE = 25;
 
 const emptyUserForm: AdminUserInput = {
   ten_dang_nhap: "",
@@ -23,27 +24,6 @@ const emptyUserForm: AdminUserInput = {
   email: "",
   vai_tro: "NguoiDung",
 };
-
-const evaluationCriteria = [
-  {
-    name: "Độ chính xác",
-    description:
-      "Tỷ lệ câu trả lời đúng trên bộ câu hỏi có đáp án chuẩn được chuyên viên xác nhận.",
-    value: "Chưa có dữ liệu",
-  },
-  {
-    name: "Tính trung thành",
-    description:
-      "Mức độ câu trả lời được hỗ trợ bởi các đoạn bằng chứng đã truy xuất, không thêm nội dung ngoài nguồn.",
-    value: "Chưa có dữ liệu",
-  },
-  {
-    name: "Độ chính xác trích dẫn",
-    description:
-      "Tỷ lệ trích dẫn đúng tài liệu, điều khoản và đoạn nội dung thực sự hỗ trợ câu trả lời.",
-    value: "Chưa có dữ liệu",
-  },
-];
 
 export function AdminWorkspace() {
   const [users, setUsers] = useState<AdminUser[]>([]);
@@ -54,20 +34,14 @@ export function AdminWorkspace() {
   const [editingUserId, setEditingUserId] = useState<string | null>(null);
   const [userForm, setUserForm] = useState<AdminUserInput>(emptyUserForm);
   const [auditTotal, setAuditTotal] = useState(0);
-  const [evaluationReport, setEvaluationReport] =
-    useState<EvaluationReport | null>(null);
-  const [evaluationError, setEvaluationError] = useState("");
-  const [loadingEvaluation, setLoadingEvaluation] = useState(true);
+  const [auditPage, setAuditPage] = useState(1);
+  const [loadingAudit, setLoadingAudit] = useState(true);
+  const [auditError, setAuditError] = useState("");
 
   const loadAdminData = useCallback(async () => {
     try {
-      const [loadedUsers, loadedAudit] = await Promise.all([
-        getAdminUsers(),
-        getAdminAuditLogs(),
-      ]);
+      const loadedUsers = await getAdminUsers();
       setUsers(loadedUsers);
-      setAuditLogs(loadedAudit.items);
-      setAuditTotal(loadedAudit.total);
       setAdminError("");
     } catch (error: unknown) {
       setAdminError(
@@ -90,52 +64,31 @@ export function AdminWorkspace() {
     void loadAdminData();
   };
 
+  const loadAuditPage = useCallback(async () => {
+    setLoadingAudit(true);
+    setAuditError("");
+    try {
+      const result = await getAdminAuditLogs(
+        (auditPage - 1) * AUDIT_PAGE_SIZE,
+        AUDIT_PAGE_SIZE,
+      );
+      setAuditLogs(result.items);
+      setAuditTotal(result.total);
+    } catch (error: unknown) {
+      setAuditError(
+        getApiErrorMessage(error, "Không thể tải nhật ký hệ thống."),
+      );
+    } finally {
+      setLoadingAudit(false);
+    }
+  }, [auditPage]);
+
   useEffect(() => {
-    let active = true;
-    let timer: number | undefined;
-    const loadReport = async () => {
-      let isRunning = false;
-      try {
-        const report = await getLatestEvaluationReport();
-        if (active) {
-          setEvaluationReport(report);
-          setEvaluationError("");
-          isRunning = report?.status === "Running";
-        }
-      } catch (error: unknown) {
-        if (active) {
-          setEvaluationError(
-            getApiErrorMessage(error, "Không thể tải báo cáo đánh giá."),
-          );
-        }
-      } finally {
-        if (active) {
-          setLoadingEvaluation(false);
-          timer = window.setTimeout(loadReport, isRunning ? 2500 : 10000);
-        }
-      }
-    };
-    void loadReport();
-
-    return () => {
-      active = false;
-      if (timer !== undefined) window.clearTimeout(timer);
-    };
-  }, []);
-
-  const formatScore = (score: number | null | undefined) =>
-    score == null ? "Chưa có dữ liệu" : `${(score * 100).toFixed(1)}%`;
-  const evaluationStatus = loadingEvaluation
-    ? "Đang tải"
-    : evaluationReport?.status === "Completed"
-      ? "Đã hoàn tất"
-      : evaluationReport?.status === "Running"
-        ? "Đang chạy"
-        : evaluationReport?.status === "Pending"
-          ? "Chờ xác minh"
-          : evaluationReport?.status === "Failed"
-            ? "Thất bại"
-            : "Chưa có báo cáo";
+    const timer = window.setTimeout(() => {
+      void loadAuditPage();
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [loadAuditPage]);
 
   const resetUserForm = () => {
     setEditingUserId(null);
@@ -194,17 +147,6 @@ export function AdminWorkspace() {
     } catch (error: unknown) {
       setAdminError(
         getApiErrorMessage(error, "Không thể xóa tài khoản người dùng."),
-      );
-    }
-  };
-
-  const loadMoreAuditLogs = async () => {
-    try {
-      const nextPage = await getAdminAuditLogs(auditLogs.length);
-      setAuditLogs((current) => [...current, ...nextPage.items]);
-    } catch (error: unknown) {
-      setAdminError(
-        getApiErrorMessage(error, "Không thể tải thêm nhật ký."),
       );
     }
   };
@@ -374,16 +316,26 @@ export function AdminWorkspace() {
             <h2>Nhật ký hệ thống</h2>
           </div>
           <span className="status-pill status-approved">
-            {auditLogs.length} / {auditTotal} bản ghi
+            {auditTotal === 0
+              ? "0 bản ghi"
+              : `${(auditPage - 1) * AUDIT_PAGE_SIZE + 1}–${Math.min(
+                  auditPage * AUDIT_PAGE_SIZE,
+                  auditTotal,
+                )} / ${auditTotal} bản ghi`}
           </span>
         </div>
         <p className="muted">
           Nhật ký kiểm toán được tải mới nhất trước. Dữ liệu chi tiết được giới
           hạn theo quyền quản trị viên.
         </p>
-        {auditLogs.length === 0 ? (
+        {auditError && (
+          <div className="notice notice-error" role="alert">{auditError}</div>
+        )}
+        {loadingAudit ? (
+          <p className="muted" role="status">Đang tải nhật ký…</p>
+        ) : auditLogs.length === 0 ? (
           <p className="muted">
-            {loadingAdminData ? "Đang tải nhật ký…" : "Chưa có nhật ký."}
+            Chưa có nhật ký.
           </p>
         ) : (
           <div className="admin-table-wrap">
@@ -411,91 +363,33 @@ export function AdminWorkspace() {
             </table>
           </div>
         )}
-        {auditLogs.length < auditTotal && (
+        <div className="document-actions">
           <button
-            className="primary-button"
+            className="secondary-button"
             type="button"
-            onClick={() => void loadMoreAuditLogs()}
+            onClick={() => setAuditPage((page) => Math.max(1, page - 1))}
+            disabled={loadingAudit || auditPage <= 1}
           >
-            Tải thêm nhật ký
+            Trang trước
           </button>
-        )}
+          <span className="muted">
+            Trang {auditPage} / {Math.max(1, Math.ceil(auditTotal / AUDIT_PAGE_SIZE))}
+          </span>
+          <button
+            className="secondary-button"
+            type="button"
+            onClick={() => setAuditPage((page) => page + 1)}
+            disabled={
+              loadingAudit ||
+              auditPage >= Math.ceil(auditTotal / AUDIT_PAGE_SIZE)
+            }
+          >
+            Trang sau
+          </button>
+        </div>
       </section>
 
-      <section className="surface-card admin-card">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">CHẤT LƯỢNG MÔ HÌNH</p>
-            <h2>Đánh giá hiệu năng AI</h2>
-          </div>
-          <span className="status-pill status-unavailable">
-            {evaluationStatus}
-          </span>
-        </div>
-        <p className="muted">
-          Đánh giá được lên lịch sau khi phê duyệt phiên bản tài liệu. Bộ câu hỏi
-          chỉ được chấm khi đáp án và nguồn pháp lý đã được xác minh.
-        </p>
-        <div className="evaluation-grid">
-          {evaluationCriteria.map((criterion) => (
-            <article key={criterion.name} className="metric-card">
-              <span className="metric-value">
-                {evaluationReport?.official && evaluationReport.metrics
-                  ? criterion.name === "Độ chính xác"
-                    ? formatScore(evaluationReport.metrics.accuracy)
-                    : criterion.name === "Tính trung thành"
-                      ? formatScore(evaluationReport.metrics.faithfulness)
-                      : formatScore(
-                          evaluationReport.metrics.citation_correctness,
-                        )
-                  : criterion.value}
-              </span>
-              <h3>{criterion.name}</h3>
-              <p>{criterion.description}</p>
-            </article>
-          ))}
-        </div>
-        {evaluationError && (
-          <div className="notice notice-error" role="alert">
-            {evaluationError}
-          </div>
-        )}
-        {evaluationReport && (
-          <>
-            <p className="muted" role="status">
-              Bộ dữ liệu: {evaluationReport.dataset_question_count} câu hỏi;
-              {" "}đã xác minh: {evaluationReport.verified_question_count};
-              {" "}được chấm: {evaluationReport.metrics?.scored_questions ?? 0}.
-              {" "}Phiên bản tài liệu:{" "}
-              <code>{evaluationReport.document_version_id}</code>
-            </p>
-            {evaluationReport.pending_verification_questions.length > 0 && (
-              <details className="notice notice-info">
-                <summary>
-                  Câu hỏi đang chờ xác minh (
-                  {evaluationReport.pending_verification_questions.length})
-                </summary>
-                <ul>
-                  {evaluationReport.pending_verification_questions.map(
-                    (question) => (
-                      <li key={question.id}>
-                        <strong>{question.id}</strong>: {question.question}
-                        {" — "}
-                        {question.reason}
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </details>
-            )}
-            {evaluationReport.errors.map((error) => (
-              <div className="notice notice-warning" key={error}>
-                {error}
-              </div>
-            ))}
-          </>
-        )}
-      </section>
+      <BenchmarkReport />
     </div>
   );
 }

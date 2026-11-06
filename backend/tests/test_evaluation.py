@@ -13,6 +13,15 @@ def test_dataset_has_50_unverified_questions():
     dataset = evaluation.load_dataset()
 
     assert len(dataset) == 50
+    assert sum(bool(item.get("candidate_sources")) for item in dataset) == 10
+    assert sum(
+        item["preliminary_match_status"] == "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS"
+        for item in dataset
+    ) == 35
+    assert sum(
+        item["preliminary_match_status"] == "OUT_OF_SCOPE_REFUSAL"
+        for item in dataset
+    ) == 5
     assert all(
         "Question has not completed legal-officer review."
         in evaluation._pending_reason(question)
@@ -45,9 +54,74 @@ def test_unverified_dataset_blocks_rag_and_writes_pending_report(
     assert report["dataset_question_count"] == 50
     assert report["verified_question_count"] == 0
     assert report["metrics"]["scored_questions"] == 0
+    assert document_version_id not in evaluation._claimed_document_versions
     assert [item["id"] for item in report["pending_verification_questions"]] == [
         f"EVAL{number:03d}" for number in range(1, 51)
     ]
+    candidate_question = next(
+        item for item in report["pending_verification_questions"]
+        if item["id"] == "EVAL028"
+    )
+    assert candidate_question["preliminary_match_status"] == (
+        "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW"
+    )
+    assert candidate_question["candidate_sources"][0]["ma_doan_candidate"] == (
+        "D_B195037637"
+    )
+
+
+def test_preliminary_evaluation_runs_unverified_questions_without_official_scores(
+    monkeypatch, tmp_path
+):
+    async def retrieve(_question):
+        return {
+            "qualified": True,
+            "best_score": 0.82,
+            "threshold": 0.7,
+            "total_active_vectors": 12,
+            "chunks": [{"ma_doan": "D1", "noi_dung": "Source text"}],
+        }
+
+    async def generate_answer(**_kwargs):
+        return "Generated answer"
+
+    monkeypatch.setattr(evaluation, "REPORT_DIR", tmp_path)
+    monkeypatch.setattr(evaluation, "write_audit_log", lambda **_kwargs: None)
+    monkeypatch.setattr(evaluation, "retrieve_evidence", retrieve)
+    monkeypatch.setattr(evaluation.chat, "generate_answer", generate_answer)
+    monkeypatch.setattr(
+        evaluation.chat,
+        "build_citations",
+        lambda _chunks: [{"ma_doan": "D1"}],
+    )
+    document_version_id = "PB_PRELIMINARY_TEST"
+    evaluation._claimed_document_versions.discard(document_version_id)
+
+    asyncio.run(
+        evaluation.run_evaluation_for_document(
+            document_version_id,
+            preliminary=True,
+        )
+    )
+
+    report = json.loads(
+        (tmp_path / "evaluation_latest.json").read_text(encoding="utf-8")
+    )
+    assert report["status"] == "Preliminary"
+    assert report["official"] is False
+    assert report["verified_question_count"] == 0
+    assert report["metrics"]["scored_questions"] == 0
+    assert report["preliminary_metrics"] == {
+        "questions_attempted": 50,
+        "questions_completed": 50,
+        "qualified_retrievals": 50,
+        "retrieval_coverage": 1.0,
+        "generated_answers": 50,
+        "refusals": 0,
+        "failed_questions": 0,
+    }
+    assert report["question_results"][0]["generated_answer"] == "Generated answer"
+    assert report["question_results"][0]["scores"] is None
 
 
 def test_question_failure_is_recorded_without_raising(monkeypatch):
@@ -147,13 +221,94 @@ def test_latest_report_endpoint_returns_saved_json(monkeypatch, tmp_path):
     assert response.json() == expected_report
 
 
+def test_admin_can_schedule_evaluation_for_latest_active_version(monkeypatch):
+    class Cursor:
+        def execute(self, query, *params):
+            self.query = query
+            self.params = params
+
+        def fetchone(self):
+            return ("PB_ACTIVE",)
+
+    class Connection:
+        closed = False
+
+        def cursor(self):
+            return Cursor()
+
+        def close(self):
+            self.closed = True
+
+    connection = Connection()
+    scheduled = []
+    monkeypatch.setattr(
+        evaluation, "get_business_db_connection", lambda: connection
+    )
+    monkeypatch.setattr(
+        evaluation,
+        "run_evaluation_for_document",
+        lambda version_id, **kwargs: scheduled.append((version_id, kwargs)),
+    )
+    app.dependency_overrides[get_current_user] = lambda: AuthenticatedUser(
+        ma_nd="ADMIN",
+        vai_tro="QuanTriVien",
+    )
+    try:
+        with TestClient(app) as client:
+            response = client.post("/api/v1/evaluation/run-latest")
+    finally:
+        app.dependency_overrides.pop(get_current_user, None)
+
+    assert response.status_code == 202
+    assert response.json()["document_version_id"] == "PB_ACTIVE"
+    assert connection.closed
+    assert scheduled == [("PB_ACTIVE", {"preliminary": True})]
+
+
+def test_run_latest_evaluation_returns_not_found_without_active_version(
+    monkeypatch,
+):
+    class Cursor:
+        def execute(self, _query):
+            pass
+
+        def fetchone(self):
+            return None
+
+    class Connection:
+        def cursor(self):
+            return Cursor()
+
+        def close(self):
+            pass
+
+    monkeypatch.setattr(
+        evaluation, "get_business_db_connection", Connection
+    )
+    app.dependency_overrides[get_current_user] = lambda: AuthenticatedUser(
+        ma_nd="ADMIN",
+        vai_tro="QuanTriVien",
+    )
+    try:
+        with TestClient(app) as client:
+            response = client.post("/api/v1/evaluation/run-latest")
+    finally:
+        app.dependency_overrides.pop(get_current_user, None)
+
+    assert response.status_code == 404
+
+
 def test_approval_schedules_evaluation_after_commit(monkeypatch):
     class Cursor:
         rowcount = 1
 
+        def __init__(self):
+            self.statements = []
+
         def execute(self, query, *params):
             self.query = query
             self.params = params
+            self.statements.append((query, params))
             return self
 
     class Connection:
@@ -191,7 +346,7 @@ def test_approval_schedules_evaluation_after_commit(monkeypatch):
             "PB_APPROVED_TEST",
             background_tasks,
             AuthenticatedUser(
-                ma_nd="REVIEWER",
+                ma_nd="UPLOADER",
                 vai_tro="ChuyenVienPhapChe",
             ),
         )
@@ -201,7 +356,9 @@ def test_approval_schedules_evaluation_after_commit(monkeypatch):
     assert response["evaluation_status"] == "Pending"
     assert connection.committed
     assert connection.closed
-    assert "AND MaND <> ?" in cursor.query
-    assert cursor.params == (("PB_APPROVED_TEST", "REVIEWER"),)
+    assert "MaND <>" not in cursor.query
+    assert cursor.params == (("PB_APPROVED_TEST",),)
+    assert "SET TrangThai = 'Expired'" in cursor.statements[0][0]
+    assert "SET TrangThai = 'Approved'" in cursor.statements[1][0]
     assert len(background_tasks.tasks) == 1
     assert background_tasks.tasks[0].args == ("PB_APPROVED_TEST",)

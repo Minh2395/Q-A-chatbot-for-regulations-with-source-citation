@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, status
 
 from app.api.v1 import chat
 from app.core.database import get_business_db_connection
@@ -22,7 +22,7 @@ router = APIRouter(prefix="/evaluation", tags=["Evaluation"])
 logger = logging.getLogger("AIK01.Evaluation")
 
 BACKEND_DIR = Path(__file__).resolve().parents[3]
-DATASET_FILE = BACKEND_DIR / "data" / "evaluation_dataset.json"
+DATASET_FILE = BACKEND_DIR / "data" / "evaluation_dataset_preliminary_matched.json"
 REPORT_DIR = BACKEND_DIR / "reports"
 MINIMUM_QUESTION_COUNT = 50
 VALID_STATUSES = {"ThanhCong", "TuChoi"}
@@ -280,6 +280,86 @@ async def _run_question(question: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
+async def _run_preliminary_question(question: dict[str, Any]) -> dict[str, Any]:
+    result: dict[str, Any] = {
+        "id": question["id"],
+        "question": question["question"],
+        "status": "Running",
+        "preliminary_match_status": question.get("preliminary_match_status"),
+        "preliminary_note": question.get("preliminary_note"),
+        "candidate_sources": question.get("candidate_sources", []),
+        "retrieval_diagnostics_not_verified": question.get(
+            "retrieval_diagnostics_not_verified", []
+        ),
+        "retrieval": None,
+        "response_status": None,
+        "generated_answer": None,
+        "retrieved_sources": [],
+        "scores": None,
+        "error": None,
+    }
+    try:
+        retrieval = await retrieve_evidence(question["question"])
+        chunks = retrieval.get("chunks") or []
+        if not retrieval.get("qualified") or not chunks:
+            answer = chat.REFUSAL_MESSAGE
+            response_status = "TuChoi"
+            citations: list[dict[str, Any]] = []
+        else:
+            answer = await chat.generate_answer(
+                question=question["question"],
+                evidence_chunks=chunks,
+            )
+            response_status = "ThanhCong"
+            citations = chat.build_citations(chunks)
+        result.update({
+            "status": "Completed",
+            "retrieval": {
+                "qualified": bool(retrieval.get("qualified")),
+                "best_score": retrieval.get("best_score", 0.0),
+                "threshold": retrieval.get("threshold"),
+                "total_active_vectors": retrieval.get("total_active_vectors", 0),
+            },
+            "response_status": response_status,
+            "generated_answer": answer,
+            "retrieved_sources": citations,
+        })
+    except Exception as error:
+        logger.exception("Preliminary evaluation question %s failed", question["id"])
+        result.update({
+            "status": "Failed",
+            "error": f"{type(error).__name__}: {error}",
+        })
+    return result
+
+
+def _aggregate_preliminary_metrics(
+    results: list[dict[str, Any]],
+) -> dict[str, Any]:
+    completed = [item for item in results if item["status"] == "Completed"]
+    qualified = [
+        item for item in completed
+        if item.get("retrieval", {}).get("qualified")
+    ]
+    return {
+        "questions_attempted": len(results),
+        "questions_completed": len(completed),
+        "qualified_retrievals": len(qualified),
+        "retrieval_coverage": (
+            round(len(qualified) / len(completed), 4) if completed else None
+        ),
+        "generated_answers": sum(
+            item.get("response_status") == "ThanhCong" for item in completed
+        ),
+        "refusals": sum(
+            item.get("response_status") == "TuChoi" for item in completed
+        ),
+        "failed_questions": sum(
+            item["status"] == "Failed" for item in results
+        ),
+    }
+
+
 def _aggregate_metrics(results: list[dict[str, Any]]) -> dict[str, Any]:
     processed = [
         item for item in results
@@ -453,7 +533,10 @@ def _write_report(report: dict[str, Any], document_version_id: str) -> None:
                 os.unlink(temporary_path)
 
 
-async def run_evaluation_for_document(document_version_id: str) -> None:
+async def run_evaluation_for_document(
+    document_version_id: str,
+    preliminary: bool = False,
+) -> None:
     """Run after approval; unverified benchmarks produce a Pending report."""
     with _claim_lock:
         if document_version_id in _claimed_document_versions:
@@ -476,6 +559,7 @@ async def run_evaluation_for_document(document_version_id: str) -> None:
         "failed_questions": [],
         "question_results": [],
         "metrics": None,
+        "preliminary_metrics": None,
         "database_persistence": {"status": "not_attempted"},
         "errors": [],
     }
@@ -520,34 +604,102 @@ async def run_evaluation_for_document(document_version_id: str) -> None:
                     "reason": reason,
                     "review_status": question.get("review_status"),
                     "review_note": question.get("review_note"),
+                    "preliminary_match_status": question.get(
+                        "preliminary_match_status"
+                    ),
+                    "preliminary_note": question.get("preliminary_note"),
+                    "candidate_sources": question.get("candidate_sources", []),
+                    "retrieval_diagnostics_not_verified": question.get(
+                        "retrieval_diagnostics_not_verified", []
+                    ),
                     "missing_reference_fields": missing_fields,
                 })
 
         report["pending_verification_questions"] = pending
         report["verified_question_count"] = len(verified)
         if pending:
-            report["status"] = "Pending"
-            report["question_results"] = pending
             report["metrics"] = {
                 "accuracy": None,
                 "faithfulness": None,
                 "citation_correctness": None,
                 "scored_questions": 0,
             }
-            report["errors"].append(
-                "Official scoring is blocked until every question has a "
-                "legally reviewed reference and active approved source."
-            )
-            write_audit_log(
-                event="MODEL_EVALUATION_BLOCKED",
-                trace_id=trace_id,
-                ma_phien=document_version_id,
-                status="Pending",
-                details={
-                    "pending_question_count": len(pending),
-                    "dataset_question_count": len(dataset),
-                },
-            )
+            if preliminary:
+                question_results = [
+                    {
+                        "id": question["id"],
+                        "question": question["question"],
+                        "status": "Running",
+                        "preliminary_match_status": question.get(
+                            "preliminary_match_status"
+                        ),
+                        "preliminary_note": question.get("preliminary_note"),
+                        "candidate_sources": question.get("candidate_sources", []),
+                        "retrieval_diagnostics_not_verified": question.get(
+                            "retrieval_diagnostics_not_verified", []
+                        ),
+                        "retrieval": None,
+                        "response_status": None,
+                        "generated_answer": None,
+                        "retrieved_sources": [],
+                        "scores": None,
+                        "error": None,
+                    }
+                    for question in dataset
+                ]
+                report["status"] = "Running"
+                report["preliminary_metrics"] = _aggregate_preliminary_metrics(
+                    question_results
+                )
+                report["question_results"] = question_results
+                _write_report(report, document_version_id)
+                for index, question in enumerate(dataset):
+                    question_results[index] = await _run_preliminary_question(
+                        question
+                    )
+                    report["question_results"] = question_results
+                    report["failed_questions"] = [
+                        {
+                            "id": item["id"],
+                            "question": item["question"],
+                            "error": item["error"],
+                        }
+                        for item in question_results
+                        if item["status"] == "Failed"
+                    ]
+                    report["preliminary_metrics"] = (
+                        _aggregate_preliminary_metrics(question_results)
+                    )
+                    _write_report(report, document_version_id)
+                report["status"] = "Preliminary"
+                report["errors"].append(
+                    "This is an unscored preliminary run. Official metrics "
+                    "require legally verified answers and source references."
+                )
+                write_audit_log(
+                    event="MODEL_EVALUATION_PRELIMINARY_COMPLETED",
+                    trace_id=trace_id,
+                    ma_phien=document_version_id,
+                    status="Preliminary",
+                    details=report["preliminary_metrics"],
+                )
+            else:
+                report["status"] = "Pending"
+                report["question_results"] = pending
+                report["errors"].append(
+                    "Official scoring is blocked until every question has a "
+                    "legally reviewed reference and active approved source."
+                )
+                write_audit_log(
+                    event="MODEL_EVALUATION_BLOCKED",
+                    trace_id=trace_id,
+                    ma_phien=document_version_id,
+                    status="Pending",
+                    details={
+                        "pending_question_count": len(pending),
+                        "dataset_question_count": len(dataset),
+                    },
+                )
         else:
             question_results = [
                 {
@@ -637,6 +789,8 @@ async def run_evaluation_for_document(document_version_id: str) -> None:
             logger.exception(
                 "Could not write evaluation report for %s", document_version_id
             )
+        with _claim_lock:
+            _claimed_document_versions.discard(document_version_id)
 
 
 @router.get("/latest")
@@ -660,3 +814,55 @@ def get_latest_evaluation_report(
             status_code=500,
             detail="The latest evaluation report is invalid.",
         ) from error
+
+
+@router.post("/run-latest", status_code=status.HTTP_202_ACCEPTED)
+def run_evaluation_for_latest_active_document(
+    background_tasks: BackgroundTasks,
+    _current_user: AuthenticatedUser = Depends(
+        require_roles("QuanTriVien")
+    ),
+) -> dict[str, str]:
+    conn = None
+    try:
+        conn = get_business_db_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT TOP (1) MaPhienBan
+            FROM dbo.PHIEN_BAN_TAI_LIEU
+            WHERE TrangThai = 'Approved'
+              AND is_active = 1
+            ORDER BY NgayHieuLuc DESC, MaPhienBan DESC
+            """
+        )
+        row = cursor.fetchone()
+        if not row:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Chưa có phiên bản tài liệu Approved đang hoạt động.",
+            )
+
+        document_version_id = str(row[0])
+    except HTTPException:
+        raise
+    except Exception as error:
+        logger.exception("Could not find an active document for evaluation.")
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Không thể tìm phiên bản tài liệu để đánh giá.",
+        ) from error
+    finally:
+        if conn:
+            conn.close()
+
+    background_tasks.add_task(
+        run_evaluation_for_document,
+        document_version_id,
+        preliminary=True,
+    )
+    return {
+        "message": "Đã đưa đánh giá hiệu năng vào hàng đợi.",
+        "document_version_id": document_version_id,
+        "status": "Pending",
+    }

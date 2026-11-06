@@ -112,6 +112,24 @@ export interface EvaluationPendingQuestion {
   question: string;
   status: string;
   reason: string;
+  review_status?: string | null;
+  review_note?: string | null;
+  preliminary_match_status?: string | null;
+  preliminary_note?: string | null;
+  candidate_sources?: Array<{
+    ma_doan_candidate?: string;
+    article_candidate?: string;
+    article_title_candidate?: string;
+    ma_phien_ban?: string;
+    document_id?: string;
+    version?: string;
+  }>;
+  retrieval_diagnostics_not_verified?: Array<{
+    ma_doan?: string;
+    similarity_score?: number;
+    dieu_khoan?: string;
+  }>;
+  missing_reference_fields?: string[];
 }
 
 export interface EvaluationReport {
@@ -119,7 +137,7 @@ export interface EvaluationReport {
   document_version_id: string;
   started_at: string;
   completed_at: string | null;
-  status: "Pending" | "Running" | "Completed" | "Failed";
+  status: "Pending" | "Running" | "Completed" | "Preliminary" | "Failed";
   official: boolean;
   dataset_question_count: number;
   verified_question_count: number;
@@ -132,8 +150,38 @@ export interface EvaluationReport {
     correct_refusal_rate?: number | null;
     scored_questions: number;
   } | null;
+  preliminary_metrics?: {
+    questions_attempted: number;
+    questions_completed: number;
+    qualified_retrievals: number;
+    retrieval_coverage: number | null;
+    generated_answers: number;
+    refusals: number;
+    failed_questions: number;
+  } | null;
+  question_results?: Array<{
+    id: string;
+    question: string;
+    status: string;
+    response_status?: string | null;
+    generated_answer?: string | null;
+    retrieved_sources?: Citation[];
+    retrieval?: {
+      qualified: boolean;
+      best_score: number;
+      threshold: number | null;
+      total_active_vectors: number;
+    } | null;
+    error?: string | null;
+  }>;
   database_persistence: { status: string; reason?: string; ma_ket_qua?: string };
   errors: string[];
+}
+
+export interface EvaluationRunResponse {
+  message: string;
+  document_version_id: string;
+  status: string;
 }
 
 export interface AdminUser {
@@ -340,4 +388,11 @@ export const getLatestEvaluationReport =
       if (isAxiosError(error) && error.response?.status === 404) return null;
       throw error;
     }
+};
+
+export const runLatestEvaluation = async (): Promise<EvaluationRunResponse> => {
+  const response = await apiClient.post<EvaluationRunResponse>(
+    `${API_BASE_URL}/evaluation/run-latest`,
+  );
+  return response.data;
 };
