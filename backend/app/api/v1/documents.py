@@ -195,6 +195,7 @@ def list_document_versions(
         "Draft",
         "Approved",
         "Rejected",
+        "Expired",
     }:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -549,8 +550,7 @@ async def approve_document_version(
     """
     Phê duyệt phiên bản tài liệu.
 
-    Trigger trg_AutoDeactivateOldVersions chịu trách nhiệm
-    xử lý các phiên bản cũ theo cấu hình SQL Server.
+    Phiên bản Approved đang hoạt động trước đó sẽ hết hiệu lực cùng giao dịch.
     """
 
     conn = None
@@ -561,15 +561,30 @@ async def approve_document_version(
 
         cursor.execute(
             """
-            UPDATE PHIEN_BAN_TAI_LIEU
+            UPDATE dbo.PHIEN_BAN_TAI_LIEU
+            SET TrangThai = 'Expired',
+                is_active = 0
+            WHERE MaTaiLieu = (
+                SELECT MaTaiLieu
+                FROM dbo.PHIEN_BAN_TAI_LIEU
+                WHERE MaPhienBan = ?
+            )
+              AND MaPhienBan <> ?
+              AND TrangThai = 'Approved'
+            """,
+            (ma_phien_ban, ma_phien_ban),
+        )
+
+        cursor.execute(
+            """
+            UPDATE dbo.PHIEN_BAN_TAI_LIEU
             SET TrangThai = 'Approved',
                 is_active = 1,
                 NgayHieuLuc = GETDATE()
             WHERE MaPhienBan = ?
               AND TrangThai = 'Draft'
-              AND MaND <> ?
             """,
-            (ma_phien_ban, current_user.ma_nd),
+            (ma_phien_ban,),
         )
 
         if cursor.rowcount == 0:

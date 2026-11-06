@@ -1,29 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
 import {
-  approveDocumentVersion,
   createDocumentCatalogItem,
   getApiErrorMessage,
   getDocumentCatalog,
-  getDocumentVersionChunks,
-  getDocumentVersions,
   uploadDocument,
 } from "../../services/api";
-import type {
-  DocumentCatalogItem,
-  DocumentChunkItem,
-  DocumentVersionItem,
-} from "../../services/api";
+import type { DocumentCatalogItem } from "../../services/api";
+import VersionManager from "./VersionManager";
 
 interface DocumentUploadProps {
   maNd: string;
+  refreshKey: number;
   onSuccess?: () => void;
-}
-
-interface ChunkPreview {
-  chunks: DocumentChunkItem[];
-  error: string;
-  loading: boolean;
 }
 
 function getFileExtension(filename: string): string {
@@ -32,25 +21,21 @@ function getFileExtension(filename: string): string {
 
 export default function DocumentUpload({
   maNd,
+  refreshKey,
   onSuccess,
 }: DocumentUploadProps) {
   const [file, setFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [catalog, setCatalog] = useState<DocumentCatalogItem[]>([]);
-  const [versions, setVersions] = useState<DocumentVersionItem[]>([]);
   const [selectedDocumentId, setSelectedDocumentId] = useState("");
   const [versionNumber, setVersionNumber] = useState("v1.0");
   const [uploading, setUploading] = useState(false);
-  const [approvingId, setApprovingId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [creatingCatalogItem, setCreatingCatalogItem] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newType, setNewType] = useState("LUAT");
   const [newField, setNewField] = useState("");
   const [newIssuer, setNewIssuer] = useState("");
-  const [chunkPreviews, setChunkPreviews] = useState<
-    Record<string, ChunkPreview>
-  >({});
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -58,12 +43,8 @@ export default function DocumentUpload({
     setLoading(true);
     setError("");
     try {
-      const [documents, documentVersions] = await Promise.all([
-        getDocumentCatalog(),
-        getDocumentVersions(),
-      ]);
+      const documents = await getDocumentCatalog();
       setCatalog(documents);
-      setVersions(documentVersions);
       setSelectedDocumentId((current) =>
         documents.some((document) => document.ma_tai_lieu === current)
           ? current
@@ -79,7 +60,10 @@ export default function DocumentUpload({
   }, []);
 
   useEffect(() => {
-    void refreshData();
+    const timer = window.setTimeout(() => {
+      void refreshData();
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [refreshData]);
 
   const handleCreateCatalogItem = async (
@@ -117,7 +101,7 @@ export default function DocumentUpload({
 
   const handleUpload = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!file || uploading || approvingId) return;
+    if (!file || uploading) return;
 
     const extension = getFileExtension(file.name);
     if (!["pdf", "docx", "html", "htm"].includes(extension)) {
@@ -153,66 +137,6 @@ export default function DocumentUpload({
       );
     } finally {
       setUploading(false);
-    }
-  };
-
-  const handleApprove = async (version: DocumentVersionItem) => {
-    if (approvingId) return;
-    const confirmed = window.confirm(
-      `Xác nhận đã rà soát các đoạn trích và phê duyệt phiên bản ${version.ma_phien_ban}?`,
-    );
-    if (!confirmed) return;
-
-    setApprovingId(version.ma_phien_ban);
-    setError("");
-    setSuccessMessage("");
-    try {
-      const result = await approveDocumentVersion(version.ma_phien_ban);
-      setSuccessMessage(
-        result.message || "Đã phê duyệt tài liệu và kích hoạt phiên bản.",
-      );
-      await refreshData();
-    } catch (approvalError: unknown) {
-      setError(
-        getApiErrorMessage(approvalError, "Không thể phê duyệt tài liệu."),
-      );
-    } finally {
-      setApprovingId(null);
-    }
-  };
-
-  const toggleChunkPreview = async (versionId: string) => {
-    if (chunkPreviews[versionId]) {
-      setChunkPreviews((previous) => {
-        const next = { ...previous };
-        delete next[versionId];
-        return next;
-      });
-      return;
-    }
-
-    setChunkPreviews((previous) => ({
-      ...previous,
-      [versionId]: { chunks: [], error: "", loading: true },
-    }));
-    try {
-      const chunks = await getDocumentVersionChunks(versionId);
-      setChunkPreviews((previous) => ({
-        ...previous,
-        [versionId]: { chunks, error: "", loading: false },
-      }));
-    } catch (previewError: unknown) {
-      setChunkPreviews((previous) => ({
-        ...previous,
-        [versionId]: {
-          chunks: [],
-          error: getApiErrorMessage(
-            previewError,
-            "Không thể tải nội dung đã trích xuất.",
-          ),
-          loading: false,
-        },
-      }));
     }
   };
 
@@ -304,7 +228,7 @@ export default function DocumentUpload({
               value={selectedDocumentId}
               onChange={(event) => setSelectedDocumentId(event.target.value)}
               required
-              disabled={loading || uploading || Boolean(approvingId)}
+              disabled={loading || uploading}
             >
               <option value="">-- Chọn tài liệu --</option>
               {catalog.map((document) => (
@@ -336,7 +260,7 @@ export default function DocumentUpload({
                 maxLength={50}
                 placeholder="v1.0"
                 required
-                disabled={uploading || Boolean(approvingId)}
+                disabled={uploading}
               />
             </label>
             <label className="file-picker">
@@ -346,7 +270,7 @@ export default function DocumentUpload({
                 type="file"
                 accept=".pdf,.docx,.html,.htm,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/html"
                 onChange={(event) => setFile(event.target.files?.[0] ?? null)}
-                disabled={uploading || Boolean(approvingId)}
+                disabled={uploading}
                 required
               />
               <span className="field-hint">
@@ -358,7 +282,7 @@ export default function DocumentUpload({
           <button
             className="primary-button"
             type="submit"
-            disabled={!file || !selectedDocumentId || uploading || Boolean(approvingId)}
+            disabled={!file || !selectedDocumentId || uploading}
           >
             {uploading ? "Đang tải lên và xử lý…" : "Tải lên và xử lý"}
           </button>
@@ -375,115 +299,7 @@ export default function DocumentUpload({
         )}
       </section>
 
-      <section className="surface-card">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">THEO DÕI VÀ RÀ SOÁT</p>
-            <h2>Phiên bản tài liệu</h2>
-          </div>
-          <button
-            type="button"
-            className="secondary-button"
-            onClick={() => void refreshData()}
-            disabled={loading || uploading || Boolean(approvingId)}
-          >
-            {loading ? "Đang tải…" : "Làm mới"}
-          </button>
-        </div>
-
-        {versions.length === 0 && !loading && (
-          <p className="muted">Chưa có phiên bản tài liệu nào.</p>
-        )}
-
-        {versions.map((version) => {
-          const preview = chunkPreviews[version.ma_phien_ban];
-          const canApprove =
-            version.trang_thai === "Draft" &&
-            Boolean(version.ma_nguoi_tai) &&
-            version.ma_nguoi_tai !== maNd;
-
-          return (
-            <article className="review-card" key={version.ma_phien_ban}>
-              <div className="section-heading">
-                <div>
-                  <p className="eyebrow">{version.tieu_de}</p>
-                  <h3>{version.so_phien_ban} · {version.ma_phien_ban}</h3>
-                </div>
-                <span
-                  className={`status-pill ${version.trang_thai === "Approved" ? "status-approved" : "status-draft"}`}
-                >
-                  {version.trang_thai || "Không rõ trạng thái"}
-                </span>
-              </div>
-              <dl className="document-details">
-                <div><dt>Mã tài liệu</dt><dd>{version.ma_tai_lieu}</dd></div>
-                <div>
-                  <dt>Người tải lên</dt>
-                  <dd>{version.ten_dang_nhap_nguoi_tai || version.ma_nguoi_tai || "Không rõ"}</dd>
-                </div>
-                <div><dt>Tệp gốc</dt><dd>{version.duong_dan_file || "Không có tên tệp"}</dd></div>
-                <div><dt>Đang kích hoạt</dt><dd>{version.is_active ? "Có" : "Không"}</dd></div>
-              </dl>
-
-              <div className="document-actions">
-                <button
-                  type="button"
-                  className="secondary-button"
-                  onClick={() => void toggleChunkPreview(version.ma_phien_ban)}
-                >
-                  {preview ? "Ẩn nội dung đã trích xuất" : "Xem nội dung đã trích xuất"}
-                </button>
-                {canApprove && (
-                  <button
-                    type="button"
-                    onClick={() => void handleApprove(version)}
-                    disabled={uploading || Boolean(approvingId)}
-                    className="approve-button"
-                  >
-                    {approvingId === version.ma_phien_ban
-                      ? "Đang phê duyệt…"
-                      : "Rà soát và phê duyệt"}
-                  </button>
-                )}
-              </div>
-
-              {version.trang_thai === "Draft" &&
-                version.ma_nguoi_tai === maNd && (
-                  <p className="field-hint">
-                    Người tải lên không thể tự phê duyệt phiên bản này. Cần một
-                    chuyên viên pháp chế khác rà soát.
-                  </p>
-                )}
-
-              {preview && (
-                <div className="chunk-preview">
-                  {preview.loading && <p className="muted">Đang tải nội dung…</p>}
-                  {preview.error && (
-                    <div className="notice notice-error" role="alert">
-                      {preview.error}
-                    </div>
-                  )}
-                  {!preview.loading && !preview.error && preview.chunks.length === 0 && (
-                    <p className="muted">Phiên bản chưa có đoạn văn bản được trích xuất.</p>
-                  )}
-                  {preview.chunks.map((chunk) => (
-                    <section className="chunk-card" key={chunk.ma_doan}>
-                      <div>
-                        <strong>Đoạn {chunk.thu_tu ?? "—"}</strong>
-                        <span>{chunk.dieu_khoan || "Không xác định điều khoản"}</span>
-                        {chunk.so_trang !== null && (
-                          <span>Trang {chunk.so_trang}</span>
-                        )}
-                      </div>
-                      <p>{chunk.noi_dung}</p>
-                    </section>
-                  ))}
-                </div>
-              )}
-            </article>
-          );
-        })}
-      </section>
+      <VersionManager refreshKey={refreshKey} />
     </div>
   );
 }

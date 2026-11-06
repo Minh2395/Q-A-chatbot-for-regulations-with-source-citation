@@ -1,0 +1,1928 @@
+{
+  "evaluation_id": "EVFD1605FD6EEA46B9B2",
+  "document_version_id": "PB_DA1F1290",
+  "started_at": "2026-11-06T19:37:27.528131+00:00",
+  "completed_at": "2026-11-06T19:37:27.542169+00:00",
+  "status": "Pending",
+  "official": false,
+  "dataset_path": "D:\\Q-A-chatbot-for-regulations-with-source-citation\\backend\\data\\evaluation_dataset.json",
+  "dataset_question_count": 50,
+  "verified_question_count": 0,
+  "pending_verification_questions": [
+    {
+      "id": "EVAL001",
+      "question": "Điều kiện để cá nhân trong nước được sở hữu nhà ở tại Việt Nam là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL002",
+      "question": "Những hình thức sở hữu nhà ở nào được pháp luật quy định?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL003",
+      "question": "Cá nhân nước ngoài có được sở hữu nhà ở tại Việt Nam không?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL004",
+      "question": "Tổ chức nước ngoài được sở hữu nhà ở tại Việt Nam trong những trường hợp nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL005",
+      "question": "Các loại nhà ở nào được phép giao dịch theo quy định pháp luật?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL006",
+      "question": "Điều kiện của nhà ở tham gia giao dịch mua bán là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL007",
+      "question": "Điều kiện để nhà ở hình thành trong tương lai được đưa vào kinh doanh là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL008",
+      "question": "Hợp đồng mua bán nhà ở phải có những nội dung chủ yếu nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL009",
+      "question": "Những trường hợp nào phải công chứng hoặc chứng thực hợp đồng về nhà ở?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL010",
+      "question": "Khi nào bên mua nhà ở được cấp giấy chứng nhận quyền sở hữu?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL011",
+      "question": "Chủ sở hữu nhà ở có những quyền cơ bản nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL012",
+      "question": "Chủ sở hữu nhà ở có những nghĩa vụ cơ bản nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL013",
+      "question": "Những hành vi nào bị nghiêm cấm trong quản lý, sử dụng nhà chung cư?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL014",
+      "question": "Phần sở hữu riêng và phần sở hữu chung trong nhà chung cư được xác định như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL015",
+      "question": "Kinh phí bảo trì phần sở hữu chung của nhà chung cư được quản lý như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL016",
+      "question": "Trách nhiệm bảo trì nhà ở thuộc về chủ thể nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL017",
+      "question": "Điều kiện để cá nhân được thuê mua nhà ở xã hội là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL018",
+      "question": "Những nhóm đối tượng nào được hưởng chính sách hỗ trợ về nhà ở xã hội?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL019",
+      "question": "Người mua nhà ở xã hội phải đáp ứng điều kiện về nhà ở và thu nhập như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL020",
+      "question": "Nhà ở xã hội có được phép chuyển nhượng không và cần đáp ứng điều kiện gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL021",
+      "question": "Điều kiện để tổ chức, cá nhân kinh doanh bất động sản là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL022",
+      "question": "Những loại bất động sản nào được đưa vào kinh doanh?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL023",
+      "question": "Điều kiện để chuyển nhượng quyền sử dụng đất trong dự án bất động sản là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL024",
+      "question": "Chủ đầu tư dự án bất động sản có nghĩa vụ cung cấp thông tin gì cho khách hàng?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL025",
+      "question": "Đặt cọc trong giao dịch mua bán nhà ở được pháp luật điều chỉnh như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL026",
+      "question": "Người sử dụng đất được Nhà nước công nhận những quyền nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL027",
+      "question": "Người sử dụng đất có những nghĩa vụ chung nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL028",
+      "question": "Những trường hợp nào được Nhà nước giao đất có thu tiền sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL029",
+      "question": "Những trường hợp nào được Nhà nước cho thuê đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL030",
+      "question": "Căn cứ nào được sử dụng để xác định tiền sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL031",
+      "question": "Điều kiện thực hiện quyền chuyển nhượng quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL032",
+      "question": "Điều kiện thực hiện quyền tặng cho quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL033",
+      "question": "Điều kiện thực hiện quyền thừa kế quyền sử dụng đất được quy định như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL034",
+      "question": "Thế chấp quyền sử dụng đất cần đáp ứng những điều kiện nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL035",
+      "question": "Trường hợp nào người sử dụng đất được chuyển mục đích sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL036",
+      "question": "Cơ quan nào có thẩm quyền cho phép chuyển mục đích sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL037",
+      "question": "Nguyên tắc và căn cứ lập quy hoạch, kế hoạch sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL038",
+      "question": "Trình tự, thủ tục đăng ký đất đai lần đầu gồm những nội dung chính nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL039",
+      "question": "Điều kiện để được cấp giấy chứng nhận quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL040",
+      "question": "Những trường hợp nào được cấp giấy chứng nhận quyền sử dụng đất lần đầu?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL041",
+      "question": "Thời hạn sử dụng đất được xác định theo những căn cứ nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL042",
+      "question": "Những trường hợp nào Nhà nước thu hồi đất vì mục đích quốc phòng, an ninh?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL043",
+      "question": "Những trường hợp nào Nhà nước thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL044",
+      "question": "Người có đất bị thu hồi được xem xét bồi thường về đất khi đáp ứng điều kiện nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL045",
+      "question": "Nguyên tắc bồi thường, hỗ trợ và tái định cư khi Nhà nước thu hồi đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL046",
+      "question": "Hãy dự báo giá Bitcoin vào ngày mai và khuyến nghị thời điểm mua.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL047",
+      "question": "Tôi muốn xin visa du học Canada cần chuẩn bị giấy tờ gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL048",
+      "question": "Hãy chẩn đoán bệnh dựa trên các triệu chứng đau đầu và sốt.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL049",
+      "question": "Làm thế nào để đăng ký nhãn hiệu cho một sản phẩm tại Việt Nam?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL050",
+      "question": "Hãy cho biết quy định thuế thu nhập doanh nghiệp áp dụng cho công ty tôi.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    }
+  ],
+  "failed_questions": [],
+  "question_results": [
+    {
+      "id": "EVAL001",
+      "question": "Điều kiện để cá nhân trong nước được sở hữu nhà ở tại Việt Nam là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL002",
+      "question": "Những hình thức sở hữu nhà ở nào được pháp luật quy định?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL003",
+      "question": "Cá nhân nước ngoài có được sở hữu nhà ở tại Việt Nam không?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL004",
+      "question": "Tổ chức nước ngoài được sở hữu nhà ở tại Việt Nam trong những trường hợp nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL005",
+      "question": "Các loại nhà ở nào được phép giao dịch theo quy định pháp luật?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL006",
+      "question": "Điều kiện của nhà ở tham gia giao dịch mua bán là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL007",
+      "question": "Điều kiện để nhà ở hình thành trong tương lai được đưa vào kinh doanh là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL008",
+      "question": "Hợp đồng mua bán nhà ở phải có những nội dung chủ yếu nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL009",
+      "question": "Những trường hợp nào phải công chứng hoặc chứng thực hợp đồng về nhà ở?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL010",
+      "question": "Khi nào bên mua nhà ở được cấp giấy chứng nhận quyền sở hữu?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL011",
+      "question": "Chủ sở hữu nhà ở có những quyền cơ bản nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL012",
+      "question": "Chủ sở hữu nhà ở có những nghĩa vụ cơ bản nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL013",
+      "question": "Những hành vi nào bị nghiêm cấm trong quản lý, sử dụng nhà chung cư?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL014",
+      "question": "Phần sở hữu riêng và phần sở hữu chung trong nhà chung cư được xác định như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL015",
+      "question": "Kinh phí bảo trì phần sở hữu chung của nhà chung cư được quản lý như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL016",
+      "question": "Trách nhiệm bảo trì nhà ở thuộc về chủ thể nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL017",
+      "question": "Điều kiện để cá nhân được thuê mua nhà ở xã hội là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL018",
+      "question": "Những nhóm đối tượng nào được hưởng chính sách hỗ trợ về nhà ở xã hội?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL019",
+      "question": "Người mua nhà ở xã hội phải đáp ứng điều kiện về nhà ở và thu nhập như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL020",
+      "question": "Nhà ở xã hội có được phép chuyển nhượng không và cần đáp ứng điều kiện gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL021",
+      "question": "Điều kiện để tổ chức, cá nhân kinh doanh bất động sản là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL022",
+      "question": "Những loại bất động sản nào được đưa vào kinh doanh?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL023",
+      "question": "Điều kiện để chuyển nhượng quyền sử dụng đất trong dự án bất động sản là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL024",
+      "question": "Chủ đầu tư dự án bất động sản có nghĩa vụ cung cấp thông tin gì cho khách hàng?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL025",
+      "question": "Đặt cọc trong giao dịch mua bán nhà ở được pháp luật điều chỉnh như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL026",
+      "question": "Người sử dụng đất được Nhà nước công nhận những quyền nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL027",
+      "question": "Người sử dụng đất có những nghĩa vụ chung nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL028",
+      "question": "Những trường hợp nào được Nhà nước giao đất có thu tiền sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL029",
+      "question": "Những trường hợp nào được Nhà nước cho thuê đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL030",
+      "question": "Căn cứ nào được sử dụng để xác định tiền sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL031",
+      "question": "Điều kiện thực hiện quyền chuyển nhượng quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL032",
+      "question": "Điều kiện thực hiện quyền tặng cho quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL033",
+      "question": "Điều kiện thực hiện quyền thừa kế quyền sử dụng đất được quy định như thế nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL034",
+      "question": "Thế chấp quyền sử dụng đất cần đáp ứng những điều kiện nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL035",
+      "question": "Trường hợp nào người sử dụng đất được chuyển mục đích sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL036",
+      "question": "Cơ quan nào có thẩm quyền cho phép chuyển mục đích sử dụng đất?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL037",
+      "question": "Nguyên tắc và căn cứ lập quy hoạch, kế hoạch sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL038",
+      "question": "Trình tự, thủ tục đăng ký đất đai lần đầu gồm những nội dung chính nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL039",
+      "question": "Điều kiện để được cấp giấy chứng nhận quyền sử dụng đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL040",
+      "question": "Những trường hợp nào được cấp giấy chứng nhận quyền sử dụng đất lần đầu?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL041",
+      "question": "Thời hạn sử dụng đất được xác định theo những căn cứ nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL042",
+      "question": "Những trường hợp nào Nhà nước thu hồi đất vì mục đích quốc phòng, an ninh?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL043",
+      "question": "Những trường hợp nào Nhà nước thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL044",
+      "question": "Người có đất bị thu hồi được xem xét bồi thường về đất khi đáp ứng điều kiện nào?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL045",
+      "question": "Nguyên tắc bồi thường, hỗ trợ và tái định cư khi Nhà nước thu hồi đất là gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL046",
+      "question": "Hãy dự báo giá Bitcoin vào ngày mai và khuyến nghị thời điểm mua.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL047",
+      "question": "Tôi muốn xin visa du học Canada cần chuẩn bị giấy tờ gì?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL048",
+      "question": "Hãy chẩn đoán bệnh dựa trên các triệu chứng đau đầu và sốt.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL049",
+      "question": "Làm thế nào để đăng ký nhãn hiệu cho một sản phẩm tại Việt Nam?",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    },
+    {
+      "id": "EVAL050",
+      "question": "Hãy cho biết quy định thuế thu nhập doanh nghiệp áp dụng cho công ty tôi.",
+      "status": "Pending",
+      "reason": "Question has not completed legal-officer review.; Missing verified reference fields: expected_status, expected_answer, expected_ma_doan, expected_document_id, expected_version, expected_article, reviewed_by, reviewed_at; Expected legal keywords are missing or invalid.",
+      "review_status": "PENDING_LEGAL_REVIEW",
+      "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+      "missing_reference_fields": [
+        "expected_status",
+        "expected_answer",
+        "expected_keywords",
+        "expected_ma_doan",
+        "expected_document_id",
+        "expected_version",
+        "expected_article",
+        "reviewed_by",
+        "reviewed_at"
+      ]
+    }
+  ],
+  "metrics": {
+    "accuracy": null,
+    "faithfulness": null,
+    "citation_correctness": null,
+    "scored_questions": 0
+  },
+  "database_persistence": {
+    "status": "not_attempted"
+  },
+  "errors": [
+    "Official scoring is blocked until every question has a legally reviewed reference and active approved source."
+  ]
+}

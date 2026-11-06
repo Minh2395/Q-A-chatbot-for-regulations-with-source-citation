@@ -6,6 +6,7 @@ import {
 } from "../../services/api";
 import type { Citation, ChatQueryResponse } from "../../services/api";
 import { CitationCard } from "./CitationCard";
+import { TraceBadge } from "./TraceBadge";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -125,10 +126,10 @@ export function ChatWindow({ maNd, maPhien }: ChatWindowProps) {
               )}
 
               {message.traceId && (
-                <div className="trace-line">
-                  TraceId: {message.traceId} · Độ tin cậy:{" "}
-                  {((message.confidence ?? 0) * 100).toFixed(1)}%
-                </div>
+                <TraceBadge
+                  traceId={message.traceId}
+                  confidence={message.confidence}
+                />
               )}
             </div>
           </div>

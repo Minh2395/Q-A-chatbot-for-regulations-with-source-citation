@@ -1,0 +1,1800 @@
+[
+  {
+    "id": "EVAL001",
+    "question": "Điều kiện để cá nhân trong nước được sở hữu nhà ở tại Việt Nam là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_DE594BD74F",
+        "similarity_score": 0.4268,
+        "dieu_khoan": "Điều 98. Bồi thường về đất khi Nhà nước thu hồi đất ở"
+      },
+      {
+        "ma_doan": "D_9FA065A8AA",
+        "similarity_score": 0.3676,
+        "dieu_khoan": "Điều 178 của Luật này và đất đó không có tranh ch ấp, được Ủy ban nhân dân c ấp"
+      },
+      {
+        "ma_doan": "D_59447FC2E0",
+        "similarity_score": 0.353,
+        "dieu_khoan": "Trang 69"
+      }
+    ]
+  },
+  {
+    "id": "EVAL002",
+    "question": "Những hình thức sở hữu nhà ở nào được pháp luật quy định?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_1620AAB278",
+        "similarity_score": 0.3799,
+        "dieu_khoan": "Điều 150. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_9C3C803225",
+        "similarity_score": 0.3468,
+        "dieu_khoan": "Điều 240 của Luật này và quy định khác của pháp luật có liên quan."
+      },
+      {
+        "ma_doan": "D_D7F511ED34",
+        "similarity_score": 0.3379,
+        "dieu_khoan": "Trang 59"
+      }
+    ]
+  },
+  {
+    "id": "EVAL003",
+    "question": "Cá nhân nước ngoài có được sở hữu nhà ở tại Việt Nam không?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_DE594BD74F",
+        "similarity_score": 0.5084,
+        "dieu_khoan": "Điều 98. Bồi thường về đất khi Nhà nước thu hồi đất ở"
+      },
+      {
+        "ma_doan": "D_D18C16F9B1",
+        "similarity_score": 0.4672,
+        "dieu_khoan": "Trang 47"
+      },
+      {
+        "ma_doan": "D_9FA065A8AA",
+        "similarity_score": 0.4301,
+        "dieu_khoan": "Điều 178 của Luật này và đất đó không có tranh ch ấp, được Ủy ban nhân dân c ấp"
+      }
+    ]
+  },
+  {
+    "id": "EVAL004",
+    "question": "Tổ chức nước ngoài được sở hữu nhà ở tại Việt Nam trong những trường hợp nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_DE594BD74F",
+        "similarity_score": 0.4738,
+        "dieu_khoan": "Điều 98. Bồi thường về đất khi Nhà nước thu hồi đất ở"
+      },
+      {
+        "ma_doan": "D_D18C16F9B1",
+        "similarity_score": 0.4584,
+        "dieu_khoan": "Trang 47"
+      },
+      {
+        "ma_doan": "D_59447FC2E0",
+        "similarity_score": 0.4256,
+        "dieu_khoan": "Trang 69"
+      }
+    ]
+  },
+  {
+    "id": "EVAL005",
+    "question": "Các loại nhà ở nào được phép giao dịch theo quy định pháp luật?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_4FFAFF39B6",
+        "similarity_score": 0.4272,
+        "dieu_khoan": "Trang 23"
+      },
+      {
+        "ma_doan": "D_C5F711FC28",
+        "similarity_score": 0.3595,
+        "dieu_khoan": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích"
+      },
+      {
+        "ma_doan": "D_808F4CCC79",
+        "similarity_score": 0.3519,
+        "dieu_khoan": "Điều 122. Điều kiện giao đất, cho thuê đất, cho phép chuy ển mục đích sử"
+      }
+    ]
+  },
+  {
+    "id": "EVAL006",
+    "question": "Điều kiện của nhà ở tham gia giao dịch mua bán là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_1852DA5B27",
+        "similarity_score": 0.3142,
+        "dieu_khoan": "Điều 140. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_518AEC6BF5",
+        "similarity_score": 0.3022,
+        "dieu_khoan": "Điều 161. Hội đồng thẩm định bảng giá đất, Hội đồng thẩm định giá đất"
+      },
+      {
+        "ma_doan": "D_FD3DB57183",
+        "similarity_score": 0.297,
+        "dieu_khoan": "Trang 78"
+      }
+    ]
+  },
+  {
+    "id": "EVAL007",
+    "question": "Điều kiện để nhà ở hình thành trong tương lai được đưa vào kinh doanh là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_946C876362",
+        "similarity_score": 0.3158,
+        "dieu_khoan": "Điều 213 của Luật này khi có đủ các điều kiện sau đây:"
+      },
+      {
+        "ma_doan": "D_1184E70799",
+        "similarity_score": 0.3104,
+        "dieu_khoan": "Trang 31"
+      },
+      {
+        "ma_doan": "D_AEA0BE718C",
+        "similarity_score": 0.2849,
+        "dieu_khoan": "Điều 176 của Luật này đối với các đối tượng sau đây:"
+      }
+    ]
+  },
+  {
+    "id": "EVAL008",
+    "question": "Hợp đồng mua bán nhà ở phải có những nội dung chủ yếu nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_77A737798F",
+        "similarity_score": 0.2519,
+        "dieu_khoan": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      },
+      {
+        "ma_doan": "D_E6C4A76C99",
+        "similarity_score": 0.2498,
+        "dieu_khoan": "Trang 71"
+      },
+      {
+        "ma_doan": "D_85E0D3A8CF",
+        "similarity_score": 0.2412,
+        "dieu_khoan": "Điều 137. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL009",
+    "question": "Những trường hợp nào phải công chứng hoặc chứng thực hợp đồng về nhà ở?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_E6C4A76C99",
+        "similarity_score": 0.3569,
+        "dieu_khoan": "Trang 71"
+      },
+      {
+        "ma_doan": "D_347C536D26",
+        "similarity_score": 0.3351,
+        "dieu_khoan": "Trang 37"
+      },
+      {
+        "ma_doan": "D_59447FC2E0",
+        "similarity_score": 0.3316,
+        "dieu_khoan": "Trang 69"
+      }
+    ]
+  },
+  {
+    "id": "EVAL010",
+    "question": "Khi nào bên mua nhà ở được cấp giấy chứng nhận quyền sở hữu?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_552F086C52",
+        "similarity_score": 0.428,
+        "dieu_khoan": "Điều 148. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_B93FA50A91",
+        "similarity_score": 0.4105,
+        "dieu_khoan": "Điều 142. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_1852DA5B27",
+        "similarity_score": 0.3978,
+        "dieu_khoan": "Điều 140. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL011",
+    "question": "Chủ sở hữu nhà ở có những quyền cơ bản nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_B93FA50A91",
+        "similarity_score": 0.3304,
+        "dieu_khoan": "Điều 142. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_D39F4A205B",
+        "similarity_score": 0.3208,
+        "dieu_khoan": "Điều 136. Thẩm quyền cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      },
+      {
+        "ma_doan": "D_6EF4D51E01",
+        "similarity_score": 0.3198,
+        "dieu_khoan": "Điều 134. Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn"
+      }
+    ]
+  },
+  {
+    "id": "EVAL012",
+    "question": "Chủ sở hữu nhà ở có những nghĩa vụ cơ bản nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_77A737798F",
+        "similarity_score": 0.3333,
+        "dieu_khoan": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      },
+      {
+        "ma_doan": "D_60B00A6DD5",
+        "similarity_score": 0.2615,
+        "dieu_khoan": "Trang 63"
+      },
+      {
+        "ma_doan": "D_B3B2CD509E",
+        "similarity_score": 0.2611,
+        "dieu_khoan": "Trang 50"
+      }
+    ]
+  },
+  {
+    "id": "EVAL013",
+    "question": "Những hành vi nào bị nghiêm cấm trong quản lý, sử dụng nhà chung cư?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_9C3C803225",
+        "similarity_score": 0.2527,
+        "dieu_khoan": "Điều 240 của Luật này và quy định khác của pháp luật có liên quan."
+      },
+      {
+        "ma_doan": "D_1620AAB278",
+        "similarity_score": 0.2505,
+        "dieu_khoan": "Điều 150. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_B3B2CD509E",
+        "similarity_score": 0.2481,
+        "dieu_khoan": "Trang 50"
+      }
+    ]
+  },
+  {
+    "id": "EVAL014",
+    "question": "Phần sở hữu riêng và phần sở hữu chung trong nhà chung cư được xác định như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_031888DDCA",
+        "similarity_score": 0.3329,
+        "dieu_khoan": "Trang 18"
+      },
+      {
+        "ma_doan": "D_1AA735F5FE",
+        "similarity_score": 0.283,
+        "dieu_khoan": "Trang 61"
+      },
+      {
+        "ma_doan": "D_1852DA5B27",
+        "similarity_score": 0.2761,
+        "dieu_khoan": "Điều 140. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL015",
+    "question": "Kinh phí bảo trì phần sở hữu chung của nhà chung cư được quản lý như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_5285228598",
+        "similarity_score": 0.3278,
+        "dieu_khoan": "Trang 64"
+      },
+      {
+        "ma_doan": "D_1620AAB278",
+        "similarity_score": 0.3068,
+        "dieu_khoan": "Điều 150. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_9C3C803225",
+        "similarity_score": 0.3042,
+        "dieu_khoan": "Điều 240 của Luật này và quy định khác của pháp luật có liên quan."
+      }
+    ]
+  },
+  {
+    "id": "EVAL016",
+    "question": "Trách nhiệm bảo trì nhà ở thuộc về chủ thể nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_2CB748EAE4",
+        "similarity_score": 0.3351,
+        "dieu_khoan": "Điều 114. Quỹ phát triển đất"
+      },
+      {
+        "ma_doan": "D_7E5F31DB0D",
+        "similarity_score": 0.2982,
+        "dieu_khoan": "Điều 130. Trách nhi ệm l ập, ch ỉnh lý, c ập nh ật, qu ản lý, khai thác h ồ s ơ"
+      },
+      {
+        "ma_doan": "D_12F98B4697",
+        "similarity_score": 0.2946,
+        "dieu_khoan": "Trang 2"
+      }
+    ]
+  },
+  {
+    "id": "EVAL017",
+    "question": "Điều kiện để cá nhân được thuê mua nhà ở xã hội là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_41F69DE49B",
+        "similarity_score": 0.3684,
+        "dieu_khoan": "Trang 9"
+      },
+      {
+        "ma_doan": "D_870FA01D67",
+        "similarity_score": 0.2977,
+        "dieu_khoan": "Trang 19"
+      },
+      {
+        "ma_doan": "D_06375641AC",
+        "similarity_score": 0.2905,
+        "dieu_khoan": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì"
+      }
+    ]
+  },
+  {
+    "id": "EVAL018",
+    "question": "Những nhóm đối tượng nào được hưởng chính sách hỗ trợ về nhà ở xã hội?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_701DDA28F8",
+        "similarity_score": 0.3156,
+        "dieu_khoan": "Điều 92. Bồi thường, hỗ trợ, tái định cư đối với các trường hợp đặc biệt"
+      },
+      {
+        "ma_doan": "D_42ED6D2A63",
+        "similarity_score": 0.2777,
+        "dieu_khoan": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu"
+      },
+      {
+        "ma_doan": "D_E9BFBFA476",
+        "similarity_score": 0.2759,
+        "dieu_khoan": "Điều 124. Các trường hợp giao đất, cho thuê đất không đấu giá quy ền sử"
+      }
+    ]
+  },
+  {
+    "id": "EVAL019",
+    "question": "Người mua nhà ở xã hội phải đáp ứng điều kiện về nhà ở và thu nhập như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_031888DDCA",
+        "similarity_score": 0.2878,
+        "dieu_khoan": "Trang 18"
+      },
+      {
+        "ma_doan": "D_8A2BAF422E",
+        "similarity_score": 0.2835,
+        "dieu_khoan": "Trang 27"
+      },
+      {
+        "ma_doan": "D_73706B8284",
+        "similarity_score": 0.2738,
+        "dieu_khoan": "Trang 34"
+      }
+    ]
+  },
+  {
+    "id": "EVAL020",
+    "question": "Nhà ở xã hội có được phép chuyển nhượng không và cần đáp ứng điều kiện gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_808F4CCC79",
+        "similarity_score": 0.4233,
+        "dieu_khoan": "Điều 122. Điều kiện giao đất, cho thuê đất, cho phép chuy ển mục đích sử"
+      },
+      {
+        "ma_doan": "D_8A2BAF422E",
+        "similarity_score": 0.3506,
+        "dieu_khoan": "Trang 27"
+      },
+      {
+        "ma_doan": "D_946C876362",
+        "similarity_score": 0.3343,
+        "dieu_khoan": "Điều 213 của Luật này khi có đủ các điều kiện sau đây:"
+      }
+    ]
+  },
+  {
+    "id": "EVAL021",
+    "question": "Điều kiện để tổ chức, cá nhân kinh doanh bất động sản là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_B195037637",
+        "similarity_score": 0.3581,
+        "dieu_khoan": "Điều 119. Giao đất có thu tiền sử dụng đất"
+      },
+      {
+        "ma_doan": "D_56E5DE458E",
+        "similarity_score": 0.336,
+        "dieu_khoan": "Trang 89"
+      },
+      {
+        "ma_doan": "D_8E1677B28B",
+        "similarity_score": 0.3303,
+        "dieu_khoan": "Điều 117. Giao đất, cho thuê đất đối v ới đất đang có ng ười s ử d ụng cho"
+      }
+    ]
+  },
+  {
+    "id": "EVAL022",
+    "question": "Những loại bất động sản nào được đưa vào kinh doanh?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_8E1677B28B",
+        "similarity_score": 0.2796,
+        "dieu_khoan": "Điều 117. Giao đất, cho thuê đất đối v ới đất đang có ng ười s ử d ụng cho"
+      },
+      {
+        "ma_doan": "D_B195037637",
+        "similarity_score": 0.2704,
+        "dieu_khoan": "Điều 119. Giao đất có thu tiền sử dụng đất"
+      },
+      {
+        "ma_doan": "D_7BCC27684A",
+        "similarity_score": 0.2492,
+        "dieu_khoan": "Trang 26"
+      }
+    ]
+  },
+  {
+    "id": "EVAL023",
+    "question": "Điều kiện để chuyển nhượng quyền sử dụng đất trong dự án bất động sản là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_D0A3D72B07",
+        "similarity_score": 0.3804,
+        "dieu_khoan": "Điều 133. Đăng ký biến động"
+      },
+      {
+        "ma_doan": "D_8E1677B28B",
+        "similarity_score": 0.3649,
+        "dieu_khoan": "Điều 117. Giao đất, cho thuê đất đối v ới đất đang có ng ười s ử d ụng cho"
+      },
+      {
+        "ma_doan": "D_B195037637",
+        "similarity_score": 0.3534,
+        "dieu_khoan": "Điều 119. Giao đất có thu tiền sử dụng đất"
+      }
+    ]
+  },
+  {
+    "id": "EVAL024",
+    "question": "Chủ đầu tư dự án bất động sản có nghĩa vụ cung cấp thông tin gì cho khách hàng?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_2B4E0DBDF7",
+        "similarity_score": 0.3412,
+        "dieu_khoan": "Trang 39"
+      },
+      {
+        "ma_doan": "D_7FBCB36E8E",
+        "similarity_score": 0.3149,
+        "dieu_khoan": "Trang 93"
+      },
+      {
+        "ma_doan": "D_B5CD01A59E",
+        "similarity_score": 0.2971,
+        "dieu_khoan": "Điều 120 của Luật này;"
+      }
+    ]
+  },
+  {
+    "id": "EVAL025",
+    "question": "Đặt cọc trong giao dịch mua bán nhà ở được pháp luật điều chỉnh như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_870FA01D67",
+        "similarity_score": 0.3052,
+        "dieu_khoan": "Trang 19"
+      },
+      {
+        "ma_doan": "D_FD3DB57183",
+        "similarity_score": 0.294,
+        "dieu_khoan": "Trang 78"
+      },
+      {
+        "ma_doan": "D_C27962CA07",
+        "similarity_score": 0.2914,
+        "dieu_khoan": "Trang 84"
+      }
+    ]
+  },
+  {
+    "id": "EVAL026",
+    "question": "Người sử dụng đất được Nhà nước công nhận những quyền nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_6EF4D51E01",
+        "similarity_score": 0.4054,
+        "dieu_khoan": "Điều 134. Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn"
+      },
+      {
+        "ma_doan": "D_1620AAB278",
+        "similarity_score": 0.3637,
+        "dieu_khoan": "Điều 150. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_77A737798F",
+        "similarity_score": 0.3594,
+        "dieu_khoan": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      }
+    ]
+  },
+  {
+    "id": "EVAL027",
+    "question": "Người sử dụng đất có những nghĩa vụ chung nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_77A737798F",
+        "similarity_score": 0.41,
+        "dieu_khoan": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      },
+      {
+        "ma_doan": "D_D7F511ED34",
+        "similarity_score": 0.3022,
+        "dieu_khoan": "Trang 59"
+      },
+      {
+        "ma_doan": "D_60B00A6DD5",
+        "similarity_score": 0.2961,
+        "dieu_khoan": "Trang 63"
+      }
+    ]
+  },
+  {
+    "id": "EVAL028",
+    "question": "Những trường hợp nào được Nhà nước giao đất có thu tiền sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_B195037637",
+        "article_candidate": "Điều 119",
+        "article_title_candidate": "Giao đất có thu tiền sử dụng đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_8BA73F8FE7",
+        "similarity_score": 0.4226,
+        "dieu_khoan": "Trang 3"
+      },
+      {
+        "ma_doan": "D_AC8715C3D1",
+        "similarity_score": 0.4111,
+        "dieu_khoan": "Điều 159. Bảng giá đất"
+      },
+      {
+        "ma_doan": "D_B195037637",
+        "similarity_score": 0.3742,
+        "dieu_khoan": "Điều 119. Giao đất có thu tiền sử dụng đất"
+      }
+    ]
+  },
+  {
+    "id": "EVAL029",
+    "question": "Những trường hợp nào được Nhà nước cho thuê đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_2CC31B7A87",
+        "article_candidate": "Điều 120",
+        "article_title_candidate": "Cho thuê đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_AC8715C3D1",
+        "similarity_score": 0.3718,
+        "dieu_khoan": "Điều 159. Bảng giá đất"
+      },
+      {
+        "ma_doan": "D_3014884AB7",
+        "similarity_score": 0.3632,
+        "dieu_khoan": "Điều 107. Bồi thường chi phí đầu tư vào đất còn lại khi Nhà n ước thu hồi"
+      },
+      {
+        "ma_doan": "D_8BA73F8FE7",
+        "similarity_score": 0.3554,
+        "dieu_khoan": "Trang 3"
+      }
+    ]
+  },
+  {
+    "id": "EVAL030",
+    "question": "Căn cứ nào được sử dụng để xác định tiền sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_44934C4502",
+        "article_candidate": "Điều 155",
+        "article_title_candidate": "Căn cứ tính tiền sử dụng đất, tiền thuê đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_44934C4502",
+        "similarity_score": 0.4127,
+        "dieu_khoan": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá"
+      },
+      {
+        "ma_doan": "D_9BFF6ABDBC",
+        "similarity_score": 0.3626,
+        "dieu_khoan": "Trang 81"
+      },
+      {
+        "ma_doan": "D_8466AE4FEC",
+        "similarity_score": 0.3206,
+        "dieu_khoan": "Trang 7"
+      }
+    ]
+  },
+  {
+    "id": "EVAL031",
+    "question": "Điều kiện thực hiện quyền chuyển nhượng quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_D0A3D72B07",
+        "similarity_score": 0.4176,
+        "dieu_khoan": "Điều 133. Đăng ký biến động"
+      },
+      {
+        "ma_doan": "D_946C876362",
+        "similarity_score": 0.3475,
+        "dieu_khoan": "Điều 213 của Luật này khi có đủ các điều kiện sau đây:"
+      },
+      {
+        "ma_doan": "D_7E7482BC52",
+        "similarity_score": 0.3414,
+        "dieu_khoan": "Điều 127. Sử dụng đất để thực hiện dự án phát triển kinh tế - xã hội thông"
+      }
+    ]
+  },
+  {
+    "id": "EVAL032",
+    "question": "Điều kiện thực hiện quyền tặng cho quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_D0A3D72B07",
+        "similarity_score": 0.3789,
+        "dieu_khoan": "Điều 133. Đăng ký biến động"
+      },
+      {
+        "ma_doan": "D_B93FA50A91",
+        "similarity_score": 0.3585,
+        "dieu_khoan": "Điều 142. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_1852DA5B27",
+        "similarity_score": 0.3547,
+        "dieu_khoan": "Điều 140. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL033",
+    "question": "Điều kiện thực hiện quyền thừa kế quyền sử dụng đất được quy định như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_B1DE3FB8C0",
+        "similarity_score": 0.3779,
+        "dieu_khoan": "Điều 220 của Luật này."
+      },
+      {
+        "ma_doan": "D_1620AAB278",
+        "similarity_score": 0.3732,
+        "dieu_khoan": "Điều 150. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_7E7482BC52",
+        "similarity_score": 0.3695,
+        "dieu_khoan": "Điều 127. Sử dụng đất để thực hiện dự án phát triển kinh tế - xã hội thông"
+      }
+    ]
+  },
+  {
+    "id": "EVAL034",
+    "question": "Thế chấp quyền sử dụng đất cần đáp ứng những điều kiện nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_B1DE3FB8C0",
+        "similarity_score": 0.3047,
+        "dieu_khoan": "Điều 220 của Luật này."
+      },
+      {
+        "ma_doan": "D_808F4CCC79",
+        "similarity_score": 0.301,
+        "dieu_khoan": "Điều 122. Điều kiện giao đất, cho thuê đất, cho phép chuy ển mục đích sử"
+      },
+      {
+        "ma_doan": "D_8A2BAF422E",
+        "similarity_score": 0.2981,
+        "dieu_khoan": "Trang 27"
+      }
+    ]
+  },
+  {
+    "id": "EVAL035",
+    "question": "Trường hợp nào người sử dụng đất được chuyển mục đích sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_377DA7879E",
+        "article_candidate": "Điều 121",
+        "article_title_candidate": "Chuyển mục đích sử dụng đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_377DA7879E",
+        "similarity_score": 0.4045,
+        "dieu_khoan": "Điều 121. Chuyển mục đích sử dụng đất"
+      },
+      {
+        "ma_doan": "D_7BCC27684A",
+        "similarity_score": 0.4001,
+        "dieu_khoan": "Trang 26"
+      },
+      {
+        "ma_doan": "D_66FD388685",
+        "similarity_score": 0.396,
+        "dieu_khoan": "Điều 156. Nộp tiền sử dụng đất, tiền thuê đất khi chuyển mục đích sử dụng"
+      }
+    ]
+  },
+  {
+    "id": "EVAL036",
+    "question": "Cơ quan nào có thẩm quyền cho phép chuyển mục đích sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_C5F711FC28",
+        "article_candidate": "Điều 123",
+        "article_title_candidate": "Thẩm quyền giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_C5F711FC28",
+        "similarity_score": 0.4991,
+        "dieu_khoan": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích"
+      },
+      {
+        "ma_doan": "D_808F4CCC79",
+        "similarity_score": 0.4777,
+        "dieu_khoan": "Điều 122. Điều kiện giao đất, cho thuê đất, cho phép chuy ển mục đích sử"
+      },
+      {
+        "ma_doan": "D_377DA7879E",
+        "similarity_score": 0.4744,
+        "dieu_khoan": "Điều 121. Chuyển mục đích sử dụng đất"
+      }
+    ]
+  },
+  {
+    "id": "EVAL037",
+    "question": "Nguyên tắc và căn cứ lập quy hoạch, kế hoạch sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_4B916B37DB",
+        "similarity_score": 0.3779,
+        "dieu_khoan": "Điều 112. Nguyên tắc phát triển, quản lý và khai thác quỹ đất"
+      },
+      {
+        "ma_doan": "D_3733199DB7",
+        "similarity_score": 0.3402,
+        "dieu_khoan": "Điều 158. Nguyên tắc, căn cứ, phương pháp định giá đất"
+      },
+      {
+        "ma_doan": "D_4FFAFF39B6",
+        "similarity_score": 0.3357,
+        "dieu_khoan": "Trang 23"
+      }
+    ]
+  },
+  {
+    "id": "EVAL038",
+    "question": "Trình tự, thủ tục đăng ký đất đai lần đầu gồm những nội dung chính nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_8D8776F5C5",
+        "article_candidate": "Điều 132",
+        "article_title_candidate": "Đăng ký lần đầu",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_347C536D26",
+        "similarity_score": 0.3266,
+        "dieu_khoan": "Trang 37"
+      },
+      {
+        "ma_doan": "D_1B9A325D9D",
+        "similarity_score": 0.3214,
+        "dieu_khoan": "Điều 137 của Luật này;"
+      },
+      {
+        "ma_doan": "D_612CFFAD64",
+        "similarity_score": 0.3207,
+        "dieu_khoan": "Trang 33"
+      }
+    ]
+  },
+  {
+    "id": "EVAL039",
+    "question": "Điều kiện để được cấp giấy chứng nhận quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_77A737798F",
+        "article_candidate": "Điều 135",
+        "article_title_candidate": "Nguyên tắc cấp Giấy chứng nhận",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      },
+      {
+        "ma_doan_candidate": "D_85E0D3A8CF",
+        "article_candidate": "Điều 137",
+        "article_title_candidate": "Cấp Giấy chứng nhận",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_552F086C52",
+        "similarity_score": 0.54,
+        "dieu_khoan": "Điều 148. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_B93FA50A91",
+        "similarity_score": 0.5395,
+        "dieu_khoan": "Điều 142. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_8466AE4FEC",
+        "similarity_score": 0.5007,
+        "dieu_khoan": "Trang 7"
+      }
+    ]
+  },
+  {
+    "id": "EVAL040",
+    "question": "Những trường hợp nào được cấp giấy chứng nhận quyền sử dụng đất lần đầu?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_8CA3371DD7",
+        "article_candidate": "Điều 138",
+        "article_title_candidate": "Cấp Giấy chứng nhận đối với hộ gia đình, cá nhân không có giấy tờ",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_D39F4A205B",
+        "similarity_score": 0.4772,
+        "dieu_khoan": "Điều 136. Thẩm quyền cấp Giấy chứng nhận quyền sử dụng đất, quyền sở"
+      },
+      {
+        "ma_doan": "D_CBFBC341EF",
+        "similarity_score": 0.4424,
+        "dieu_khoan": "Điều 151. Các trường hợp không cấp Giấy chứng nhận quyền sử dụng đất,"
+      },
+      {
+        "ma_doan": "D_B93FA50A91",
+        "similarity_score": 0.435,
+        "dieu_khoan": "Điều 142. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL041",
+    "question": "Thời hạn sử dụng đất được xác định theo những căn cứ nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_44934C4502",
+        "similarity_score": 0.3542,
+        "dieu_khoan": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá"
+      },
+      {
+        "ma_doan": "D_3733199DB7",
+        "similarity_score": 0.3292,
+        "dieu_khoan": "Điều 158. Nguyên tắc, căn cứ, phương pháp định giá đất"
+      },
+      {
+        "ma_doan": "D_8466AE4FEC",
+        "similarity_score": 0.3081,
+        "dieu_khoan": "Trang 7"
+      }
+    ]
+  },
+  {
+    "id": "EVAL042",
+    "question": "Những trường hợp nào Nhà nước thu hồi đất vì mục đích quốc phòng, an ninh?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_06375641AC",
+        "similarity_score": 0.5471,
+        "dieu_khoan": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì"
+      },
+      {
+        "ma_doan": "D_3014884AB7",
+        "similarity_score": 0.4067,
+        "dieu_khoan": "Điều 107. Bồi thường chi phí đầu tư vào đất còn lại khi Nhà n ước thu hồi"
+      },
+      {
+        "ma_doan": "D_34EFB31AD8",
+        "similarity_score": 0.3474,
+        "dieu_khoan": "Điều 118. Giao đất không thu tiền sử dụng đất"
+      }
+    ]
+  },
+  {
+    "id": "EVAL043",
+    "question": "Những trường hợp nào Nhà nước thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "candidate_sources": [],
+    "preliminary_note": "Không tìm thấy điều khoản trực tiếp đủ sát trong corpus hiện tại; nhiều câu thuộc Luật Nhà ở, Luật Kinh doanh bất động sản hoặc điều khoản Luật Đất đai ngoài dải Điều 91-170.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_06375641AC",
+        "similarity_score": 0.5636,
+        "dieu_khoan": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì"
+      },
+      {
+        "ma_doan": "D_3014884AB7",
+        "similarity_score": 0.437,
+        "dieu_khoan": "Điều 107. Bồi thường chi phí đầu tư vào đất còn lại khi Nhà n ước thu hồi"
+      },
+      {
+        "ma_doan": "D_7E7482BC52",
+        "similarity_score": 0.4073,
+        "dieu_khoan": "Điều 127. Sử dụng đất để thực hiện dự án phát triển kinh tế - xã hội thông"
+      }
+    ]
+  },
+  {
+    "id": "EVAL044",
+    "question": "Người có đất bị thu hồi được xem xét bồi thường về đất khi đáp ứng điều kiện nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_06375641AC",
+        "article_candidate": "Điều 95",
+        "article_title_candidate": "Điều kiện được bồi thường về đất khi Nhà nước thu hồi đất",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_031888DDCA",
+        "similarity_score": 0.3785,
+        "dieu_khoan": "Trang 18"
+      },
+      {
+        "ma_doan": "D_DE594BD74F",
+        "similarity_score": 0.3634,
+        "dieu_khoan": "Điều 98. Bồi thường về đất khi Nhà nước thu hồi đất ở"
+      },
+      {
+        "ma_doan": "D_42ED6D2A63",
+        "similarity_score": 0.354,
+        "dieu_khoan": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu"
+      }
+    ]
+  },
+  {
+    "id": "EVAL045",
+    "question": "Nguyên tắc bồi thường, hỗ trợ và tái định cư khi Nhà nước thu hồi đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
+    "candidate_sources": [
+      {
+        "ma_doan_candidate": "D_42ED6D2A63",
+        "article_candidate": "Điều 91",
+        "article_title_candidate": "Nguyên tắc bồi thường, hỗ trợ, tái định cư",
+        "ma_phien_ban": "PB_A6E7970D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0"
+      }
+    ],
+    "preliminary_note": "Có điều khoản ứng viên trong 199 đoạn; cần chuyên viên đọc toàn văn đoạn và xác nhận phạm vi trả lời.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_6C129F9459",
+        "similarity_score": 0.5197,
+        "dieu_khoan": "Điều 94. Kinh phí và chi trả tiền bồi thường, hỗ trợ, tái định cư"
+      },
+      {
+        "ma_doan": "D_42ED6D2A63",
+        "similarity_score": 0.4486,
+        "dieu_khoan": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu"
+      },
+      {
+        "ma_doan": "D_DE594BD74F",
+        "similarity_score": 0.4024,
+        "dieu_khoan": "Điều 98. Bồi thường về đất khi Nhà nước thu hồi đất ở"
+      }
+    ]
+  },
+  {
+    "id": "EVAL046",
+    "question": "Hãy dự báo giá Bitcoin vào ngày mai và khuyến nghị thời điểm mua.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [],
+    "preliminary_note": "Câu hỏi ngoài phạm vi trợ lý quy chế nhà ở và đất đai; giữ hướng từ chối, không cần gán đoạn luật.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_8095B7A1DF",
+        "similarity_score": 0.1698,
+        "dieu_khoan": "Trang 52"
+      },
+      {
+        "ma_doan": "D_5AB5FBE1CE",
+        "similarity_score": 0.1601,
+        "dieu_khoan": "Trang 82"
+      },
+      {
+        "ma_doan": "D_A54B88F070",
+        "similarity_score": 0.1585,
+        "dieu_khoan": "Trang 79"
+      }
+    ]
+  },
+  {
+    "id": "EVAL047",
+    "question": "Tôi muốn xin visa du học Canada cần chuẩn bị giấy tờ gì?",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [],
+    "preliminary_note": "Câu hỏi ngoài phạm vi trợ lý quy chế nhà ở và đất đai; giữ hướng từ chối, không cần gán đoạn luật.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_1E712AEEBC",
+        "similarity_score": 0.1309,
+        "dieu_khoan": "Điều 149. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_B7A128E06A",
+        "similarity_score": 0.1282,
+        "dieu_khoan": "Điều 145. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_8466AE4FEC",
+        "similarity_score": 0.1209,
+        "dieu_khoan": "Trang 7"
+      }
+    ]
+  },
+  {
+    "id": "EVAL048",
+    "question": "Hãy chẩn đoán bệnh dựa trên các triệu chứng đau đầu và sốt.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [],
+    "preliminary_note": "Câu hỏi ngoài phạm vi trợ lý quy chế nhà ở và đất đai; giữ hướng từ chối, không cần gán đoạn luật.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_7835F6E998",
+        "similarity_score": 0.1926,
+        "dieu_khoan": "Điều 152. Đính chính, thu hồi, hủy giấy chứng nhận đã cấp"
+      },
+      {
+        "ma_doan": "D_6496754CD7",
+        "similarity_score": 0.1834,
+        "dieu_khoan": "Trang 42"
+      },
+      {
+        "ma_doan": "D_8C9B79490E",
+        "similarity_score": 0.1698,
+        "dieu_khoan": "Điều 119 và Điều 120 của Luật này;"
+      }
+    ]
+  },
+  {
+    "id": "EVAL049",
+    "question": "Làm thế nào để đăng ký nhãn hiệu cho một sản phẩm tại Việt Nam?",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [],
+    "preliminary_note": "Câu hỏi ngoài phạm vi trợ lý quy chế nhà ở và đất đai; giữ hướng từ chối, không cần gán đoạn luật.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_85E0D3A8CF",
+        "similarity_score": 0.2675,
+        "dieu_khoan": "Điều 137. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      },
+      {
+        "ma_doan": "D_9FA065A8AA",
+        "similarity_score": 0.2483,
+        "dieu_khoan": "Điều 178 của Luật này và đất đó không có tranh ch ấp, được Ủy ban nhân dân c ấp"
+      },
+      {
+        "ma_doan": "D_06ADE66AA3",
+        "similarity_score": 0.2438,
+        "dieu_khoan": "Điều 147. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản"
+      }
+    ]
+  },
+  {
+    "id": "EVAL050",
+    "question": "Hãy cho biết quy định thuế thu nhập doanh nghiệp áp dụng cho công ty tôi.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": null,
+    "expected_keywords": [],
+    "expected_ma_doan": null,
+    "expected_document_id": null,
+    "expected_version": null,
+    "expected_article": null,
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Cần đối chiếu văn bản đã được duyệt và xác nhận đáp án/đoạn nguồn trước khi dùng để chấm tự động.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [],
+    "preliminary_note": "Câu hỏi ngoài phạm vi trợ lý quy chế nhà ở và đất đai; giữ hướng từ chối, không cần gán đoạn luật.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "ma_doan": "D_2CC31B7A87",
+        "similarity_score": 0.3143,
+        "dieu_khoan": "Điều 120. Cho thuê đất"
+      },
+      {
+        "ma_doan": "D_AEA0BE718C",
+        "similarity_score": 0.3119,
+        "dieu_khoan": "Điều 176 của Luật này đối với các đối tượng sau đây:"
+      },
+      {
+        "ma_doan": "D_CF51FEEB60",
+        "similarity_score": 0.2902,
+        "dieu_khoan": "Trang 30"
+      }
+    ]
+  }
+]

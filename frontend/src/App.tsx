@@ -264,6 +264,7 @@ export default function App() {
             </div>
             <DocumentUpload
               maNd={user.maNd}
+              refreshKey={processedCount}
               onSuccess={() => setProcessedCount((count) => count + 1)}
             />
           </section>
