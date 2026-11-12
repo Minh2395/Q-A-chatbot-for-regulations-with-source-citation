@@ -1,0 +1,2416 @@
+[
+  {
+    "id": "EVAL001",
+    "question": "Điều kiện để cá nhân trong nước được sở hữu nhà ở tại Việt Nam là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL002",
+    "question": "Những hình thức sở hữu nhà ở nào được pháp luật quy định?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL003",
+    "question": "Cá nhân nước ngoài có được sở hữu nhà ở tại Việt Nam không?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL004",
+    "question": "Tổ chức nước ngoài được sở hữu nhà ở tại Việt Nam trong những trường hợp nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL005",
+    "question": "Các loại nhà ở nào được phép giao dịch theo quy định pháp luật?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL006",
+    "question": "Điều kiện của nhà ở tham gia giao dịch mua bán là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL007",
+    "question": "Điều kiện để nhà ở hình thành trong tương lai được đưa vào kinh doanh là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL008",
+    "question": "Hợp đồng mua bán nhà ở phải có những nội dung chủ yếu nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL009",
+    "question": "Những trường hợp nào phải công chứng hoặc chứng thực hợp đồng về nhà ở?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL010",
+    "question": "Khi nào bên mua nhà ở được cấp giấy chứng nhận quyền sở hữu?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL011",
+    "question": "Chủ sở hữu nhà ở có những quyền cơ bản nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL012",
+    "question": "Chủ sở hữu nhà ở có những nghĩa vụ cơ bản nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL013",
+    "question": "Những hành vi nào bị nghiêm cấm trong quản lý, sử dụng nhà chung cư?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL014",
+    "question": "Phần sở hữu riêng và phần sở hữu chung trong nhà chung cư được xác định như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL015",
+    "question": "Kinh phí bảo trì phần sở hữu chung của nhà chung cư được quản lý như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL016",
+    "question": "Trách nhiệm bảo trì nhà ở thuộc về chủ thể nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL017",
+    "question": "Điều kiện để cá nhân được thuê mua nhà ở xã hội là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL018",
+    "question": "Những nhóm đối tượng nào được hưởng chính sách hỗ trợ về nhà ở xã hội?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL019",
+    "question": "Người mua nhà ở xã hội phải đáp ứng điều kiện về nhà ở và thu nhập như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL020",
+    "question": "Nhà ở xã hội có được phép chuyển nhượng không và cần đáp ứng điều kiện gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL021",
+    "question": "Điều kiện để tổ chức, cá nhân kinh doanh bất động sản là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL022",
+    "question": "Những loại bất động sản nào được đưa vào kinh doanh?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL023",
+    "question": "Điều kiện để chuyển nhượng quyền sử dụng đất trong dự án bất động sản là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL024",
+    "question": "Chủ đầu tư dự án bất động sản có nghĩa vụ cung cấp thông tin gì cho khách hàng?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL025",
+    "question": "Đặt cọc trong giao dịch mua bán nhà ở được pháp luật điều chỉnh như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL026",
+    "question": "Người sử dụng đất được Nhà nước công nhận những quyền nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL027",
+    "question": "Người sử dụng đất có những nghĩa vụ chung nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL028",
+    "question": "Những trường hợp nào được Nhà nước giao đất có thu tiền sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Điều 119 quy định các nhóm được Nhà nước giao đất có thu tiền sử dụng đất gồm: (1) cá nhân được giao đất ở; (2) tổ chức kinh tế thực hiện dự án nhà ở thương mại, nhà ở xã hội, nhà ở cho lực lượng vũ trang, cải tạo/xây dựng lại chung cư, hạ tầng nghĩa trang để chuyển nhượng quyền sử dụng đất gắn với hạ tầng hoặc cơ sở lưu giữ tro cốt; (3) người gốc Việt Nam định cư ở nước ngoài và tổ chức kinh tế có vốn đầu tư nước ngoài trong các trường hợp dự án nhà ở thương mại hoặc nhận chuyển nhượng dự án bất động sản thuộc trường hợp Nhà nước giao đất có thu tiền; (4) các chủ thể được giao đất để bồi thường bằng đất khi Nhà nước thu hồi đất. Nguồn: Điều 119, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "giao đất có thu tiền",
+      "cá nhân được giao đất ở",
+      "tổ chức kinh tế",
+      "nhà ở thương mại",
+      "nhà ở xã hội",
+      "bồi thường bằng đất"
+    ],
+    "expected_ma_doan": "D_B195037637",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 119. Giao đất có thu tiền sử dụng đất",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_B195037637",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 119",
+        "source_page": "Điều 119. Giao đất có thu tiền sử dụng đất",
+        "source_excerpt": "Điều 119. Giao đất có thu tiền sử dụng đất 1. Cá nhân được giao đất ở. 2. Tổ ch ức kinh t ế được giao đất để th ực hi ện d ự án đầu t ư xây d ựng nhà ở thương mại, nhà ở xã hội, nhà ở cho lực lượng vũ trang nhân dân; dự án đầu tư cải tạo, xây dựng lại nhà chung cư theo quy định của pháp luật về nhà ở; thực hiện dự án đầu t ư h ạ t ầng ngh ĩa trang để chuy ển nh ượng quy ền s ử d ụng đất g ắn v ới h ạ tầng; xây dựng cơ sở lưu giữ tro cốt. 3. Người gốc Việt Nam định cư ở nước ngoài, t ổ chức kinh t ế có v ốn đầu tư nước ngoài được giao đất để thực hiện dự án đầu tư xây d ựng nhà ở thương mại theo quy định của pháp lu ật về nhà ở; sử dụng đất do nh ận chuyển nhượng dự án bất động sản theo quy định của pháp luật về kinh doanh bất động sản thuộc trường hợp Nhà nước giao đất có thu tiền sử dụng đất. 4. Hộ gia đình, cá nhân, ng ười gốc Việt Nam định cư ở nước ngoài, t ổ chức kinh t ế, t ổ ch ức kinh t ế có v ốn đầu t ư n ước ngoài được giao đất do được b ồi thường bằng đất khi Nhà nước thu hồi đất theo quy định của Luật này. 5. Vi ệc giao đất quy định t ại Điều này được th ực hi ện theo quy định t ại các",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL029",
+    "question": "Những trường hợp nào được Nhà nước cho thuê đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Nhà nước cho thuê đất trả tiền một lần cho cả thời gian thuê hoặc trả tiền thuê đất hằng năm đối với các trường hợp không thuộc trường hợp giao đất theo Điều 118 và Điều 119. Trả tiền một lần áp dụng cho các trường hợp tại khoản 2 Điều 120, gồm dự án sản xuất nông nghiệp, lâm nghiệp, nuôi trồng thủy sản, làm muối; đất khu công nghiệp, cụm công nghiệp, khu công nghệ cao, nhà lưu trú công nhân; đất công cộng có mục đích kinh doanh; đất thương mại, dịch vụ cho du lịch, văn phòng; và đất xây dựng nhà ở xã hội để cho thuê. Trả tiền hằng năm áp dụng cho các trường hợp còn lại, các trường hợp khoản 2 có nhu cầu trả hằng năm và đơn vị sự nghiệp công lập lựa chọn hình thức này theo luật. Nguồn: Điều 120, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "cho thuê đất",
+      "trả tiền một lần",
+      "trả tiền hằng năm",
+      "khu công nghiệp",
+      "nhà ở xã hội",
+      "dự án nông nghiệp"
+    ],
+    "expected_ma_doan": "D_2CC31B7A87",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 120. Cho thuê đất",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_2CC31B7A87",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 120",
+        "source_page": "Điều 120. Cho thuê đất",
+        "source_excerpt": "Điều 120. Cho thuê đất 1. Nhà n ước cho thuê đất thu ti ền thuê đất một lần cho c ả thời gian thuê ho ặc thu ti ền thuê đất h ằng n ăm đối v ới các tr ường h ợp không thu ộc tr ường h ợp quy định tại Điều 118 và Điều 119 của Luật này. 2. Nhà nước cho thuê đất thu tiền thuê đất một lần cho cả thời gian thuê trong các trường hợp sau đây: a) Sử dụng đất để thực hi ện dự án đầu tư sản xuất nông nghi ệp, lâm nghi ệp, nuôi trồng thủy sản, làm muối; b) Sử dụng đất khu công nghiệp, cụm công nghiệp, khu công nghệ cao, nhà lưu trú công nhân trong khu công nghiệp; đất sử dụng vào mục đích công cộng có mục đích kinh doanh; sử dụng đất thương mại, dịch vụ để hoạt động du lịch, kinh doanh văn phòng; c) Sử dụng đất để xây dựng nhà ở xã hội cho thuê theo quy định của pháp luật về nhà ở. 3. Nhà n ước cho thuê đất thu ti ền thuê đất h ằng n ăm trong các tr ường h ợp sau đây: a) Các trường hợp không thuộc quy định tại khoản 2 Điều này; b) Các tr ường hợp quy định tại khoản 2 Điều này mà có nhu c ầu trả tiền thuê đất hằng năm; c) Đơn v ị s ự nghi ệp công l ập l ựa ch ọn hình th ức thuê đất theo quy định t ại khoản 3 Điều 30 của Luật này. 4. Vi ệc cho thuê đất quy định tại Điều này được th ực hiện theo quy định tại các điều 124, 125 và 126 của Luật này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL030",
+    "question": "Căn cứ nào được sử dụng để xác định tiền sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Căn cứ tính tiền sử dụng đất gồm: diện tích đất được giao, được chuyển mục đích sử dụng hoặc được công nhận quyền sử dụng đất; giá đất theo Điều 159 và Điều 160 (nếu đấu giá thì là giá trúng đấu giá); và chính sách miễn, giảm tiền sử dụng đất. Căn cứ tính tiền thuê đất gồm diện tích đất thuê, thời hạn thuê/gia hạn, đơn giá thuê (nếu đấu giá quyền thuê thì là giá trúng đấu giá), hình thức trả tiền một lần hay hằng năm và chính sách miễn, giảm tiền thuê đất. Nguồn: Điều 155, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "căn cứ tính tiền sử dụng đất",
+      "diện tích đất",
+      "giá đất",
+      "giá trúng đấu giá",
+      "miễn giảm",
+      "thời hạn thuê",
+      "đơn giá thuê"
+    ],
+    "expected_ma_doan": "D_44934C4502",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_44934C4502",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 155",
+        "source_page": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá",
+        "source_excerpt": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá đất, thời điểm tính tiền sử dụng đất, tiền thuê đất 1. Căn cứ tính tiền sử dụng đất bao gồm: a) Di ện tích đất được giao, được chuyển mục đích s ử dụng, được công nh ận quyền sử dụng đất; b) Giá đất theo quy định tại Điều 159 và Điều 160 c ủa Luật này; tr ường hợp đấu giá quyền sử dụng đất thì giá đất là giá trúng đấu giá; c) Chính sách miễn, giảm tiền sử dụng đất của Nhà nước. 2. Căn cứ tính tiền cho thuê đất bao gồm: a) Diện tích đất cho thuê;",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_FD3DB57183",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 155",
+        "source_page": "Trang 78",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 79  b) Thời hạn cho thuê đất, thời hạn gia hạn sử dụng đất; c) Đơn giá thuê đất; trường hợp đấu giá quy ền thuê đất thì giá đất thuê là giá trúng đấu giá; d) Hình thức Nhà nước cho thuê đất thu tiền thuê đất hằng năm hoặc cho thuê đất thu tiền thuê đất một lần cho cả thời gian thuê; đ) Chính sách miễn, giảm tiền thuê đất của Nhà nước. 3. Thời điểm định giá đất, thời điểm tính ti ền sử dụng đất, tiền thuê đất được quy định như sau: a) Đối với trường hợp Nhà nước giao đất, cho thuê đất, cho phép chuy ển mục đích s ử d ụng đất, gia h ạn s ử d ụng đất, điều ch ỉnh th ời h ạn s ử d ụng đất, chuy ển hình thức sử dụng đất, là th ời điểm Nhà n ước ban hành quy ết định giao đất, cho thuê đất, cho phép chuy ển mục đích sử dụng đất, gia h ạn sử dụng đất, điều chỉnh thời hạn s ử dụng đất, chuyển hình th ức sử dụng đất, trừ trường hợp quy định tại khoản 7 Điều 124 của Luật này; b) Đối v ới tr ường h ợp công nh ận quy ền s ử d ụng đất, là th ời điểm ng ười s ử dụng đất, ch ủ s ở h ữu tài s ản g ắn li ền v ới đất ho ặc ng ười đại di ện cho ng ười s ử dụng đất, chủ sở hữu tài sản gắn liền với đất nộp đủ hồ sơ hợp lệ theo quy định của pháp luật; c) Đối với trường hợp cơ quan nhà nước có thẩm quyền điều chỉnh quyết định giao đất, cho thuê đất mà làm thay đổi diện tích, mục đích sử dụng đất, thời hạn sử dụng đất, là thời điểm cơ quan nhà nước có thẩm quyền điều chỉnh quyết định giao đất, cho thuê đất; d) Đối với trường hợp cơ quan nhà nước có thẩm quyền quyết định điều chỉnh quy hoạch chi ti ết theo quy định của pháp lu ật về xây d ựng mà ph ải xác định lại giá đất, là th ời điểm cơ quan nhà n ước có th ẩm quyền quyết định điều chỉnh quy hoạch chi tiết. 4. Đối với trường hợp áp d ụng giá đất trong bảng giá đất để tính tiền sử dụng đất, ti ền thuê đất thì Ủy ban nhân dân c ấp có th ẩm quyền ph ải ghi giá đất trong quyết định giao đất, cho thuê đất, cho phép chuy ển mục đích sử dụng đất, gia hạn sử dụng đất, điều chỉnh thời hạn sử dụng đất, chuyển hình thức sử dụng đất.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_A54B88F070",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 155",
+        "source_page": "Trang 79",
+        "source_excerpt": " 80 CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024  Đối với trường hợp xác định giá đất cụ thể để tính ti ền sử dụng đất, tiền thuê đất thì Ủy ban nhân dân cấp có thẩm quyền phải ban hành quyết định giá đất trong thời h ạn 180 ngày k ể t ừ th ời điểm định giá đất quy định t ại các điểm a, c và d khoản 3 Điều này. 5. Chính phủ quy định chi tiết Điều này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL031",
+    "question": "Điều kiện thực hiện quyền chuyển nhượng quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL032",
+    "question": "Điều kiện thực hiện quyền tặng cho quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL033",
+    "question": "Điều kiện thực hiện quyền thừa kế quyền sử dụng đất được quy định như thế nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL034",
+    "question": "Thế chấp quyền sử dụng đất cần đáp ứng những điều kiện nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL035",
+    "question": "Trường hợp nào người sử dụng đất được chuyển mục đích sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Các trường hợp phải được cơ quan nhà nước có thẩm quyền cho phép chuyển mục đích sử dụng đất gồm: chuyển đất trồng lúa hoặc đất rừng đặc dụng, phòng hộ, sản xuất sang loại đất khác trong nhóm đất nông nghiệp; chuyển đất nông nghiệp sang đất phi nông nghiệp; chuyển loại đất khác sang đất chăn nuôi tập trung khi thực hiện dự án quy mô lớn; chuyển đất phi nông nghiệp được giao không thu tiền sang loại đất phi nông nghiệp được giao có thu tiền hoặc cho thuê; chuyển đất phi nông nghiệp không phải đất ở sang đất ở; chuyển đất công trình sự nghiệp hoặc đất công cộng có mục đích kinh doanh sang đất sản xuất, kinh doanh phi nông nghiệp; và chuyển đất sản xuất, kinh doanh phi nông nghiệp không phải đất thương mại, dịch vụ sang đất thương mại, dịch vụ. Người sử dụng đất phải thực hiện nghĩa vụ tài chính; các trường hợp ngoài danh mục khoản 1 không phải xin phép theo khoản 3. Nguồn: Điều 121, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "chuyển mục đích sử dụng đất",
+      "phải xin phép",
+      "đất trồng lúa",
+      "đất nông nghiệp",
+      "đất phi nông nghiệp",
+      "đất ở",
+      "nghĩa vụ tài chính"
+    ],
+    "expected_ma_doan": "D_377DA7879E",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 121. Chuyển mục đích sử dụng đất",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_377DA7879E",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 121",
+        "source_page": "Điều 121. Chuyển mục đích sử dụng đất",
+        "source_excerpt": "Điều 121. Chuyển mục đích sử dụng đất 1. Các tr ường hợp chuyển mục đích sử dụng đất phải được cơ quan nhà n ước có thẩm quyền cho phép bao gồm: a) Chuyển đất trồng lúa, đất rừng đặc dụng, đất rừng phòng h ộ, đất rừng sản xuất sang loại đất khác trong nhóm đất nông nghiệp; b) Chuyển đất nông nghiệp sang đất phi nông nghiệp;",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_7BCC27684A",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 121",
+        "source_page": "Trang 26",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 27  c) Chuyển các lo ại đất khác sang đất chăn nuôi t ập trung khi th ực hiện dự án chăn nuôi tập trung quy mô lớn; d) Chuy ển đất phi nông nghi ệp được Nhà n ước giao đất không thu ti ền s ử dụng đất sang loại đất phi nông nghiệp khác được Nhà nước giao đất có thu tiền sử dụng đất hoặc cho thuê đất; đ) Chuyển đất phi nông nghiệp không phải là đất ở sang đất ở; e) Chuyển đất xây dựng công trình s ự nghiệp, đất sử dụng vào mục đích công cộng có mục đích kinh doanh sang đất sản xuất, kinh doanh phi nông nghiệp; g) Chuyển đất sản xuất, kinh doanh phi nông nghi ệp không phải là đất thương mại, dịch vụ sang đất thương mại, dịch vụ. 2. Khi chuy ển mục đích s ử dụng đất theo quy định t ại kho ản 1 Điều này thì người sử dụng đất phải thực hiện nghĩa vụ tài chính theo quy định của pháp lu ật; chế độ sử dụng đất, quyền và ngh ĩa vụ của người sử dụng đất được áp d ụng theo loại đất sau khi được chuyển mục đích sử dụng. 3. Việc chuyển mục đích sử dụng đất không thuộc các trường hợp quy định tại khoản 1 Điều này thì không phải xin phép của cơ quan nhà nước có thẩm quyền. Trường h ợp s ử dụng đất có ngu ồn g ốc là đất ở hoặc đất phi nông nghi ệp có thời h ạn s ử dụng đất ổn định lâu dài phù h ợp quy định c ủa pháp lu ật đã chuyển sang sử dụng vào mục đích khác mà nay có nhu c ầu chuyển lại thành đất ở và phù hợp với quy hoạch sử dụng đất thì không phải nộp tiền sử dụng đất. 4. Vi ệc chuyển m ục đích s ử d ụng đất quy định t ại Điều này được th ực hi ện theo quy định tại Điều 124 của Luật này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL036",
+    "question": "Cơ quan nào có thẩm quyền cho phép chuyển mục đích sử dụng đất?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Thẩm quyền được phân định như sau: UBND cấp tỉnh quyết định giao đất, cho thuê đất và cho phép chuyển mục đích sử dụng đất đối với tổ chức trong nước; giao/cho thuê đất đối với tổ chức tôn giáo, người gốc Việt Nam định cư ở nước ngoài và tổ chức kinh tế có vốn đầu tư nước ngoài; đồng thời cho thuê đất đối với tổ chức nước ngoài có chức năng ngoại giao. UBND cấp huyện quyết định đối với cá nhân và giao đất đối với cộng đồng dân cư. UBND cấp xã cho thuê đất thuộc quỹ đất nông nghiệp sử dụng vào mục đích công ích của xã, phường, thị trấn. Trường hợp cá nhân thuê đất hoặc chuyển mục đích đất nông nghiệp sang thương mại, dịch vụ từ 0,5 ha trở lên cần văn bản chấp thuận của UBND cấp tỉnh trước khi quyết định. Nguồn: Điều 123, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "thẩm quyền",
+      "UBND cấp tỉnh",
+      "UBND cấp huyện",
+      "UBND cấp xã",
+      "tổ chức",
+      "cá nhân",
+      "0,5 ha"
+    ],
+    "expected_ma_doan": "D_C5F711FC28",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_C5F711FC28",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 123",
+        "source_page": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích",
+        "source_excerpt": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích sử dụng đất 1. Ủy ban nhân dân cấp tỉnh quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất trong các trường hợp sau đây: a) Giao đất, cho thuê đất, cho phép chuy ển m ục đích s ử d ụng đất đối với tổ chức trong nước; b) Giao đất, cho thuê đất đối với tổ chức tôn giáo, tổ chức tôn giáo trực thuộc; c) Giao đất, cho thuê đất đối v ới ng ười g ốc Vi ệt Nam định c ư ở n ước ngoài, tổ chức kinh tế có vốn đầu tư nước ngoài; d) Cho thuê đất đối với tổ chức nước ngoài có chức năng ngoại giao. 2. Ủy ban nhân dân c ấp huy ện quy ết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất trong các trường hợp sau đây: a) Giao đất, cho thuê đất, cho phép chuy ển mục đích s ử dụng đất đối v ới cá nhân. Trường hợp cho cá nhân thuê đất, cho phép chuy ển mục đích s ử dụng đất nông nghiệp để sử dụng vào mục đích thương mại, dịch vụ với diện tích từ 0,5 ha trở lên thì ph ải có v ăn b ản ch ấp thu ận c ủa Ủy ban nhân dân c ấp t ỉnh tr ước khi quyết định; b) Giao đất đối với cộng đồng dân cư. 3. Ủy ban nhân dân c ấp xã cho thuê đất thu ộc qu ỹ đất nông nghi ệp s ử dụng vào mục đích công ích của xã, phường, thị trấn. 4. Cơ quan nhà n ước có th ẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích s ử d ụng đất quy định t ại kho ản 1 và kho ản 2 Điều này là c ơ quan có thẩm quyền quyết định điều chỉnh, gia h ạn sử dụng đất đối với trường hợp người sử dụng đất đã có quyết định giao đất, cho thuê đất, cho phép chuyển mục đích sử dụng đất trước ngày Lu ật này có hi ệu lực thi hành và các tr ường hợp quyết định giao đất, cho thuê đất, cho phép chuy ển mục đích sử dụng đất theo quy định của Luật này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_883F8A78F7",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 123",
+        "source_page": "Trang 29",
+        "source_excerpt": " 30 CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024  5. Cơ quan nhà nước có thẩm quyền quy định tại các khoản 1, 2 và 4 Điều này không được phân cấp, không được ủy quyền.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL037",
+    "question": "Nguyên tắc và căn cứ lập quy hoạch, kế hoạch sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL038",
+    "question": "Trình tự, thủ tục đăng ký đất đai lần đầu gồm những nội dung chính nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Đăng ký lần đầu được thực hiện đối với: (1) thửa đất đang sử dụng nhưng chưa đăng ký; (2) thửa đất được Nhà nước giao hoặc cho thuê để sử dụng; (3) thửa đất được giao để quản lý nhưng chưa đăng ký; và (4) tài sản gắn liền với đất khi chủ sở hữu có nhu cầu đăng ký đồng thời với đăng ký đất đai trong các trường hợp trên. UBND cấp tỉnh có trách nhiệm chỉ đạo tuyên truyền và tổ chức thực hiện đăng ký lần đầu cho các trường hợp chưa đăng ký. Nguồn: Điều 132, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "đăng ký lần đầu",
+      "thửa đất chưa đăng ký",
+      "Nhà nước giao đất",
+      "cho thuê đất",
+      "đất được giao để quản lý",
+      "tài sản gắn liền với đất"
+    ],
+    "expected_ma_doan": "D_8D8776F5C5",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 132. Đăng ký lần đầu",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_8D8776F5C5",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 132",
+        "source_page": "Điều 132. Đăng ký lần đầu",
+        "source_excerpt": "Điều 132. Đăng ký lần đầu 1. Đăng ký lần đầu đối với đất đai, tài sản gắn liền với đất được thực hiện trong các trường hợp sau đây: a) Thửa đất đang sử dụng mà chưa đăng ký; b) Thửa đất được Nhà nước giao, cho thuê để sử dụng; c) Thửa đất được giao để quản lý mà chưa đăng ký; d) Tài s ản gắn liền với đất mà có nhu c ầu đăng ký đồng thời với đăng ký đất đai trong các trường hợp quy định tại các điểm a, b và c khoản này. 2. Ủy ban nhân dân cấp tỉnh có trách nhiệm chỉ đạo việc phổ biến, tuyên truyền và tổ chức thực hiện đăng ký lần đầu cho các trường hợp chưa đăng ký.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL039",
+    "question": "Điều kiện để được cấp giấy chứng nhận quyền sử dụng đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Nguyên tắc chung: Giấy chứng nhận được cấp theo từng thửa đất cho người có quyền sử dụng đất và chủ sở hữu tài sản gắn liền với đất khi có nhu cầu và đủ điều kiện luật định. Nếu nhiều người cùng có quyền sử dụng đất hoặc sở hữu tài sản gắn liền với đất, có thể cấp riêng cho từng người hoặc cấp chung theo yêu cầu. Giấy chứng nhận chỉ được cấp sau khi hoàn thành nghĩa vụ tài chính, trừ trường hợp không phải thực hiện, được miễn hoặc được ghi nợ. Điều kiện cụ thể còn phụ thuộc loại giấy tờ và tình trạng sử dụng đất; Điều 137 quy định trường hợp có giấy tờ, Điều 138 quy định một số trường hợp không có giấy tờ nhưng sử dụng ổn định, không vi phạm và không thuộc trường hợp luật loại trừ. Nguồn: Điều 135, 137 và 138, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "Giấy chứng nhận",
+      "từng thửa đất",
+      "đủ điều kiện",
+      "nghĩa vụ tài chính",
+      "giấy tờ về quyền sử dụng đất",
+      "sử dụng ổn định"
+    ],
+    "expected_ma_doan": "D_77A737798F",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_77A737798F",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 135, 137, 138",
+        "source_page": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở",
+        "source_excerpt": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất 1. Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn liền với đất được cấp theo t ừng thửa đất cho ng ười có quy ền sử dụng đất, chủ sở hữu tài s ản gắn liền với đất có nhu c ầu và đủ điều kiện theo quy định của Luật này. Tr ường hợp người sử dụng đất đang sử dụng nhiều thửa đất nông nghi ệp tại cùng 01 xã, phường, thị trấn mà có yêu c ầu thì được cấp 01 Gi ấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất chung cho các thửa đất đó. 2. Th ửa đất có nhi ều ng ười chung quy ền s ử d ụng đất, nhi ều ng ười s ở h ữu chung tài sản gắn liền với đất thì cấp cho mỗi người 01 Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; trường hợp những người có chung quyền sử dụng đất, chung quyền sở hữu tài sản gắn liền với đất có yêu cầu thì cấp chung 01 Gi ấy chứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn liền với đất và trao cho người đại diện. 3. Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn liền với đất chỉ được cấp sau khi ng ười sử dụng đất, chủ sở hữu tài s ản gắn liền với đất hoàn thành nghĩa vụ tài chính theo quy định của pháp luật. Trường hợp người sử dụng đất, chủ sở hữu tài sản gắn liền với đất không thuộc đối tượng phải thực hiện nghĩa vụ tài chính hoặc được miễn, được ghi nợ nghĩa vụ",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_8BCEE6E2AA",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 135, 137, 138",
+        "source_page": "Trang 44",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 45  tài chính thì Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất được cấp sau khi c ơ quan có th ẩm quyền xác định không phải thực hiện nghĩa vụ tài chính ho ặc được miễn, được ghi nợ nghĩa vụ tài chính; tr ường hợp thuê đất trả tiền thuê đất hằng năm thì Gi ấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất được cấp sau khi c ơ quan có th ẩm quyền ban hành quy ết định cho thuê đất, ký hợp đồng thuê đất. Trường hợp người sử dụng đất tặng cho quyền sử dụng đất cho Nhà nước hoặc tặng cho quyền sử dụng đất cho cộng đồng dân cư để xây dựng các công trình phục vụ lợi ích chung c ủa cộng đồng hoặc mở rộng đường giao thông theo quy ho ạch hoặc tặng cho quy ền sử dụng đất để làm nhà tình ngh ĩa, nhà tình th ương, nhà đại đoàn kết gắn liền với đất theo quy định của pháp luật thì Nhà nước có trách nhiệm bố trí kinh phí th ực hi ện vi ệc đo đạc, ch ỉnh lý, c ập nh ật h ồ s ơ địa chính và c ấp Giấy ch ứng nh ận quy ền s ử d ụng đất, quy ền s ở h ữu tài s ản g ắn li ền v ới đất cho người sử dụng đất theo quy định của Luật này; ng ười sử dụng đất không ph ải trả chi phí đối với trường hợp này. 4. Trường hợp quyền s ử dụng đất hoặc quyền s ử dụng đất, quyền s ở h ữu tài sản gắn liền với đất hoặc quyền sở hữu tài sản gắn liền với đất là tài sản chung của vợ và chồng thì phải ghi cả họ, tên vợ và họ, tên chồng vào Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất, trừ trường hợp vợ và chồng có thỏa thuận ghi tên một người để đứng tên làm đại diện cho vợ và chồng. Trường hợp quyền sử dụng đất hoặc quyền sử dụng đất, quyền sở hữu tài s ản gắn liền với đất hoặc quyền sở hữu tài sản gắn liền với đất là tài s ản chung của vợ và chồng mà Giấy chứng nhận quyền sử dụng đất, Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở, Giấy chứng nhận quyền sở hữu nhà ở, Giấy chứng nhận quy ền s ở h ữu công trình xây d ựng, Gi ấy ch ứng nh ận quy ền s ử d ụng đất, quyền sở hữu nhà ở và tài s ản khác g ắn liền với đất, Giấy chứng nh ận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đã cấp chỉ ghi họ, tên của vợ hoặc chồng thì được cấp đổi sang Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất để ghi cả họ, tên vợ và họ, tên chồng nếu có yêu cầu. 5. Tr ường h ợp th ửa đất thu ộc quy ền s ử d ụng c ủa h ộ gia đình thì c ấp m ột Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất ghi đầy",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_6022325D61",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 135, 137, 138",
+        "source_page": "Trang 45",
+        "source_excerpt": " 46 CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024  đủ tên thành viên có chung quy ền s ử d ụng đất c ủa h ộ gia đình trên Gi ấy ch ứng nhận quyền sử dụng đất, quyền sở hữu tài s ản gắn liền với đất và trao cho ng ười đại diện. Trường hợp các thành viên có chung quy ền sử dụng đất của hộ gia đình có nhu cầu thì cấp một Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất ghi tên đại diện hộ gia đình trên Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và trao cho người đại diện hộ gia đình. Việc xác định các thành viên có chung quy ền sử dụng đất của hộ gia đình để ghi tên trên Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất do các thành viên này tự thỏa thuận và chịu trách nhiệm trước pháp luật. 6. Trường hợp có sự chênh lệch diện tích giữa số liệu đo đạc thực tế với số liệu ghi trên gi ấy tờ quy định tại Điều 137 c ủa Luật này ho ặc Giấy chứng nhận quyền sử d ụng đất ho ặc Giấy chứng nh ận quyền s ở hữu nhà ở và quy ền s ử d ụng đất ở hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền v ới đất hoặc Giấy chứng nh ận quyền s ử dụng đất, quyền sở h ữu tài s ản g ắn liền với đất đã cấp mà ranh giới thửa đất đang sử dụng không thay đổi so với ranh giới th ửa đất t ại th ời điểm có gi ấy t ờ v ề quy ền s ử d ụng đất, Gi ấy ch ứng nh ận quyền sử dụng đất, Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài s ản khác g ắn liền với đất, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đã cấp, không có tranh ch ấp với những người sử dụng đất liền kề thì khi c ấp hoặc cấp đổi Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất, diện tích đất được xác định theo số liệu đo đạc thực tế. Trường hợp đo đạc lại mà ranh gi ới thửa đất có thay đổi so với ranh giới thửa đất tại thời điểm có giấy tờ về quyền sử dụng đất hoặc Giấy chứng nhận quyền sử dụng đất, Gi ấy ch ứng nh ận quy ền s ở h ữu nhà ở và quy ền s ử d ụng đất ở, Giấy ch ứng nh ận quy ền s ử dụng đất, quy ền s ở hữu nhà ở và tài s ản khác g ắn liền với đất, Gi ấy chứng nh ận quy ền sử dụng đất, quy ền sở hữu tài s ản gắn liền với đất đã c ấp và di ện tích đất đo đạc th ực t ế nhi ều h ơn di ện tích ghi trên gi ấy tờ về quyền sử dụng đất hoặc Giấy ch ứng nh ận quy ền sử dụng đất, Gi ấy ch ứng nhận quy ền s ở h ữu nhà ở và quy ền s ử d ụng đất ở, Gi ấy ch ứng nh ận quy ền s ử dụng đất, quy ền sở hữu nhà ở và tài s ản khác g ắn liền với đất, Giấy chứng nhận",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_85E0D3A8CF",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 135, 137, 138",
+        "source_page": "Điều 137. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản",
+        "source_excerpt": "Điều 137. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất đối với hộ gia đình, cá nhân, c ộng đồng dân cư đang sử dụng đất có giấy tờ về quyền sử dụng đất 1. Hộ gia đình, cá nhân đang sử dụng đất ổn định mà có một trong các loại giấy tờ được lập trước ngày 15 tháng 10 n ăm 1993 sau đây thì được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và không phải nộp tiền sử dụng đất: a) Những giấy tờ về quyền được sử dụng đất do c ơ quan có th ẩm quyền cấp trong quá trình th ực hi ện chính sách đất đai c ủa Nhà n ước Vi ệt Nam dân ch ủ Cộng hòa, Chính ph ủ Cách m ạng lâm th ời C ộng hòa mi ền Nam Vi ệt Nam và Nhà n ước Cộng hòa xã h ội chủ nghĩa Việt Nam; b) M ột trong các gi ấy t ờ v ề quy ền s ử d ụng đất do c ơ q u a n  c ó  t hẩm quy ền thuộc ch ế độ c ũ c ấp cho ng ười s ử d ụng đất, g ồm: B ằng khoán điền th ổ; V ăn t ự đoạn mãi b ất động sản có ch ứng nhận của cơ quan thu ộc chế độ cũ; Văn tự mua bán nhà ở, tặng cho nhà ở, đổi nhà ở, thừa kế nhà ở mà gắn liền với đất ở có chứng nhận của cơ quan thuộc chế độ cũ; Bản di chúc hoặc giấy thỏa thuận tương phân di",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL040",
+    "question": "Những trường hợp nào được cấp giấy chứng nhận quyền sử dụng đất lần đầu?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Đối với hộ gia đình, cá nhân đang sử dụng đất ổn định nhưng không có giấy tờ về quyền sử dụng đất, Điều 138 cho phép xem xét cấp Giấy chứng nhận nếu không vi phạm pháp luật đất đai và không thuộc trường hợp đất được giao không đúng thẩm quyền hoặc các trường hợp bị loại trừ tại Điều 139, 140. Điều luật phân biệt theo thời điểm bắt đầu sử dụng đất (trước 18/12/1980; từ 18/12/1980 đến trước 15/10/1993; và các giai đoạn tiếp theo), tình trạng tranh chấp, xác nhận của UBND cấp xã, hiện trạng và quy hoạch. Các trường hợp có giấy tờ được xem xét theo Điều 137. Nguồn: Điều 137 và 138, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "cấp Giấy chứng nhận lần đầu",
+      "sử dụng đất ổn định",
+      "không có giấy tờ",
+      "không vi phạm pháp luật đất đai",
+      "không có tranh chấp",
+      "UBND cấp xã",
+      "Điều 137",
+      "Điều 138"
+    ],
+    "expected_ma_doan": "D_8CA3371DD7",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 138. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_8CA3371DD7",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 137, 138",
+        "source_page": "Điều 138. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản",
+        "source_excerpt": "Điều 138. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn li ền v ới đất đối v ới tr ường h ợp h ộ gia đình, cá nhân đang s ử d ụng đất không có gi ấy tờ về quy ền sử d ụng đất mà không vi ph ạm pháp lu ật về đất đai, không thuộc trường hợp đất được giao không đúng thẩm quyền Việc cấp Giấy chứng nhận quyền s ử dụng đất, quyền sở hữu tài s ản gắn liền với đất đối v ới tr ường h ợp h ộ gia đình, cá nhân đang s ử d ụng đất ổn định mà không có m ột trong các lo ại giấy tờ về quyền sử dụng đất quy định tại Điều 137 của Lu ật này, không thu ộc tr ường h ợp quy định t ại Điều 139 và Điều 140 c ủa Luật này được thực hiện theo quy định như sau: 1. H ộ gia đình, cá nhân s ử d ụng đất tr ước ngày 18 tháng 12 n ăm 1980, nay được Ủy ban nhân dân cấp xã nơi có đất xác nhận không có tranh chấp thì được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất như sau: a) Đối với thửa đất có nhà ở, nhà ở và công trình ph ục vụ đời sống nếu diện tích thửa đất bằng hoặc lớn hơn hạn mức công nhận đất ở theo quy định tại khoản 5",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_7C699E6A8D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 137, 138",
+        "source_page": "Điều 141 của Luật này thì diện tích đất ở được công nhận bằng hạn mức công nhận",
+        "source_excerpt": "Điều 141 của Luật này thì diện tích đất ở được công nhận bằng hạn mức công nhận đất ở và không phải nộp tiền sử dụng đất. Trường hợp diện tích đất đã xây dựng nhà ở, nhà ở và công trình ph ục vụ đời sống lớn hơn hạn mức công nh ận đất ở quy định tại điểm này thì di ện tích đất ở được công nhận theo diện tích thực tế đã xây dựng nhà ở, nhà ở và công trình phục vụ đời sống đó; người sử dụng đất phải nộp tiền sử dụng đất đối với diện tích vượt hạn mức công nhận đất ở tại điểm này; b) Đối với thửa đất có nhà ở, nhà ở và công trình ph ục vụ đời sống nếu diện tích thửa đất nhỏ hơn hạn mức công nhận đất ở quy định tại khoản 5 Điều 141 của Luật này thì diện tích đất ở được xác định là toàn bộ diện tích thửa đất đó và không phải nộp tiền sử dụng đất; c) Đối v ới th ửa đất có s ử dụng vào m ục đích sản xu ất, kinh doanh phi nông nghiệp, thương m ại, d ịch v ụ thì công nh ận đất c ơ sở sản xu ất phi nông nghi ệp,",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_8095B7A1DF",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 137, 138",
+        "source_page": "Trang 52",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 53  đất thương mại, dịch vụ theo di ện tích th ực tế đã sử dụng; hình th ức sử dụng đất được công nh ận như hình th ức giao đất có thu ti ền sử dụng đất, thời hạn sử dụng đất là ổn định lâu dài; d) Đối với phần diện tích đất còn lại sau khi đã được xác định theo quy định tại điểm a và điểm c khoản này thì được xác định theo hiện trạng sử dụng đất. Trường hợp hiện trạng sử dụng là đất phi nông nghi ệp không phải là đất ở thì được công nhận theo quy định tại điểm c khoản này. Trường h ợp hi ện tr ạng s ử d ụng là đất nông nghi ệp thì được công nh ận theo hình thức Nhà nước giao đất không thu tiền sử dụng đất; nếu người sử dụng đất có nhu cầu công nh ận vào m ục đích đất phi nông nghi ệp mà phù h ợp với quy ho ạch sử dụng đất cấp huyện hoặc quy ho ạch chung hoặc quy hoạch phân khu ho ặc quy hoạch xây dựng hoặc quy hoạch nông thôn thì được công nhận vào mục đích đó và phải nộp tiền sử dụng đất theo quy định của pháp luật; 2. Hộ gia đình, cá nhân s ử dụng đất từ ngày 18 tháng 12 n ăm 1980 đến trước ngày 15 tháng 10 năm 1993, nay được Ủy ban nhân dân cấp xã nơi có đất xác nhận không có tranh ch ấp thì được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất như sau: a) Đối với thửa đất có nhà ở, nhà ở và công trình ph ục vụ đời sống nếu diện tích th ửa đất b ằng ho ặc l ớn h ơn h ạn mức công nh ận đất ở quy định t ại kho ản 5",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL041",
+    "question": "Thời hạn sử dụng đất được xác định theo những căn cứ nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Thời hạn sử dụng đất được xác định theo loại đất, chủ thể và mục đích sử dụng theo các Điều 171 và 172. Điều 171 liệt kê các loại đất được sử dụng ổn định lâu dài. Đối với đất có thời hạn, Điều 172 quy định các mốc theo trường hợp: một số loại đất nông nghiệp của cá nhân trực tiếp sản xuất có thời hạn 50 năm; cá nhân thuê đất nông nghiệp không quá 50 năm; dự án đầu tư thông thường không quá 50 năm, trường hợp dự án có thời hạn hoạt động trên 50 năm theo Luật Đầu tư thì thời hạn giao/thuê đất có thể theo thời hạn dự án nhưng không quá 70 năm. Các trường hợp khác phải căn cứ đúng nhóm đất và quy định tương ứng tại Điều 172; không thể áp dụng một thời hạn chung cho mọi thửa đất. Nguồn: Điều 171 và 172, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "thời hạn sử dụng đất",
+      "đất sử dụng ổn định lâu dài",
+      "đất có thời hạn",
+      "50 năm",
+      "70 năm",
+      "loại đất",
+      "mục đích sử dụng"
+    ],
+    "expected_ma_doan": "D_0699C36B96",
+    "expected_document_id": "TLCC15686A3BB44DB88A",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 171. Đất sử dụng ổn định lâu dài",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: TLCC15686A3BB44DB88A, phiên bản v1.0, mã phiên bản PB_CC6C1358.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_0699C36B96",
+        "document_id": "TLCC15686A3BB44DB88A",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_CC6C1358",
+        "article_candidate": "Điều 171, 172",
+        "source_page": "Điều 171. Đất sử dụng ổn định lâu dài",
+        "source_excerpt": "Điều 171. Đất sử dụng ổn định lâu dài 1. Đất ở. 2. Đất nông nghiệp do cộng đồng dân cư sử dụng quy định tại khoản 4 Điều 178 của Luật này. 3. Đất rừng đặc dụng; đất rừng phòng hộ; đất rừng sản xuất do tổ chức quản lý. 4. Đất thương mại, dịch vụ, đất cơ sở sản xuất phi nông nghi ệp của cá nhân đang sử dụng ổn định được Nhà n ước công nh ận mà không ph ải là đất được Nhà nước giao có thời hạn, cho thuê. 5. Đất xây d ựng trụ sở cơ quan quy định tại khoản 1 Điều 199 c ủa Luật này; đất xây d ựng công trình s ự nghi ệp c ủa đơn v ị s ự nghi ệp công l ập quy định t ại khoản 2 Điều 199 của Luật này. 6. Đất quốc phòng, an ninh. 7. Đất tín ngưỡng. 8. Đất tôn giáo quy định tại khoản 2 Điều 213 của Luật này. 9. Đất sử dụng vào mục đích công cộng không có mục đích kinh doanh. 10. Đất nghĩa trang, nhà tang lễ, cơ sở hỏa táng; đất cơ sở lưu giữ tro cốt. 11. Đất quy định tại khoản 3 Điều 173 và khoản 2 Điều 174 của Luật này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_153E7DDC13",
+        "document_id": "TLCC15686A3BB44DB88A",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_CC6C1358",
+        "article_candidate": "Điều 171, 172",
+        "source_page": "Điều 172. Đất sử dụng có thời hạn",
+        "source_excerpt": "Điều 172. Đất sử dụng có thời hạn 1. Trừ các tr ường hợp quy định tại Điều 171 c ủa Luật này, th ời hạn sử dụng đất khi được Nhà n ước giao đất, cho thuê đất, công nhận quyền sử dụng đất được quy định như sau:",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_039ECEA83D",
+        "document_id": "TLCC15686A3BB44DB88A",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_CC6C1358",
+        "article_candidate": "Điều 171, 172",
+        "source_page": "Trang 2",
+        "source_excerpt": " 4 CÔNG BÁO/Số 367 + 368/Ngày 01-3-2024  a) Th ời h ạn giao đất, công nh ận quy ền s ử d ụng đất nông nghi ệp đối v ới cá nhân tr ực ti ếp s ản xu ất nông nghi ệp s ử d ụng đất tr ồng cây h ằng n ăm, đất nuôi trồng th ủy s ản, đất làm mu ối, đất tr ồng cây lâu n ăm, đất r ừng s ản xu ất là r ừng trồng trong h ạn mức quy định tại Điều 176 c ủa Luật này là 50 n ăm. Khi h ết thời hạn sử dụng đất, thì được tiếp tục sử dụng đất theo thời hạn quy định tại điểm này mà không phải làm thủ tục gia hạn; b) Thời hạn cho thuê đất nông nghiệp đối với cá nhân không quá 50 n ăm. Khi hết thời hạn thuê đất, cá nhân n ếu có nhu c ầu thì được Nhà nước xem xét ti ếp tục cho thuê đất nhưng không quá 50 năm; c) Thời hạn giao đất, cho thuê đất để thực hiện các dự án đầu tư có sử dụng đất được xem xét, quy ết định theo th ời hạn hoạt động của dự án đầu tư hoặc đơn xin giao đất, thuê đất nhưng không quá 50 năm. Đối với các d ự án có th ời hạn hoạt động trên 50 n ăm theo quy định của Luật Đầu tư thì th ời hạn giao đất, cho thuê đất theo th ời hạn của dự án nh ưng không quá 70 n ăm. Khi hết thời hạn, người sử dụng đất nếu có nhu c ầu tiếp tục sử dụng thì được Nhà n ước xem xét gia h ạn s ử d ụng đất nh ưng không quá th ời h ạn quy định t ại khoản này. Trường hợp không phải lập dự án đầu tư thì thời hạn sử dụng đất được xem xét trên cơ sở đơn xin giao đất, cho thuê đất nhưng không quá 50 năm; d) Thời hạn cho thuê đất xây d ựng trụ sở làm vi ệc của tổ chức nước ngoài có chức năng ngoại giao không quá 99 n ăm. Khi hết thời hạn, tổ chức nước ngoài có chức năng ngoại giao n ếu có nhu c ầu sử dụng đất thì được Nhà n ước xem xét gia hạn ho ặc cho thuê đất khác; th ời h ạn gia h ạn ho ặc cho thuê đất khác không quá thời hạn quy định tại khoản này. 2. Thời hạn giao đất, cho thuê đất quy định tại Điều này được tính t ừ ngày có quyết định giao đất, cho thuê đất của cơ quan nhà nước có thẩm quyền. 3. Vi ệc gia h ạn s ử d ụng đất được th ực hi ện trong n ăm cu ối c ủa th ời h ạn s ử dụng đất, trừ trường hợp quy định tại điểm a khoản 1 Điều này. Người sử dụng đất có nhu c ầu gia h ạn sử dụng đất phải n ộp hồ sơ đề nghị gia h ạn ch ậm nhất là 06 tháng trước khi hết thời hạn sử dụng đất. Quá thời hạn phải nộp hồ sơ đề nghị gia hạn mà người sử dụng đất không nộp hồ sơ đề nghị gia hạn thì không được gia hạn sử d ụng đất, tr ừ tr ường h ợp b ất kh ả kháng. Tr ường h ợp không được gia h ạn s ử dụng đất, cơ quan nhà nước có thẩm quyền thực hiện thu hồi đất theo quy định của Luật này. 4. Tr ường h ợp không được gia h ạn s ử d ụng đất, ng ười s ử d ụng đất có trách nhiệm xử lý tài s ản gắn liền với đất để hoàn trả mặt bằng cho Nhà n ước. Quá thời",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_673BF0BDB1",
+        "document_id": "TLCC15686A3BB44DB88A",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_CC6C1358",
+        "article_candidate": "Điều 171, 172",
+        "source_page": "Trang 3",
+        "source_excerpt": " CÔNG BÁO/Số 367 + 368/Ngày 01-3-2024 5  hạn 24 tháng kể từ thời điểm hết thời hạn sử dụng đất mà người sử dụng đất không xử lý tài s ản thì Nhà n ước thu h ồi đất mà không b ồi thường về đất và tài s ản gắn liền với đất; trường hợp phải phá dỡ, chủ sở hữu tài sản phải chịu chi phí phá dỡ. 5. Chính phủ quy định chi tiết Điều này.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: TLCC15686A3BB44DB88A, phiên bản v1.0, mã phiên bản PB_CC6C1358.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL042",
+    "question": "Những trường hợp nào Nhà nước thu hồi đất vì mục đích quốc phòng, an ninh?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL043",
+    "question": "Những trường hợp nào Nhà nước thu hồi đất để phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối có kiểm soát: câu hỏi thuộc lĩnh vực nhà ở/đất đai nhưng bản xuất dữ liệu Active/Approved được cung cấp không chứa điều khoản trực tiếp đủ để trả lời. Hệ thống không suy diễn hoặc dùng đoạn không liên quan làm căn cứ; cần bổ sung văn bản/điều khoản phù hợp vào kho đã duyệt trước khi trả lời.",
+    "expected_keywords": [
+      "không có điều khoản trực tiếp",
+      "kho dữ liệu Active/Approved",
+      "không đủ bằng chứng",
+      "từ chối có kiểm soát",
+      "bổ sung nguồn phù hợp"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
+      }
+    ],
+    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL044",
+    "question": "Người có đất bị thu hồi được xem xét bồi thường về đất khi đáp ứng điều kiện nào?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Điều 95 quy định trước hết các nhóm chủ thể có thể được bồi thường về đất khi Nhà nước thu hồi vì quốc phòng, an ninh hoặc phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng. Điều kiện về quyền sử dụng đất gồm một trong các căn cứ: có Giấy chứng nhận; có quyết định giao đất hoặc cho thuê đất hoặc cho phép chuyển mục đích sử dụng đất; có giấy tờ về quyền sử dụng đất làm căn cứ cấp Giấy chứng nhận; nhận chuyển quyền hợp pháp nhưng chưa hoàn tất đăng ký; hoặc sử dụng đất theo thỏa thuận xử lý thế chấp/văn bản công nhận kết quả đấu giá sau khi hoàn thành nghĩa vụ tài chính. Các nhóm chủ thể và điều kiện cụ thể phải đối chiếu đầy đủ khoản 1 và khoản 2 Điều 95. Nguồn: Điều 95, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "bồi thường về đất",
+      "Nhà nước thu hồi đất",
+      "Giấy chứng nhận",
+      "quyết định giao đất",
+      "giấy tờ về quyền sử dụng đất",
+      "nhận chuyển quyền hợp pháp",
+      "đấu giá"
+    ],
+    "expected_ma_doan": "D_06375641AC",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_06375641AC",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 95",
+        "source_page": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì",
+        "source_excerpt": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì mục đích quốc phòng, an ninh; phát tri ển kinh t ế - xã h ội vì l ợi ích qu ốc gia, công cộng 1. Các tr ường hợp được b ồi th ường v ề đất khi Nhà n ước thu h ồi đất vì m ục đích quốc phòng, an ninh; phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng bao gồm: a) Hộ gia đình, cá nhân đang sử dụng đất không ph ải là đất thuê tr ả tiền thuê đất hằng năm;",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_EEAB9161DC",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 95",
+        "source_page": "Trang 6",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 7  b) Cộng đồng dân cư đang sử dụng đất có công trình là chùa, đình, đền, miếu, am, nhà thờ họ, công trình tín ng ưỡng khác; đất nông nghiệp quy định tại khoản 4",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_9FA065A8AA",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 95",
+        "source_page": "Điều 178 của Luật này và đất đó không có tranh ch ấp, được Ủy ban nhân dân c ấp",
+        "source_excerpt": "Điều 178 của Luật này và đất đó không có tranh ch ấp, được Ủy ban nhân dân c ấp xã nơi có đất xác nhận là đất sử dụng chung cho cộng đồng; c) Ng ười g ốc Việt Nam định c ư ở nước ngoài quy định tại khoản 1 Điều 44 của Luật này; d) Tổ chức tôn giáo, tổ chức tôn giáo trực thuộc được Nhà nước cho phép hoạt động đang sử dụng đất mà không ph ải là đất do Nhà n ước giao, cho thuê; không phải là đất nh ận chuy ển nh ượng, nh ận t ặng cho t ừ ngày 01 tháng 7 n ăm 2004 trở về sau; đ) Người gốc Việt Nam định cư ở nước ngoài được Nhà n ước giao đất có thu tiền sử dụng đất, cho thuê đất trả tiền thuê đất một lần cho cả thời gian thuê; nh ận chuyển nhượng quyền sử dụng đất trong khu công nghi ệp, cụm công nghi ệp, khu công nghệ cao, khu kinh tế; e) Tổ chức được Nhà n ước giao đất có thu ti ền sử dụng đất, cho thuê đất trả tiền thuê đất m ột l ần cho c ả th ời gian thuê; nh ận th ừa k ế quy ền s ử d ụng đất, nhận chuyển nhượng quyền sử dụng đất, nhận góp vốn bằng quyền sử dụng đất; g) Tổ chức nước ngoài có ch ức năng ngoại giao được Nhà n ước cho thuê đất trả tiền thuê đất một lần cho cả thời gian thuê; h) Tổ chức kinh tế, người gốc Việt Nam định cư ở nước ngoài, tổ chức kinh tế có vốn đầu tư nước ngoài được Nhà nước giao đất có thu ti ền sử dụng đất để thực hiện dự án đầu tư xây d ựng nhà ở để bán ho ặc để bán k ết hợp cho thuê; cho thuê đất trả tiền thuê đất một lần cho cả thời gian thuê. 2. Các tr ường hợp quy định tại khoản 1 Điều này được bồi thường về đất khi có một trong các điều kiện sau đây: a) Có Gi ấy ch ứng nh ận quy ền s ử d ụng đất ho ặc Gi ấy ch ứng nh ận quy ền s ở hữu nhà ở và quy ền s ử d ụng đất ở ho ặc Gi ấy ch ứng nh ận quy ền s ử d ụng đất, quyền sở hữu nhà ở và tài s ản khác gắn liền với đất hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; b) Có quy ết định giao đất hoặc quyết định cho thuê đất hoặc quyết định cho phép chuyển mục đích sử dụng đất của cơ quan nhà nước có thẩm quyền;",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_8466AE4FEC",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 95",
+        "source_page": "Trang 7",
+        "source_excerpt": " 8 CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024  c) Có một trong các giấy tờ về quyền sử dụng đất làm căn cứ để cấp Giấy chứng nhận quyền s ử dụng đất, quyền s ở hữu tài s ản gắn liền với đất theo quy định tại",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_1B9A325D9D",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 95",
+        "source_page": "Điều 137 của Luật này;",
+        "source_excerpt": "Điều 137 của Luật này; d) Nh ận chuyển quy ền s ử dụng đất theo quy định của pháp lu ật từ ng ười có quyền sử dụng đất hợp pháp nhưng chưa hoàn thành thủ tục đăng ký đất đai; đ) Được s ử dụng đất theo th ỏa thu ận trong h ợp đồng th ế ch ấp để xử lý n ợ; văn bản công nh ận kết quả đấu giá quy ền sử dụng đất mà ng ười trúng đấu giá đã hoàn thành nghĩa vụ tài chính theo quy định của pháp luật. 3. Chính ph ủ quy định trường hợp khác được bồi thường về đất và điều kiện được bồi thường về đất.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL045",
+    "question": "Nguyên tắc bồi thường, hỗ trợ và tái định cư khi Nhà nước thu hồi đất là gì?",
+    "question_type": "DungPhamVi",
+    "expected_status_candidate": "ThanhCong",
+    "expected_answer": "Việc bồi thường, hỗ trợ, tái định cư phải bảo đảm dân chủ, khách quan, công bằng, công khai, minh bạch, kịp thời và đúng pháp luật; vì lợi ích chung, phát triển bền vững, văn minh, hiện đại của cộng đồng và địa phương; quan tâm đến đối tượng chính sách xã hội và người trực tiếp sản xuất nông nghiệp. Bồi thường về đất được thực hiện bằng đất cùng mục đích; nếu không có đất để bồi thường thì bồi thường bằng tiền theo giá đất cụ thể tại thời điểm phê duyệt phương án. Người bị thu hồi đất có thể được bồi thường bằng tiền theo nguyện vọng đã đăng ký; nếu có nhu cầu và địa phương có điều kiện thì có thể được xem xét bồi thường bằng đất khác mục đích hoặc bằng nhà ở. Nguồn: Điều 91, Luật Đất đai 2024.",
+    "expected_keywords": [
+      "bồi thường",
+      "hỗ trợ",
+      "tái định cư",
+      "dân chủ",
+      "khách quan",
+      "công bằng",
+      "công khai",
+      "minh bạch",
+      "giá đất cụ thể"
+    ],
+    "expected_ma_doan": "D_42ED6D2A63",
+    "expected_document_id": "PD_PHAPDIEN",
+    "expected_version": "v1.0",
+    "expected_article": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "candidate_sources": [
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_42ED6D2A63",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 91",
+        "source_page": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu",
+        "source_excerpt": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu hồi đất 1. Việc bồi thường, hỗ trợ, tái định cư khi Nhà n ước thu hồi đất phải bảo đảm dân chủ, khách quan, công b ằng, công khai, minh b ạch, kịp thời và đúng quy định của pháp lu ật; vì l ợi ích chung, s ự phát tri ển bền vững, văn minh và hi ện đại của cộng đồng, của địa phương; quan tâm đến đối tượng chính sách xã h ội, đối tượng trực tiếp sản xuất nông nghiệp. 2. Việc bồi thường về đất được thực hiện bằng việc giao đất có cùng mục đích sử dụng với loại đất thu h ồi, trường hợp không có đất để bồi thường thì được bồi thường bằng tiền theo giá đất cụ thể của loại đất thu h ồi do Ủy ban nhân dân c ấp có thẩm quyền quyết định tại thời điểm phê duy ệt phương án b ồi thường, hỗ trợ, tái định cư. Trường hợp người có đất thu hồi được bồi thường bằng đất, bằng nhà ở mà có nhu c ầu được b ồi th ường b ằng ti ền thì được b ồi th ường b ằng ti ền theo nguyện vọng đã đăng ký khi lập phương án bồi thường, hỗ trợ, tái định cư. Đối với ng ười có đất thu h ồi nếu có nhu c ầu và địa ph ương có điều ki ện về quỹ đất, quỹ nhà ở thì được xem xét b ồi thường bằng đất khác m ục đích sử dụng với loại đất thu hồi hoặc bằng nhà ở.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_12F98B4697",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 91",
+        "source_page": "Trang 2",
+        "source_excerpt": " CÔNG BÁO/Số 365 + 366/Ngày 01-3-2024 3  3. Chủ sở hữu tài sản theo quy định của pháp luật dân sự mà bị thiệt hại về tài sản thì được bồi thường thiệt hại; chủ cơ sở sản xuất, kinh doanh ph ải ngừng sản xuất, kinh doanh do Nhà nước thu hồi đất thì được xem xét hỗ trợ. 4. Nhà nước có trách nhiệm hỗ trợ cho người có đất thu hồi, chủ sở hữu tài sản để tạo điều kiện cho ng ười có đất thu h ồi, chủ sở hữu tài s ản có vi ệc làm, có thu nhập, ổn định đời sống, sản xuất. 5. Khu tái định cư phải hoàn thiện các điều kiện về hạ tầng kỹ thuật, hạ tầng xã hội đồng bộ theo quy ho ạch chi tiết được cơ quan có th ẩm quyền phê duyệt; đồng thời ph ải phù h ợp với truyền th ống v ăn hóa, phong t ục, t ập quán c ủa cộng đồng dân cư nơi có đất thu hồi. Khu tái định cư có thể bố trí cho một hoặc nhiều dự án. 6. Ủy ban nhân dân c ấp t ỉnh, Ủy ban nhân dân c ấp huyện có trách nhi ệm tổ chức lập và th ực hiện dự án tái định cư để bảo đảm chủ động trong vi ệc bố trí tái định cư cho người có đất thu hồi. Việc phê duyệt phương án bồi thường, hỗ trợ, tái định cư và việc bố trí tái định cư phải được hoàn thành trước khi có quyết định thu hồi đất. 7. Khi Nhà nước thu hồi đất theo quy định tại Điều 78 và Điều 79 của Luật này mà phần diện tích còn l ại của thửa đất sau khi thu h ồi nhỏ hơn diện tích t ối thiểu theo quy định c ủa Ủy ban nhân dân c ấp t ỉnh v ề di ện tích t ối thi ểu t ại kho ản 2",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      },
+      {
+        "source_status": "VERIFIED_SOURCE",
+        "ma_doan_candidate": "D_D699135DC2",
+        "document_id": "PD_PHAPDIEN",
+        "version": "v1.0",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "Điều 91",
+        "source_page": "Điều 220 c ủa Lu ật này, n ếu ng ười s ử d ụng đất đồng ý thu h ồi đất thì Ủy ban",
+        "source_excerpt": "Điều 220 c ủa Lu ật này, n ếu ng ười s ử d ụng đất đồng ý thu h ồi đất thì Ủy ban nhân dân c ấp có th ẩm quy ền quy ết định thu h ồi đất và th ực hi ện vi ệc b ồi thường, hỗ trợ, quản lý diện tích đất này theo quy định của pháp lu ật. Kinh phí b ồi thường, hỗ trợ trong tr ường hợp thu h ồi đất quy định tại khoản này được tính vào kinh phí bồi thường, hỗ trợ, tái định cư của dự án đầu tư.",
+        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
+      }
+    ],
+    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "ThanhCong",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL046",
+    "question": "Hãy dự báo giá Bitcoin vào ngày mai và khuyến nghị thời điểm mua.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối: câu hỏi nằm ngoài phạm vi trợ lý hỏi đáp quy chế nhà ở và đất đai. Hệ thống không thực hiện tư vấn về lĩnh vực được hỏi và không tạo trích dẫn pháp lý không liên quan.",
+    "expected_keywords": [
+      "ngoài phạm vi",
+      "nhà ở và đất đai",
+      "từ chối",
+      "không tạo trích dẫn không liên quan"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - ngoài phạm vi",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [
+      {
+        "source_status": "OUT_OF_SCOPE",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - ngoài phạm vi",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
+      }
+    ],
+    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL047",
+    "question": "Tôi muốn xin visa du học Canada cần chuẩn bị giấy tờ gì?",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối: câu hỏi nằm ngoài phạm vi trợ lý hỏi đáp quy chế nhà ở và đất đai. Hệ thống không thực hiện tư vấn về lĩnh vực được hỏi và không tạo trích dẫn pháp lý không liên quan.",
+    "expected_keywords": [
+      "ngoài phạm vi",
+      "nhà ở và đất đai",
+      "từ chối",
+      "không tạo trích dẫn không liên quan"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - ngoài phạm vi",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [
+      {
+        "source_status": "OUT_OF_SCOPE",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - ngoài phạm vi",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
+      }
+    ],
+    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL048",
+    "question": "Hãy chẩn đoán bệnh dựa trên các triệu chứng đau đầu và sốt.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối: câu hỏi nằm ngoài phạm vi trợ lý hỏi đáp quy chế nhà ở và đất đai. Hệ thống không thực hiện tư vấn về lĩnh vực được hỏi và không tạo trích dẫn pháp lý không liên quan.",
+    "expected_keywords": [
+      "ngoài phạm vi",
+      "nhà ở và đất đai",
+      "từ chối",
+      "không tạo trích dẫn không liên quan"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - ngoài phạm vi",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [
+      {
+        "source_status": "OUT_OF_SCOPE",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - ngoài phạm vi",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
+      }
+    ],
+    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL049",
+    "question": "Làm thế nào để đăng ký nhãn hiệu cho một sản phẩm tại Việt Nam?",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối: câu hỏi nằm ngoài phạm vi trợ lý hỏi đáp quy chế nhà ở và đất đai. Hệ thống không thực hiện tư vấn về lĩnh vực được hỏi và không tạo trích dẫn pháp lý không liên quan.",
+    "expected_keywords": [
+      "ngoài phạm vi",
+      "nhà ở và đất đai",
+      "từ chối",
+      "không tạo trích dẫn không liên quan"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - ngoài phạm vi",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [
+      {
+        "source_status": "OUT_OF_SCOPE",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - ngoài phạm vi",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
+      }
+    ],
+    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  },
+  {
+    "id": "EVAL050",
+    "question": "Hãy cho biết quy định thuế thu nhập doanh nghiệp áp dụng cho công ty tôi.",
+    "question_type": "NgoaiPhamVi",
+    "expected_status_candidate": "TuChoi",
+    "expected_answer": "Từ chối: câu hỏi nằm ngoài phạm vi trợ lý hỏi đáp quy chế nhà ở và đất đai. Hệ thống không thực hiện tư vấn về lĩnh vực được hỏi và không tạo trích dẫn pháp lý không liên quan.",
+    "expected_keywords": [
+      "ngoài phạm vi",
+      "nhà ở và đất đai",
+      "từ chối",
+      "không tạo trích dẫn không liên quan"
+    ],
+    "expected_ma_doan": "N/A",
+    "expected_document_id": "N/A",
+    "expected_version": "N/A",
+    "expected_article": "N/A - ngoài phạm vi",
+    "review_status": "VERIFIED",
+    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
+    "candidate_sources": [
+      {
+        "source_status": "OUT_OF_SCOPE",
+        "ma_doan_candidate": "N/A",
+        "document_id": "N/A",
+        "version": "N/A",
+        "ma_phien_ban": "PB_A6E7970D",
+        "article_candidate": "N/A - ngoài phạm vi",
+        "source_page": "N/A",
+        "source_excerpt": "N/A",
+        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
+      }
+    ],
+    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "retrieval_diagnostics_not_verified": [
+      {
+        "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
+        "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
+      }
+    ],
+    "expected_status": "TuChoi",
+    "reviewed_by": "DATASET_OWNER",
+    "reviewed_at": "2026-11-08"
+  }
+]
