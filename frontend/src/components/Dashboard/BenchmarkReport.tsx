@@ -1,5 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { isAxiosError } from "axios";
 import {
+  clearLatestEvaluationReport,
   getApiErrorMessage,
   getLatestEvaluationReport,
   runLatestEvaluation,
@@ -7,9 +9,27 @@ import {
 import type { EvaluationReport } from "../../services/api";
 
 const metrics = [
-  { name: "Độ chính xác", key: "accuracy" },
-  { name: "Tính trung thành", key: "faithfulness" },
-  { name: "Độ chính xác trích dẫn", key: "citation_correctness" },
+  {
+    name: "Độ chính xác (Accuracy)",
+    key: "accuracy",
+    sampleKey: "accuracy_sample_count",
+    description:
+      "Mức độ khớp với đáp án chuẩn đã xác minh, hiển thị theo phần trăm.",
+  },
+  {
+    name: "Tính trung thành (Faithfulness)",
+    key: "faithfulness",
+    sampleKey: "faithfulness_sample_count",
+    description:
+      "Tỷ lệ nhận định được nội dung nguồn truy xuất hỗ trợ.",
+  },
+  {
+    name: "Độ chính xác trích dẫn (Citation Accuracy)",
+    key: "citation_correctness",
+    sampleKey: "citation_sample_count",
+    description:
+      "Tỷ lệ trích dẫn đúng đoạn, điều khoản, phiên bản và có hỗ trợ câu trả lời.",
+  },
 ] as const;
 
 function statusLabel(status: EvaluationReport["status"] | undefined): string {
@@ -22,6 +42,8 @@ function statusLabel(status: EvaluationReport["status"] | undefined): string {
       return "Chờ xác minh";
     case "Preliminary":
       return "Đã chạy thử · chưa chấm chính thức";
+    case "NoActiveDocuments":
+      return "Không có tài liệu hoạt động";
     case "Failed":
       return "Thất bại";
     default:
@@ -50,29 +72,17 @@ export function BenchmarkReport() {
   const [report, setReport] = useState<EvaluationReport | null>(null);
   const [loading, setLoading] = useState(true);
   const [running, setRunning] = useState(false);
+  const [clearing, setClearing] = useState(false);
   const [queuedRun, setQueuedRun] = useState<{
     documentVersionId: string;
     previousStartedAt?: string;
   } | null>(null);
   const [error, setError] = useState("");
+  const [warning, setWarning] = useState("");
   const needsPreliminaryRun = Boolean(
     report &&
       report.verified_question_count < report.dataset_question_count,
   );
-
-  const loadReport = useCallback(async () => {
-    try {
-      const latestReport = await getLatestEvaluationReport();
-      setReport(latestReport);
-      setError("");
-    } catch (loadError: unknown) {
-      setError(
-        getApiErrorMessage(loadError, "Không thể tải báo cáo đánh giá."),
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, []);
 
   useEffect(() => {
     let active = true;
@@ -119,6 +129,7 @@ export function BenchmarkReport() {
     if (running || queuedRun || report?.status === "Running") return;
     setRunning(true);
     setError("");
+    setWarning("");
     try {
       const result = await runLatestEvaluation();
       setQueuedRun({
@@ -129,11 +140,43 @@ export function BenchmarkReport() {
             : undefined,
       });
     } catch (runError: unknown) {
-      setError(
-        getApiErrorMessage(runError, "Không thể bắt đầu đánh giá mô hình."),
+      const message = getApiErrorMessage(
+        runError,
+        "Không thể bắt đầu đánh giá mô hình.",
       );
+      if (isAxiosError(runError) && runError.response?.status === 404) {
+        setWarning(message);
+      } else {
+        setError(message);
+      }
     } finally {
       setRunning(false);
+    }
+  };
+
+  const handleClearReport = async () => {
+    if (clearing || running || queuedRun) return;
+    if (
+      !window.confirm(
+        "Xóa báo cáo đánh giá mới nhất khỏi dashboard? Báo cáo theo phiên bản sẽ được giữ lại.",
+      )
+    ) {
+      return;
+    }
+
+    setClearing(true);
+    setError("");
+    setWarning("");
+    try {
+      await clearLatestEvaluationReport();
+      setReport(null);
+      setQueuedRun(null);
+    } catch (clearError: unknown) {
+      setError(
+        getApiErrorMessage(clearError, "Không thể xóa báo cáo đánh giá."),
+      );
+    } finally {
+      setClearing(false);
     }
   };
 
@@ -172,13 +215,20 @@ export function BenchmarkReport() {
         <button
           className="secondary-button"
           type="button"
-          onClick={() => void loadReport()}
-          disabled={loading}
+          onClick={() => void handleClearReport()}
+          disabled={loading || clearing || running || Boolean(queuedRun) || !report}
         >
-          {loading ? "Đang tải…" : "Làm mới báo cáo"}
+          {clearing ? "Đang xóa…" : "Xóa báo cáo mới nhất"}
         </button>
       </div>
       {error && <div className="notice notice-error" role="alert">{error}</div>}
+      {warning && <div className="notice notice-warning" role="alert">{warning}</div>}
+      {report?.status === "NoActiveDocuments" && (
+        <div className="notice notice-warning" role="status">
+          Không có tài liệu được phê duyệt và đang hoạt động. Đánh giá đã dừng;
+          không sử dụng phiên bản cũ.
+        </div>
+      )}
       {report?.status === "Pending" &&
         report.pending_verification_questions.length > 0 && (
           <div className="notice notice-warning" role="status">
@@ -199,17 +249,37 @@ export function BenchmarkReport() {
           </div>
         )}
       {report?.status === "Preliminary" && report.preliminary_metrics && (
+        <div className="notice notice-warning" role="status">
+          Đã chạy thử {report.preliminary_metrics.questions_completed}/
+          {report.preliminary_metrics.questions_attempted} câu. Câu chưa xác
+          minh không được chấm; mọi điểm chính thức (nếu có) chỉ tính trên câu
+          đã được chuyên viên pháp chế xác minh.
+        </div>
+      )}
+      {report && (
         <>
-          <div className="notice notice-warning" role="status">
-            Đã chạy thử {report.preliminary_metrics.questions_completed}/
-            {report.preliminary_metrics.questions_attempted} câu. Đây là chỉ số
-            truy xuất sơ bộ, không phải điểm chính xác/trung thành/trích dẫn
-            chính thức.
-          </div>
           <div className="evaluation-grid">
             <article className="metric-card">
               <span className="metric-value">
-                {report.preliminary_metrics.retrieval_coverage == null
+                {report.dataset_question_count}
+              </span>
+              <h3>Tổng số câu hỏi</h3>
+              <p>Bộ benchmark hiện tại.</p>
+            </article>
+            <article className="metric-card">
+              <span className="metric-value">
+                {report.preliminary_metrics?.questions_attempted ?? 0}/
+                {report.dataset_question_count}
+              </span>
+              <h3>Số câu đã chạy</h3>
+              <p>
+                {report.preliminary_metrics?.questions_completed ?? 0} câu hoàn
+                tất.
+              </p>
+            </article>
+            <article className="metric-card">
+              <span className="metric-value">
+                {report.preliminary_metrics?.retrieval_coverage == null
                   ? "Chưa có dữ liệu"
                   : `${(
                       report.preliminary_metrics.retrieval_coverage * 100
@@ -217,31 +287,34 @@ export function BenchmarkReport() {
               </span>
               <h3>Truy xuất đạt ngưỡng</h3>
               <p>
-                {report.preliminary_metrics.qualified_retrievals}/
-                {report.preliminary_metrics.questions_completed} câu có bằng
-                chứng qua ngưỡng truy xuất.
+                {report.preliminary_metrics?.qualified_retrievals ?? 0}/
+                {report.preliminary_metrics?.questions_completed ?? 0} câu hoàn
+                tất có bằng chứng qua ngưỡng truy xuất.
               </p>
             </article>
             <article className="metric-card">
               <span className="metric-value">
-                {report.preliminary_metrics.generated_answers}
+                {report.preliminary_metrics?.generated_answers ?? 0}
               </span>
               <h3>Câu trả lời được tạo</h3>
+              <p>Chỉ số vận hành, không phải câu trả lời đúng.</p>
             </article>
             <article className="metric-card">
               <span className="metric-value">
-                {report.preliminary_metrics.refusals}
+                {report.preliminary_metrics?.refusals ?? 0}
               </span>
               <h3>Lượt từ chối</h3>
             </article>
             <article className="metric-card">
               <span className="metric-value">
-                {report.preliminary_metrics.failed_questions}
+                {report.preliminary_metrics?.failed_questions ?? 0}
               </span>
               <h3>Lượt lỗi</h3>
             </article>
           </div>
-          {report.question_results && report.question_results.length > 0 && (
+          {report.preliminary_metrics &&
+            report.question_results &&
+            report.question_results.length > 0 && (
             <details className="notice notice-info">
               <summary>Xem kết quả chạy thử từng câu</summary>
               <ol>
@@ -290,26 +363,40 @@ export function BenchmarkReport() {
           )}
         </>
       )}
-      {report?.metrics && (
+      {report && (
         <div className="evaluation-grid">
-          {metrics.map((metric) => (
-            <article key={metric.key} className="metric-card">
-              <span className="metric-value">
-                {report.official
-                  ? formatScore(report.metrics?.[metric.key])
-                  : "Chưa có dữ liệu"}
-              </span>
-              <h3>{metric.name}</h3>
-            </article>
-          ))}
+          {metrics.map((metric) => {
+            const sampleCount = report.metrics?.[metric.sampleKey];
+            const hasSamples = sampleCount != null && sampleCount > 0;
+            return (
+              <article key={metric.key} className="metric-card">
+                <span className="metric-value">
+                  {report.official && hasSamples
+                    ? formatScore(report.metrics?.[metric.key])
+                    : "Chưa có dữ liệu"}
+                </span>
+                <h3>{metric.name}</h3>
+                <p>
+                  {!hasSamples
+                    ? "Chưa có dữ liệu để đánh giá."
+                    : `${sampleCount} mẫu đã đánh giá.`}
+                  {" "}{metric.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       )}
       {report && (
         <>
           <p className="muted" role="status">
             Bộ dữ liệu: {report.dataset_question_count} câu hỏi; đã xác minh:{" "}
-            {report.verified_question_count}; được chấm:{" "}
-            {report.metrics?.scored_questions ?? 0}. Phiên bản tài liệu:{" "}
+            {report.verified_question_count}; đang chờ xác minh:{" "}
+            {report.pending_verification_questions.length}; chính thức được
+            chấm điểm: {report.metrics?.scored_questions ?? 0}. Số phiên bản
+            tài liệu Approved đang hoạt động được nạp:{" "}
+            {report.active_document_count ?? "—"}. Phiên bản kích hoạt lượt
+            đánh giá:{" "}
             <code>{report.document_version_id}</code>
           </p>
           {report.pending_verification_questions.length > 0 && (

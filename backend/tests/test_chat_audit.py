@@ -103,20 +103,22 @@ def test_chat_refusal_is_audited_once(monkeypatch, tmp_path):
     assert results[0]["ma_phien"] == "S2"
 
 
-def test_chat_refuses_subthreshold_evidence_without_citations(monkeypatch, tmp_path):
+def test_chat_refuses_evidence_below_80_percent_without_citations(
+    monkeypatch, tmp_path
+):
     audit_file = tmp_path / "audit.jsonl"
     monkeypatch.setattr(audit, "AUDIT_FILE", audit_file)
     persisted = {}
 
     async def retrieve_evidence(question):
         return {
-            "best_score": 0.69,
+            "best_score": 0.79,
             "threshold": 0.70,
             "qualified": True,
             "chunks": [{
                 "ma_doan": "D1",
                 "noi_dung": "Below-threshold evidence",
-                "score": 0.69,
+                "score": 0.79,
                 "metadata": {},
             }],
         }
@@ -146,8 +148,46 @@ def test_chat_refuses_subthreshold_evidence_without_citations(monkeypatch, tmp_p
 
     assert response.trang_thai == "TuChoi"
     assert response.trich_dan == []
-    assert response.do_tin_cay == 0.69
+    assert response.do_tin_cay == 0.79
+    assert "0.80" in (response.ly_do_tu_choi or "")
     assert persisted["status"] == "TuChoi"
     assert persisted["chunks"] == []
     assert len(results) == 1
     assert results[0]["details"]["citation_count"] == 0
+
+
+def test_chat_accepts_evidence_at_exact_80_percent(monkeypatch, tmp_path):
+    audit_file = tmp_path / "audit.jsonl"
+    monkeypatch.setattr(audit, "AUDIT_FILE", audit_file)
+
+    async def retrieve_evidence(_question):
+        return {
+            "best_score": 0.80,
+            "threshold": 0.70,
+            "qualified": True,
+            "chunks": [{
+                "ma_doan": "D1",
+                "noi_dung": "Evidence",
+                "score": 0.80,
+                "metadata": {},
+            }],
+        }
+
+    async def generate_answer(**_kwargs):
+        return "Answer"
+
+    monkeypatch.setattr(chat, "retrieve_evidence", retrieve_evidence)
+    monkeypatch.setattr(chat, "generate_answer", generate_answer)
+    monkeypatch.setattr(chat, "save_chat_result", lambda **_kwargs: None)
+
+    response = asyncio.run(chat.chat_with_rag(
+        chat.ChatRequest(
+            ma_phien="S4",
+            ma_nd="U4",
+            noi_dung_cau_hoi="Question",
+        ),
+        AuthenticatedUser(ma_nd="U4", vai_tro="NguoiDung"),
+    ))
+
+    assert response.trang_thai == "ThanhCong"
+    assert response.trich_dan

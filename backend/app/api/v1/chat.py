@@ -24,6 +24,7 @@ REFUSAL_MESSAGE = (
     "phê duyệt để trả lời câu hỏi này. Vui lòng thử diễn đạt "
     "lại câu hỏi hoặc liên hệ chuyên viên pháp chế."
 )
+CHAT_CONFIDENCE_THRESHOLD = 0.80
 
 
 # =========================================================
@@ -424,7 +425,10 @@ async def chat_with_rag(
         )
 
     best_score = float(retrieval.get("best_score", 0.0))
-    threshold = float(retrieval.get("threshold", 0.70))
+    threshold = max(
+        float(retrieval.get("threshold", 0.70)),
+        CHAT_CONFIDENCE_THRESHOLD,
+    )
 
     chunks = retrieval.get("chunks", [])
 

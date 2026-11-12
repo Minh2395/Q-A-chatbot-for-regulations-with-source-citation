@@ -28,6 +28,9 @@ The frontend uses the APIs currently exposed by `backend/app/main.py`:
   source text before approval
 - `PUT /api/v1/documents/approve/{ma_phien_ban}` for explicit approval
 - `GET /api/v1/evaluation/latest` for the latest evaluation report
+- `DELETE /api/v1/evaluation/latest` to clear the latest dashboard report
+  without deleting per-version reports; this is blocked while an evaluation
+  is running
 - `POST /api/v1/evaluation/run-latest` to schedule a benchmark for the newest
   active, approved document version (runs an unscored preliminary pass when
   legal references are still pending)
@@ -79,5 +82,16 @@ therefore records pending questions and does not publish official scores until
 the benchmark references have been reviewed and verified against active
 approved documents. Administrators may still run an unscored preliminary
 retrieval/answer pass, which reports retrieval coverage and generated answers
-without presenting them as official metrics. Reports are written under
-`backend/reports/`.
+without presenting them as official metrics. In a mixed dataset, only legally
+verified questions are scored; pending questions remain unscored. Operational
+benchmark counts (attempted/completed questions, qualified retrievals,
+generated answers, refusals, and failures) are separate from quality scores.
+An empty quality-score sample is reported as “Chưa có dữ liệu”, not zero.
+
+The current rule-based score implementation compares an answer with verified
+keywords and token-level F1, checks each punctuation-delimited claim against
+retrieved source text, and validates each citation against the verified chunk,
+article, version, and claim support. These are conservative lexical checks,
+not an independent legal or natural-language entailment judgment: paraphrases
+may be missed, and lexical overlap alone cannot establish legal equivalence.
+Reports are written under `backend/reports/`.

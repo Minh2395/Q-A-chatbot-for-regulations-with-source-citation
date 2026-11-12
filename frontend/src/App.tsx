@@ -14,6 +14,8 @@ type Page = "chat" | "documents" | "admin";
 
 interface WorkspaceUser {
   maNd: string;
+  tenHienThi: string;
+  tenDangNhap: string;
   vaiTro: UserRole;
 }
 
@@ -44,6 +46,7 @@ export default function App() {
   const [sessionId, setSessionId] = useState("");
   const [activePage, setActivePage] = useState<Page>("chat");
   const [processedCount, setProcessedCount] = useState(0);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const handleEnterWorkspace = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -63,6 +66,8 @@ export default function App() {
 
       setUser({
         maNd: authenticatedUser.ma_nd,
+        tenHienThi: authenticatedUser.ho_ten?.trim() || username.trim(),
+        tenDangNhap: username.trim(),
         vaiTro: authenticatedUser.vai_tro,
       });
       setSessionId(createSessionId());
@@ -167,7 +172,7 @@ export default function App() {
   };
 
   return (
-    <div className="app-shell">
+    <div className="app-shell" data-theme={theme}>
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">
@@ -200,11 +205,12 @@ export default function App() {
         <div className="sidebar-bottom">
           <div className="profile-card">
             <div className="avatar" aria-hidden="true">
-              {user.maNd.slice(0, 1).toUpperCase()}
+              {user.tenHienThi.slice(0, 1).toUpperCase()}
             </div>
             <div className="profile-copy">
-              <strong>{user.maNd}</strong>
+              <strong>{user.tenHienThi}</strong>
               <span>{roleLabels[user.vaiTro]}</span>
+              <small>@{user.tenDangNhap}</small>
             </div>
           </div>
           <button
@@ -223,9 +229,24 @@ export default function App() {
             <p className="eyebrow">AIK-01 · HỆ THỐNG HỎI ĐÁP QUY CHẾ</p>
             <h1>{pages.find((page) => page.id === activePage)?.label}</h1>
           </div>
-          <div className="role-pill">
-            <span className="status-dot" />
-            {roleLabels[user.vaiTro]}
+          <div className="topbar-actions">
+            <span className="user-name-pill">Xin chào, {user.tenHienThi}</span>
+            <div className="role-pill">
+              <span className="status-dot" />
+              {roleLabels[user.vaiTro]}
+            </div>
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={() =>
+                setTheme((current) => current === "light" ? "dark" : "light")
+              }
+              aria-label={theme === "light" ? "Bật giao diện tối" : "Bật giao diện sáng"}
+              aria-pressed={theme === "dark"}
+            >
+              <span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span>
+              {theme === "light" ? "Giao diện tối" : "Giao diện sáng"}
+            </button>
           </div>
         </header>
 

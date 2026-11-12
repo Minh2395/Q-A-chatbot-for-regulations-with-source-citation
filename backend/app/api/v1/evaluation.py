@@ -79,14 +79,17 @@ def _pending_reason(question: dict[str, Any]) -> str | None:
 
     required_values = {
         "expected_status": question.get("expected_status"),
-        "expected_answer": question.get("expected_answer"),
-        "expected_ma_doan": question.get("expected_ma_doan"),
-        "expected_document_id": question.get("expected_document_id"),
-        "expected_version": question.get("expected_version"),
-        "expected_article": question.get("expected_article"),
         "reviewed_by": question.get("reviewed_by"),
         "reviewed_at": question.get("reviewed_at"),
     }
+    if question.get("expected_status") == "ThanhCong":
+        required_values.update({
+            "expected_answer": question.get("expected_answer"),
+            "expected_ma_doan": question.get("expected_ma_doan"),
+            "expected_document_id": question.get("expected_document_id"),
+            "expected_version": question.get("expected_version"),
+            "expected_article": question.get("expected_article"),
+        })
     missing = [
         key for key, value in required_values.items()
         if not isinstance(value, str) or not value.strip()
@@ -95,19 +98,44 @@ def _pending_reason(question: dict[str, Any]) -> str | None:
         problems.append("Missing verified reference fields: " + ", ".join(missing))
     elif question["expected_status"] not in VALID_STATUSES:
         problems.append("expected_status must be ThanhCong or TuChoi.")
-    keywords = question.get("expected_keywords")
-    if (
-        not isinstance(keywords, list)
-        or not keywords
-        or any(not isinstance(keyword, str) or not keyword.strip() for keyword in keywords)
-    ):
-        problems.append("Expected legal keywords are missing or invalid.")
+    if question.get("expected_status") == "ThanhCong":
+        keywords = question.get("expected_keywords")
+        if (
+            not isinstance(keywords, list)
+            or not keywords
+            or any(
+                not isinstance(keyword, str) or not keyword.strip()
+                for keyword in keywords
+            )
+        ):
+            problems.append("Expected legal keywords are missing or invalid.")
 
     return "; ".join(problems) if problems else None
 
 
-def _verify_source_record(question: dict[str, Any]) -> tuple[bool, str | None]:
-    """Require the reference chunk/version to be active and approved."""
+def _verify_source_record(
+    question: dict[str, Any],
+    active_documents: dict[str, dict[str, Any]] | None = None,
+) -> tuple[bool, str | None]:
+    """Require the reference chunk/version in the active approved snapshot."""
+    if active_documents is not None:
+        record = active_documents.get(
+            str(question.get("expected_ma_doan") or "")
+        )
+        if not record:
+            return False, "Reference chunk is not in the active approved document repository."
+        if record["ma_tai_lieu"] != question["expected_document_id"]:
+            return False, "Reference chunk document ID does not match the dataset."
+        if record["so_phien_ban"] != question["expected_version"]:
+            return False, "Reference chunk version does not match the dataset."
+        if question.get("expected_ma_phien_ban") and (
+            record["ma_phien_ban"] != question["expected_ma_phien_ban"]
+        ):
+            return False, "Reference chunk version ID does not match the dataset."
+        if record["dieu_khoan"].strip() != question["expected_article"].strip():
+            return False, "Reference chunk article/clause does not match the dataset."
+        return True, None
+
     conn = None
     try:
         conn = get_business_db_connection()
@@ -126,6 +154,8 @@ def _verify_source_record(question: dict[str, Any]) -> tuple[bool, str | None]:
             WHERE d.MaDoan = ?
               AND p.TrangThai = 'Approved'
               AND p.is_active = 1
+              AND p.NgayHieuLuc IS NOT NULL
+              AND p.NgayHieuLuc <= GETDATE()
             """,
             question["expected_ma_doan"],
         )
@@ -153,8 +183,99 @@ def _verify_source_record(question: dict[str, Any]) -> tuple[bool, str | None]:
             conn.close()
 
 
+def _load_active_document_records() -> list[dict[str, Any]]:
+    """Load the current approved evidence corpus for evaluation scoring."""
+    conn = None
+    try:
+        conn = get_business_db_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT
+                d.MaDoan,
+                p.MaTaiLieu,
+                p.MaPhienBan,
+                p.SoPhienBan,
+                d.DieuKhoan,
+                d.NoiDung
+            FROM dbo.DOAN_VAN_BAN d
+            INNER JOIN dbo.PHIEN_BAN_TAI_LIEU p
+                ON p.MaPhienBan = d.MaPhienBan
+            WHERE p.is_active = 1
+              AND p.TrangThai = 'Approved'
+            ORDER BY p.MaTaiLieu, p.MaPhienBan, d.MaDoan
+            """
+        )
+        return [
+            {
+                "ma_doan": str(row[0]),
+                "ma_tai_lieu": str(row[1]),
+                "ma_phien_ban": str(row[2]),
+                "so_phien_ban": str(row[3]),
+                "dieu_khoan": str(row[4] or ""),
+                "noi_dung": str(row[5] or ""),
+            }
+            for row in cursor.fetchall()
+        ]
+    finally:
+        if conn:
+            conn.close()
+
+
+def _normalized_source_text(value: Any) -> str:
+    return " ".join(str(value or "").split())
+
+
+def _active_evidence_chunks(
+    chunks: list[dict[str, Any]],
+    active_documents: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    current_chunks = []
+    for chunk in chunks:
+        record = active_documents.get(str(chunk.get("ma_doan") or ""))
+        if not record:
+            continue
+        if (
+            str(chunk.get("ma_phien_ban") or "") == record["ma_phien_ban"]
+            and str(chunk.get("so_phien_ban") or "") == record["so_phien_ban"]
+            and _normalized_source_text(chunk.get("dieu_khoan"))
+                == _normalized_source_text(record["dieu_khoan"])
+            and _normalized_source_text(chunk.get("noi_dung"))
+                == _normalized_source_text(record["noi_dung"])
+        ):
+            current_chunks.append(chunk)
+    return current_chunks
+
+
 def _normalize_tokens(text: str) -> list[str]:
     return re.findall(r"[^\W_]+", text.casefold(), flags=re.UNICODE)
+
+
+_CLAIM_STOPWORDS = {
+    "các", "của", "cho", "đã", "được", "hoặc", "là", "mà", "này", "nếu",
+    "những", "ở", "sẽ", "theo", "thì", "trong", "và", "về", "với",
+}
+_NEGATION_TOKENS = {
+    "không", "chưa", "chẳng", "khỏi", "not", "no", "never", "without",
+}
+
+
+def _answer_claims(answer: str) -> list[set[str]]:
+    claims = []
+    for sentence in re.split(r"[.!?;\n]+", answer):
+        tokens = {
+            token for token in _normalize_tokens(sentence)
+            if len(token) > 1 and token not in _CLAIM_STOPWORDS
+        }
+        if tokens:
+            claims.append(tokens)
+    return claims
+
+
+def _has_unexpected_negation(answer: str, expected_answer: str) -> bool:
+    answer_negations = set(_normalize_tokens(answer)) & _NEGATION_TOKENS
+    expected_negations = set(_normalize_tokens(expected_answer)) & _NEGATION_TOKENS
+    return bool(answer_negations - expected_negations)
 
 
 def _answer_metrics(
@@ -163,17 +284,20 @@ def _answer_metrics(
     status: str,
     citations: list[dict[str, Any]],
     evidence_chunks: list[dict[str, Any]],
+    active_documents: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     expected_status = question["expected_status"]
     status_correct = status == expected_status
-    expected_answer = question["expected_answer"]
-    expected_keywords = question["expected_keywords"]
+    expected_answer = question.get("expected_answer") or ""
+    expected_keywords = question.get("expected_keywords") or []
 
     matched_keywords = [
         keyword for keyword in expected_keywords
         if keyword.casefold() in answer.casefold()
     ]
-    keyword_recall = len(matched_keywords) / len(expected_keywords)
+    keyword_recall = (
+        len(matched_keywords) / len(expected_keywords) if expected_keywords else 0.0
+    )
     expected_tokens = _normalize_tokens(expected_answer)
     answer_tokens = _normalize_tokens(answer)
     expected_counts: dict[str, int] = {}
@@ -194,50 +318,134 @@ def _answer_metrics(
         else 0.0
     )
 
-    if expected_status == "TuChoi":
-        accuracy = 1.0 if status_correct else 0.0
-    else:
-        accuracy = (keyword_recall + answer_f1) / 2 if status_correct else 0.0
-
-    if expected_status == "TuChoi" and status_correct:
-        faithfulness = 1.0
-    else:
-        evidence_tokens = set(_normalize_tokens(" ".join(
-            str(chunk.get("noi_dung", "")) for chunk in evidence_chunks
-        )))
-        faithfulness = (
-            sum(token in evidence_tokens for token in answer_tokens) / len(answer_tokens)
-            if answer_tokens else 0.0
+    accuracy = None
+    if expected_status == "ThanhCong":
+        accuracy = (
+            round((keyword_recall + answer_f1) / 2, 4)
+            if status_correct
+            and not _has_unexpected_negation(answer, expected_answer)
+            else 0.0
         )
 
-    cited_chunk_ids = [citation.get("ma_doan") for citation in citations]
-    citation_correct = (
-        question["expected_ma_doan"] in cited_chunk_ids
-        if expected_status == "ThanhCong"
-        else status_correct and not cited_chunk_ids
+    claims = (
+        _answer_claims(answer)
+        if expected_status == "ThanhCong" and status == "ThanhCong"
+        else []
     )
+    evidence_tokens = {
+        token
+        for chunk in evidence_chunks
+        for token in _normalize_tokens(str(chunk.get("noi_dung", "")))
+        if len(token) > 1 and token not in _CLAIM_STOPWORDS
+    }
+    supported_claims = sum(claim.issubset(evidence_tokens) for claim in claims)
+
+    if active_documents is not None:
+        evidence_chunks = _active_evidence_chunks(
+            evidence_chunks, active_documents
+        )
+
+    chunks_by_id = {
+        str(chunk.get("ma_doan")): chunk
+        for chunk in evidence_chunks
+        if chunk.get("ma_doan") is not None
+    }
+    expected_chunk_id = str(question.get("expected_ma_doan") or "")
+    cited_chunk_ids = [
+        str(citation.get("ma_doan"))
+        for citation in citations
+        if citation.get("ma_doan") is not None
+    ]
+    citation_results = []
+    citations_to_check = citations if expected_status == "ThanhCong" else []
+    for citation in citations_to_check:
+        chunk_id = str(citation.get("ma_doan") or "")
+        chunk = chunks_by_id.get(chunk_id)
+        active_record = (
+            active_documents.get(chunk_id)
+            if active_documents is not None else None
+        )
+        source_tokens = set(_normalize_tokens(
+            str(
+                active_record.get("noi_dung", "")
+                if active_record is not None
+                else chunk.get("noi_dung", "") if chunk else ""
+            )
+        ))
+        source_claim_support = any(
+            claim.issubset(source_tokens) for claim in claims
+        )
+        expected_version_id = question.get("expected_ma_phien_ban")
+        version_id_matches = (
+            not expected_version_id
+            or str(citation.get("ma_phien_ban") or "").strip()
+                == str(expected_version_id).strip()
+        )
+        citation_matches = bool(
+            chunk
+            and chunk_id == expected_chunk_id
+            and version_id_matches
+            and str(citation.get("dieu_khoan") or "").strip()
+                == str(question.get("expected_article") or "").strip()
+            and str(citation.get("so_phien_ban") or "").strip()
+                == str(question.get("expected_version") or "").strip()
+            and source_claim_support
+        )
+        if active_documents is not None:
+            citation_matches = bool(
+                citation_matches
+                and active_record
+                and active_record["ma_tai_lieu"]
+                    == str(question.get("expected_document_id") or "")
+                and str(citation.get("ma_phien_ban") or "")
+                    == active_record["ma_phien_ban"]
+                and str(citation.get("so_phien_ban") or "")
+                    == active_record["so_phien_ban"]
+                and _normalized_source_text(citation.get("dieu_khoan"))
+                    == _normalized_source_text(active_record["dieu_khoan"])
+                and _normalized_source_text(citation.get("noi_dung_trich"))
+                    == _normalized_source_text(active_record["noi_dung"])
+            )
+        citation_results.append(citation_matches)
+
+    if expected_status == "ThanhCong" and status == "ThanhCong" and not citations:
+        citation_results.append(False)
+    citation_correct_count = sum(citation_results)
+    citation_checked_count = len(citations_to_check)
+    if expected_status == "ThanhCong" and status == "ThanhCong" and not citations:
+        citation_checked_count = 1
     return {
         "status_correct": status_correct,
         "keyword_score": round(keyword_recall, 4),
         "answer_similarity": round(answer_f1, 4),
-        "accuracy_score": round(accuracy, 4),
-        "faithfulness_score": round(faithfulness, 4),
-        "faithfulness_method": (
-            "Normalized-token overlap with retrieved source text; heuristic only."
+        "accuracy_score": accuracy,
+        "faithfulness_score": (
+            supported_claims / len(claims) if claims else None
         ),
-        "citation_correct": citation_correct,
-        "citation_score": 1.0 if citation_correct else 0.0,
+        "faithfulness_supported_claims": supported_claims,
+        "faithfulness_checked_claims": len(claims),
+        "citation_correct": bool(citation_results) and all(citation_results),
+        "citation_score": (
+            citation_correct_count / citation_checked_count
+            if citation_checked_count else None
+        ),
+        "citation_correct_count": citation_correct_count,
+        "citation_checked_count": citation_checked_count,
+        "correct_refusal": expected_status == "TuChoi" and status_correct,
         "matched_keywords": matched_keywords,
         "missing_keywords": [
             keyword for keyword in expected_keywords
             if keyword not in matched_keywords
         ],
-        "expected_chunk_id": question["expected_ma_doan"],
+        "expected_chunk_id": expected_chunk_id or None,
         "cited_chunk_ids": cited_chunk_ids,
     }
 
 
-async def _run_question(question: dict[str, Any]) -> dict[str, Any]:
+async def _run_question(
+    question: dict[str, Any],
+    active_documents: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     result: dict[str, Any] = {
         "id": question["id"],
         "question": question["question"],
@@ -264,11 +472,22 @@ async def _run_question(question: dict[str, Any]) -> dict[str, Any]:
             citations = chat.build_citations(chunks)
         result.update({
             "status": "Completed",
+            "retrieval": {
+                "qualified": bool(retrieval.get("qualified")),
+                "best_score": retrieval.get("best_score", 0.0),
+                "threshold": retrieval.get("threshold"),
+                "total_active_vectors": retrieval.get("total_active_vectors", 0),
+            },
             "response_status": response_status,
             "generated_answer": answer,
             "retrieved_sources": citations,
             "scores": _answer_metrics(
-                question, answer, response_status, citations, chunks
+                question,
+                answer,
+                response_status,
+                citations,
+                chunks,
+                active_documents,
             ),
         })
     except Exception as error:
@@ -361,59 +580,91 @@ def _aggregate_preliminary_metrics(
 
 
 def _aggregate_metrics(results: list[dict[str, Any]]) -> dict[str, Any]:
-    processed = [
+    completed = [
         item for item in results
-        if item["status"] in {"Completed", "Failed"}
+        if item.get("status") == "Completed" and item.get("scores")
     ]
-    completed = [item for item in processed if item["status"] == "Completed"]
+    accuracy_samples = [
+        item for item in completed
+        if item.get("expected_status") == "ThanhCong"
+        and item["scores"].get("accuracy_score") is not None
+    ]
+    checked_claims = sum(
+        item["scores"].get("faithfulness_checked_claims", 0)
+        for item in completed
+    )
+    supported_claims = sum(
+        item["scores"].get("faithfulness_supported_claims", 0)
+        for item in completed
+    )
+    checked_citations = sum(
+        item["scores"].get("citation_checked_count", 0)
+        for item in completed
+    )
+    correct_citations = sum(
+        item["scores"].get("citation_correct_count", 0)
+        for item in completed
+    )
     refusals = [
-        item for item in processed
+        item for item in completed
         if item.get("expected_status") == "TuChoi"
     ]
-    denominator = len(completed)
     return {
         "accuracy": round(
             sum(
                 item["scores"]["accuracy_score"]
-                for item in completed
-                if item.get("scores")
-            ) / denominator,
+                for item in accuracy_samples
+            ) / len(accuracy_samples),
             4,
-        ) if denominator else 0.0,
+        ) if accuracy_samples else None,
         "faithfulness": round(
-            sum(
-                item["scores"]["faithfulness_score"]
-                for item in completed
-                if item.get("scores")
-            ) / denominator,
+            supported_claims / checked_claims,
             4,
-        ) if denominator else 0.0,
+        ) if checked_claims else None,
         "citation_correctness": round(
-            sum(
-                item["scores"]["citation_score"]
-                for item in completed
-                if item.get("scores")
-            ) / denominator,
+            correct_citations / checked_citations,
             4,
-        ) if denominator else 0.0,
+        ) if checked_citations else None,
         "correct_refusal_rate": round(
             sum(
-                item.get("scores", {}).get("status_correct", False)
+                item["scores"].get("correct_refusal", False)
                 for item in refusals
             )
             / len(refusals),
             4,
-        ) if refusals else 0.0,
-        "scored_questions": len(completed),
+        ) if refusals else None,
+        "accuracy_sample_count": len(accuracy_samples),
+        "faithfulness_sample_count": checked_claims,
+        "citation_sample_count": checked_citations,
+        "correct_refusal_sample_count": len(refusals),
+        "scored_questions": len(accuracy_samples),
         "failed_questions": sum(
-            item["status"] == "Failed" for item in results
+            item.get("status") == "Failed" for item in results
         ),
+    }
+
+
+def _empty_metrics() -> dict[str, Any]:
+    return {
+        "accuracy": None,
+        "faithfulness": None,
+        "citation_correctness": None,
+        "correct_refusal_rate": None,
+        "accuracy_sample_count": 0,
+        "faithfulness_sample_count": 0,
+        "citation_sample_count": 0,
+        "correct_refusal_sample_count": 0,
+        "scored_questions": 0,
+        "failed_questions": 0,
     }
 
 
 def _persist_existing_evaluation_result(report: dict[str, Any]) -> dict[str, Any]:
     """Persist only when existing SQL benchmark rows already satisfy all FKs."""
-    results = report["question_results"]
+    results = [
+        item for item in report["question_results"]
+        if item.get("reviewed_by") and item.get("reviewed_at")
+    ]
     question_ids = [item["id"] for item in results]
     if not question_ids:
         return {"status": "skipped", "reason": "No evaluation results to persist."}
@@ -497,7 +748,7 @@ def _persist_existing_evaluation_result(report: dict[str, Any]) -> dict[str, Any
                 result_id,
                 item["id"],
                 int(scores.get("status_correct", False)
-                    and scores.get("accuracy_score", 0.0) >= 1.0),
+                    and scores.get("accuracy_score") == 1.0),
                 int(scores.get("citation_correct", False)),
             )
         conn.commit()
@@ -554,11 +805,12 @@ async def run_evaluation_for_document(
         "official": False,
         "dataset_path": str(DATASET_FILE),
         "dataset_question_count": 0,
+        "active_document_count": 0,
         "verified_question_count": 0,
         "pending_verification_questions": [],
         "failed_questions": [],
         "question_results": [],
-        "metrics": None,
+        "metrics": _empty_metrics(),
         "preliminary_metrics": None,
         "database_persistence": {"status": "not_attempted"},
         "errors": [],
@@ -572,16 +824,46 @@ async def run_evaluation_for_document(
         _write_report(report, document_version_id)
         dataset = load_dataset()
         report["dataset_question_count"] = len(dataset)
+        active_records = _load_active_document_records()
+        if not active_records:
+            report["status"] = "NoActiveDocuments"
+            report["errors"].append(
+                "No approved active documents are available; evaluation was not run."
+            )
+            write_audit_log(
+                event="MODEL_EVALUATION_BLOCKED_NO_ACTIVE_DOCUMENTS",
+                trace_id=trace_id,
+                ma_phien=document_version_id,
+                status="NoActiveDocuments",
+            )
+            return
+
+        active_documents = {
+            record["ma_doan"]: record for record in active_records
+        }
+        if len(active_documents) != len(active_records):
+            raise ValueError(
+                "The active document repository contains duplicate segment IDs."
+            )
+        report["active_document_count"] = len({
+            (record["ma_tai_lieu"], record["ma_phien_ban"])
+            for record in active_records
+        })
+
         verified: list[dict[str, Any]] = []
         pending: list[dict[str, Any]] = []
         for question in dataset:
             reason = _pending_reason(question)
-            if reason is None:
-                source_matches, source_reason = _verify_source_record(question)
+            if reason is None and question["expected_status"] == "ThanhCong":
+                source_matches, source_reason = _verify_source_record(
+                    question, active_documents
+                )
                 if source_matches:
                     verified.append(question)
                 else:
                     reason = source_reason
+            elif reason is None:
+                verified.append(question)
             if reason:
                 missing_fields = [
                     field for field in (
@@ -617,118 +899,80 @@ async def run_evaluation_for_document(
 
         report["pending_verification_questions"] = pending
         report["verified_question_count"] = len(verified)
-        if pending:
-            report["metrics"] = {
-                "accuracy": None,
-                "faithfulness": None,
-                "citation_correctness": None,
-                "scored_questions": 0,
-            }
-            if preliminary:
-                question_results = [
-                    {
-                        "id": question["id"],
-                        "question": question["question"],
-                        "status": "Running",
-                        "preliminary_match_status": question.get(
-                            "preliminary_match_status"
-                        ),
-                        "preliminary_note": question.get("preliminary_note"),
-                        "candidate_sources": question.get("candidate_sources", []),
-                        "retrieval_diagnostics_not_verified": question.get(
-                            "retrieval_diagnostics_not_verified", []
-                        ),
-                        "retrieval": None,
-                        "response_status": None,
-                        "generated_answer": None,
-                        "retrieved_sources": [],
-                        "scores": None,
-                        "error": None,
-                    }
-                    for question in dataset
-                ]
-                report["status"] = "Running"
-                report["preliminary_metrics"] = _aggregate_preliminary_metrics(
-                    question_results
-                )
-                report["question_results"] = question_results
-                _write_report(report, document_version_id)
-                for index, question in enumerate(dataset):
-                    question_results[index] = await _run_preliminary_question(
-                        question
-                    )
-                    report["question_results"] = question_results
-                    report["failed_questions"] = [
-                        {
-                            "id": item["id"],
-                            "question": item["question"],
-                            "error": item["error"],
-                        }
-                        for item in question_results
-                        if item["status"] == "Failed"
-                    ]
-                    report["preliminary_metrics"] = (
-                        _aggregate_preliminary_metrics(question_results)
-                    )
-                    _write_report(report, document_version_id)
-                report["status"] = "Preliminary"
-                report["errors"].append(
-                    "This is an unscored preliminary run. Official metrics "
-                    "require legally verified answers and source references."
-                )
-                write_audit_log(
-                    event="MODEL_EVALUATION_PRELIMINARY_COMPLETED",
-                    trace_id=trace_id,
-                    ma_phien=document_version_id,
-                    status="Preliminary",
-                    details=report["preliminary_metrics"],
-                )
-            else:
-                report["status"] = "Pending"
-                report["question_results"] = pending
-                report["errors"].append(
-                    "Official scoring is blocked until every question has a "
-                    "legally reviewed reference and active approved source."
-                )
-                write_audit_log(
-                    event="MODEL_EVALUATION_BLOCKED",
-                    trace_id=trace_id,
-                    ma_phien=document_version_id,
-                    status="Pending",
-                    details={
-                        "pending_question_count": len(pending),
-                        "dataset_question_count": len(dataset),
-                    },
-                )
+        if pending and not preliminary:
+            report["status"] = "Pending"
+            report["question_results"] = pending
+            report["errors"].append(
+                "Unverified questions were not run. Official metrics are "
+                "calculated only for questions with verified references."
+            )
+            write_audit_log(
+                event="MODEL_EVALUATION_BLOCKED",
+                trace_id=trace_id,
+                ma_phien=document_version_id,
+                status="Pending",
+                details={
+                    "pending_question_count": len(pending),
+                    "verified_question_count": len(verified),
+                    "dataset_question_count": len(dataset),
+                },
+            )
         else:
+            verified_by_id = {question["id"]: question for question in verified}
+            questions_to_run = dataset if preliminary else verified
             question_results = [
                 {
                     "id": question["id"],
                     "question": question["question"],
-                    "expected_status": question["expected_status"],
                     "status": "Running",
-                    "generated_answer": None,
+                    "preliminary_match_status": question.get(
+                        "preliminary_match_status"
+                    ),
+                    "preliminary_note": question.get("preliminary_note"),
+                    "candidate_sources": question.get("candidate_sources", []),
+                    "retrieval_diagnostics_not_verified": question.get(
+                        "retrieval_diagnostics_not_verified", []
+                    ),
+                    "retrieval": None,
                     "response_status": None,
+                    "generated_answer": None,
                     "retrieved_sources": [],
                     "scores": None,
                     "error": None,
                 }
-                for question in verified
+                for question in questions_to_run
             ]
+            report["status"] = "Running"
             report["question_results"] = question_results
+            report["preliminary_metrics"] = _aggregate_preliminary_metrics(
+                question_results
+            )
             _write_report(report, document_version_id)
-            for index, question in enumerate(verified):
-                result = await _run_question(question)
-                result["expected_status"] = question["expected_status"]
-                result["expected_answer"] = question["expected_answer"]
-                result["expected_keywords"] = question["expected_keywords"]
-                result["expected_ma_doan"] = question["expected_ma_doan"]
-                result["expected_document_id"] = question["expected_document_id"]
-                result["expected_version"] = question["expected_version"]
-                result["expected_article"] = question["expected_article"]
-                result["question_type"] = question.get("question_type")
-                result["reviewed_by"] = question["reviewed_by"]
-                result["reviewed_at"] = question["reviewed_at"]
+            for index, question in enumerate(questions_to_run):
+                verified_question = verified_by_id.get(question["id"])
+                if verified_question:
+                    result = await _run_question(
+                        verified_question,
+                        active_documents,
+                    )
+                    result.update({
+                        "expected_status": verified_question["expected_status"],
+                        "expected_answer": verified_question.get("expected_answer"),
+                        "expected_keywords": verified_question.get("expected_keywords"),
+                        "expected_ma_doan": verified_question.get("expected_ma_doan"),
+                        "expected_document_id": verified_question.get(
+                            "expected_document_id"
+                        ),
+                        "expected_version": verified_question.get("expected_version"),
+                        "expected_article": verified_question.get("expected_article"),
+                        "question_type": verified_question.get("question_type"),
+                        "review_status": verified_question.get("review_status"),
+                        "reviewed_by": verified_question["reviewed_by"],
+                        "reviewed_at": verified_question["reviewed_at"],
+                    })
+                else:
+                    result = await _run_preliminary_question(question)
+
                 question_results[index] = result
                 report["failed_questions"] = [
                     {
@@ -737,10 +981,19 @@ async def run_evaluation_for_document(
                         "error": item["error"],
                     }
                     for item in question_results
-                    if item["status"] == "Failed"
+                    if item.get("status") == "Failed"
                 ]
                 report["metrics"] = _aggregate_metrics(question_results)
+                report["preliminary_metrics"] = _aggregate_preliminary_metrics(
+                    question_results
+                )
+                report["official"] = bool(
+                    verified and any(
+                        item.get("reviewed_by") for item in question_results
+                    )
+                )
                 _write_report(report, document_version_id)
+
             report["failed_questions"] = [
                 {
                     "id": item["id"],
@@ -748,24 +1001,39 @@ async def run_evaluation_for_document(
                     "error": item["error"],
                 }
                 for item in question_results
-                if item["status"] == "Failed"
+                if item.get("status") == "Failed"
             ]
             report["metrics"] = _aggregate_metrics(question_results)
-            report["official"] = True
-            report["status"] = "Completed"
-            report["database_persistence"] = (
-                _persist_existing_evaluation_result(report)
+            report["preliminary_metrics"] = _aggregate_preliminary_metrics(
+                question_results
             )
-            if report["database_persistence"]["status"] == "failed":
-                report["errors"].append(report["database_persistence"]["reason"])
+            report["official"] = bool(verified)
+            report["status"] = "Preliminary" if pending else "Completed"
+            if pending:
+                report["errors"].append(
+                    "Unverified questions have no official scores. Any "
+                    "official metrics shown cover verified questions only."
+                )
+            if report["metrics"]["accuracy"] is not None:
+                report["database_persistence"] = (
+                    _persist_existing_evaluation_result(report)
+                )
+                if report["database_persistence"]["status"] == "failed":
+                    report["errors"].append(
+                        report["database_persistence"]["reason"]
+                    )
             write_audit_log(
-                event="MODEL_EVALUATION_COMPLETED",
+                event=(
+                    "MODEL_EVALUATION_PRELIMINARY_COMPLETED"
+                    if pending else "MODEL_EVALUATION_COMPLETED"
+                ),
                 trace_id=trace_id,
                 ma_phien=document_version_id,
-                status="Completed",
+                status=report["status"],
                 details={
                     "evaluation_id": report["evaluation_id"],
                     "metrics": report["metrics"],
+                    "preliminary_metrics": report["preliminary_metrics"],
                     "failed_question_count": len(report["failed_questions"]),
                     "database_persistence": report["database_persistence"],
                 },
@@ -816,6 +1084,30 @@ def get_latest_evaluation_report(
         ) from error
 
 
+@router.delete("/latest")
+def clear_latest_evaluation_report(
+    _current_user: AuthenticatedUser = Depends(
+        require_roles("QuanTriVien")
+    ),
+) -> dict[str, str]:
+    report_path = REPORT_DIR / "evaluation_latest.json"
+    with _claim_lock:
+        if _claimed_document_versions:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Không thể xóa báo cáo khi benchmark đang chạy.",
+            )
+        try:
+            report_path.unlink(missing_ok=True)
+        except OSError as error:
+            logger.exception("Could not clear the latest evaluation report.")
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Không thể xóa báo cáo đánh giá mới nhất.",
+            ) from error
+    return {"message": "Đã xóa báo cáo đánh giá mới nhất."}
+
+
 @router.post("/run-latest", status_code=status.HTTP_202_ACCEPTED)
 def run_evaluation_for_latest_active_document(
     background_tasks: BackgroundTasks,
@@ -840,7 +1132,10 @@ def run_evaluation_for_latest_active_document(
         if not row:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail="Chưa có phiên bản tài liệu Approved đang hoạt động.",
+                detail=(
+                    "Không có tài liệu nào được phê duyệt và đang hoạt động; "
+                    "đánh giá đã dừng, không sử dụng phiên bản cũ."
+                ),
             )
 
         document_version_id = str(row[0])

@@ -137,9 +137,16 @@ export interface EvaluationReport {
   document_version_id: string;
   started_at: string;
   completed_at: string | null;
-  status: "Pending" | "Running" | "Completed" | "Preliminary" | "Failed";
+  status:
+    | "Pending"
+    | "Running"
+    | "Completed"
+    | "Preliminary"
+    | "NoActiveDocuments"
+    | "Failed";
   official: boolean;
   dataset_question_count: number;
+  active_document_count?: number;
   verified_question_count: number;
   pending_verification_questions: EvaluationPendingQuestion[];
   failed_questions: Array<{ id: string; question: string; error: string }>;
@@ -148,6 +155,10 @@ export interface EvaluationReport {
     faithfulness: number | null;
     citation_correctness: number | null;
     correct_refusal_rate?: number | null;
+    accuracy_sample_count?: number;
+    faithfulness_sample_count?: number;
+    citation_sample_count?: number;
+    correct_refusal_sample_count?: number;
     scored_questions: number;
   } | null;
   preliminary_metrics?: {
@@ -388,6 +399,10 @@ export const getLatestEvaluationReport =
       if (isAxiosError(error) && error.response?.status === 404) return null;
       throw error;
     }
+};
+
+export const clearLatestEvaluationReport = async (): Promise<void> => {
+  await apiClient.delete(`${API_BASE_URL}/evaluation/latest`);
 };
 
 export const runLatestEvaluation = async (): Promise<EvaluationRunResponse> => {
