@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { ChatWindow } from "./components/chat/ChatWindow";
+import { CitationDetailPage } from "./components/chat/CitationDetailPage";
+import type { Citation } from "./services/api";
 import DocumentUpload from "./components/Documents/DocumentUpload";
 import { AdminWorkspace } from "./components/AdminWorkspace";
 import {
@@ -10,7 +12,7 @@ import {
 } from "./services/api";
 
 type UserRole = "ChuyenVienPhapChe" | "QuanTriVien" | "NguoiDung";
-type Page = "chat" | "documents" | "admin";
+type Page = "chat" | "documents" | "admin" | "citation";
 
 interface WorkspaceUser {
   maNd: string;
@@ -45,6 +47,7 @@ export default function App() {
   const [authenticating, setAuthenticating] = useState(false);
   const [sessionId, setSessionId] = useState("");
   const [activePage, setActivePage] = useState<Page>("chat");
+  const [selectedCitation, setSelectedCitation] = useState<Citation | null>(null);
   const [processedCount, setProcessedCount] = useState(0);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -227,7 +230,11 @@ export default function App() {
         <header className="topbar">
           <div>
             <p className="eyebrow">AIK-01 · HỆ THỐNG HỎI ĐÁP QUY CHẾ</p>
-            <h1>{pages.find((page) => page.id === activePage)?.label}</h1>
+            <h1>
+              {activePage === "citation"
+                ? "Nội dung căn cứ"
+                : pages.find((page) => page.id === activePage)?.label}
+            </h1>
           </div>
           <div className="topbar-actions">
             <span className="user-name-pill">Xin chào, {user.tenHienThi}</span>
@@ -250,7 +257,7 @@ export default function App() {
           </div>
         </header>
 
-        <div className="role-notice" role="note">
+        <div className="role-notice" role="note" hidden={activePage === "citation"}>
           Vai trò được đọc từ tài khoản backend đã xác thực; API kiểm tra quyền
           trên từng thao tác.
         </div>
@@ -266,8 +273,24 @@ export default function App() {
             </div>
             <span className="info-chip">Tài liệu đã duyệt · RAG</span>
           </div>
-          <ChatWindow maNd={user.maNd} maPhien={sessionId} />
+          <ChatWindow
+            maNd={user.maNd}
+            maPhien={sessionId}
+            onCitationSelect={(citation) => {
+              setSelectedCitation(citation);
+              setActivePage("citation");
+            }}
+          />
         </section>
+
+        {selectedCitation && (
+          <section className="page-section" hidden={activePage !== "citation"}>
+            <CitationDetailPage
+              citation={selectedCitation}
+              onBack={() => setActivePage("chat")}
+            />
+          </section>
+        )}
 
         {user.vaiTro === "ChuyenVienPhapChe" && (
           <section className="page-section" hidden={activePage !== "documents"}>

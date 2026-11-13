@@ -6,7 +6,6 @@ import {
 } from "../../services/api";
 import type { Citation, ChatQueryResponse } from "../../services/api";
 import { CitationCard } from "./CitationCard";
-import { RegulationViewer } from "./RegulationViewer";
 import { TraceBadge } from "./TraceBadge";
 
 interface ChatMessage {
@@ -23,13 +22,17 @@ interface ChatMessage {
 interface ChatWindowProps {
   maNd: string;
   maPhien: string;
+  onCitationSelect: (citation: Citation) => void;
 }
 
-export function ChatWindow({ maNd, maPhien }: ChatWindowProps) {
+export function ChatWindow({
+  maNd,
+  maPhien,
+  onCitationSelect,
+}: ChatWindowProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [selectedCitation, setSelectedCitation] = useState<Citation | null>(null);
 
   const handleSend = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -122,7 +125,7 @@ export function ChatWindow({ maNd, maPhien }: ChatWindowProps) {
                     <CitationCard
                       key={citation.ma_doan ?? citationIndex}
                       citation={citation}
-                      onClick={setSelectedCitation}
+                      onClick={onCitationSelect}
                     />
                   ))}
                 </div>
@@ -161,12 +164,6 @@ export function ChatWindow({ maNd, maPhien }: ChatWindowProps) {
       <p className="chat-footnote">
         Câu trả lời có tính tham khảo và phụ thuộc vào tài liệu đã được phê duyệt.
       </p>
-      {selectedCitation && (
-        <RegulationViewer
-          citation={selectedCitation}
-          onClose={() => setSelectedCitation(null)}
-        />
-      )}
     </div>
   );
 }

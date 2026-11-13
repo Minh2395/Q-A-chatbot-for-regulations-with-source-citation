@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="d52a70wIQp4ctNGSolEA">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="Người dùng" plantUmlId="n_0" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" plantUmlBaseValue="Lãnh đạo cơ quan" id="cXSyHcBlwgb2sI7ah95L-1">
+          <mxCell parent="1" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="40" width="160" x="800" y="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Chuyên viên pháp chế" plantUmlId="n_1" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" plantUmlBaseValue="Phòng Pháp chế / Chính sách" id="cXSyHcBlwgb2sI7ah95L-2">
+          <mxCell parent="1" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="49" width="220" x="610" y="399" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Quản trị viên" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" plantUmlBaseValue="Bộ phận Một cửa / Tiếp công dân" id="cXSyHcBlwgb2sI7ah95L-3">
+          <mxCell parent="1" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="49" width="202" x="940" y="399" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_5" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="cXSyHcBlwgb2sI7ah95L-6">
+          <mxCell edge="1" parent="1" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="cXSyHcBlwgb2sI7ah95L-2">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="720" y="340" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_6" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="cXSyHcBlwgb2sI7ah95L-7">
+          <mxCell edge="1" parent="1" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="cXSyHcBlwgb2sI7ah95L-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="1040" y="340" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="cXSyHcBlwgb2sI7ah95L-10" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cXSyHcBlwgb2sI7ah95L-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="340" as="sourcePoint" />
+            <mxPoint x="765" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXSyHcBlwgb2sI7ah95L-11" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1040" y="340" as="sourcePoint" />
+            <mxPoint x="720" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="System" plantUmlId="n_0" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" plantUmlBaseValue="Lãnh đạo cơ quan" id="U71B01cX6LVvN72gCaAE-1">
+          <mxCell parent="1" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="40" width="160" x="1380" y="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="LLM (Ollama)" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" plantUmlBaseValue="Bộ phận Một cửa / Tiếp công dân" id="U71B01cX6LVvN72gCaAE-3">
+          <mxCell parent="1" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="49" width="202" x="1359" y="399" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_6" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="U71B01cX6LVvN72gCaAE-5">
+          <mxCell edge="1" parent="1" source="U71B01cX6LVvN72gCaAE-1" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;endArrow=classicThin;endFill=1;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="U71B01cX6LVvN72gCaAE-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="1620" y="340" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

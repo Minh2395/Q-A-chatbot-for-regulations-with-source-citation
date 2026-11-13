@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Ph4giroWlzwKKqKrQlMR">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-iuRUml-xC1J2SFiWqyu-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#F1F1F1;" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Đặt câu hỏi&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="210" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#F1F1F1;" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Chuẩn hóa câu hỏi&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="350" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#F1F1F1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Nhập câu hỏi và ngữ cảnh&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="350" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#F1F1F1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Ghi nhật ký kết quả&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="350" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-4" edge="1" parent="1" source="-iuRUml-xC1J2SFiWqyu-1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ws75995rUfdMhtw97r7x-2" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/font&gt;">
+          <mxGeometry relative="1" width="160" x="-0.3186" y="29" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="340" y="430" as="sourcePoint" />
+            <mxPoint x="500" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-5" edge="1" parent="1" source="-iuRUml-xC1J2SFiWqyu-1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ws75995rUfdMhtw97r7x-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/font&gt;">
+          <mxGeometry relative="1" width="160" x="0.1429" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="220" y="380" as="sourcePoint" />
+            <mxPoint x="360" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ws75995rUfdMhtw97r7x-6" edge="1" parent="1" source="-iuRUml-xC1J2SFiWqyu-1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ws75995rUfdMhtw97r7x-3" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/font&gt;">
+          <mxGeometry relative="1" width="160" x="0.5457" y="19" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="220" y="380" as="sourcePoint" />
+            <mxPoint x="360" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
