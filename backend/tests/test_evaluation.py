@@ -9,6 +9,17 @@ from app.core.security import AuthenticatedUser, get_current_user
 from app.main import app
 
 
+def _active_document_records():
+    return [{
+        "ma_doan": "D1",
+        "ma_tai_lieu": "DOC1",
+        "ma_phien_ban": "VERSION1",
+        "so_phien_ban": "1.0",
+        "dieu_khoan": "Article 1",
+        "noi_dung": "Alpha beta",
+    }]
+
+
 def test_dataset_has_50_unverified_questions():
     dataset = evaluation.load_dataset()
 
@@ -33,6 +44,9 @@ def test_unverified_dataset_blocks_rag_and_writes_pending_report(
     monkeypatch, tmp_path
 ):
     monkeypatch.setattr(evaluation, "REPORT_DIR", tmp_path)
+    monkeypatch.setattr(
+        evaluation, "_load_active_document_records", _active_document_records
+    )
     monkeypatch.setattr(evaluation, "write_audit_log", lambda **kwargs: None)
     monkeypatch.setattr(
         evaluation,
@@ -89,6 +103,9 @@ def test_preliminary_evaluation_runs_unverified_questions_without_official_score
         return "Generated answer"
 
     monkeypatch.setattr(evaluation, "REPORT_DIR", tmp_path)
+    monkeypatch.setattr(
+        evaluation, "_load_active_document_records", _active_document_records
+    )
     monkeypatch.setattr(evaluation, "write_audit_log", lambda **_kwargs: None)
     monkeypatch.setattr(evaluation, "retrieve_evidence", retrieve)
     monkeypatch.setattr(evaluation.chat, "generate_answer", generate_answer)
@@ -397,6 +414,9 @@ def test_partially_verified_run_scores_only_verified_questions(
 
     monkeypatch.setattr(evaluation, "REPORT_DIR", tmp_path)
     monkeypatch.setattr(evaluation, "load_dataset", lambda: [verified, pending])
+    monkeypatch.setattr(
+        evaluation, "_load_active_document_records", _active_document_records
+    )
     monkeypatch.setattr(
         evaluation,
         "_verify_source_record",

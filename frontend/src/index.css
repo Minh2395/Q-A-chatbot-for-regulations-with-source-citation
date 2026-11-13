@@ -742,6 +742,74 @@ button:disabled {
   text-decoration: underline;
 }
 
+.citation-detail-page {
+  padding: clamp(20px, 4vw, 36px);
+}
+
+.citation-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9edf3;
+}
+
+.citation-detail-header .eyebrow {
+  margin: 0 0 8px;
+}
+
+.citation-detail-header h2 {
+  margin: 0;
+  color: #1c2940;
+  font-size: clamp(20px, 2.5vw, 26px);
+  line-height: 1.45;
+}
+
+.citation-detail-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px 24px;
+  margin: 24px 0;
+}
+
+.citation-detail-metadata dt {
+  margin-bottom: 6px;
+  color: #8490a2;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.citation-detail-metadata dd {
+  margin: 0;
+  color: #36445a;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.citation-detail-content {
+  padding: 22px 24px;
+  border: 1px solid #e4eaf3;
+  border-left: 4px solid #5578b4;
+  border-radius: 10px;
+  background: #f7f9fc;
+}
+
+.citation-detail-content h3 {
+  margin: 0 0 12px;
+  color: #52627b;
+  font-size: 13px;
+}
+
+.citation-detail-content p {
+  margin: 0;
+  color: #26334b;
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
 .trace-line {
   margin-top: 8px;
   color: #939cad;
@@ -1560,9 +1628,45 @@ button:disabled {
   color: #e0e6ef;
 }
 
+.app-shell[data-theme="dark"] .citation-detail-header {
+  border-color: #344052;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-header h2 {
+  color: #e6ebf3;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-metadata dt {
+  color: #aab5c5;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-metadata dd {
+  color: #dce3ed;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-content {
+  border-color: #354153;
+  border-left-color: #7394c8;
+  background: #121923;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-content h3 {
+  color: #b7c3d4;
+}
+
+.app-shell[data-theme="dark"] .citation-detail-content p {
+  color: #e0e6ef;
+}
+
 .app-shell[data-theme="dark"] .regulation-source,
 .app-shell[data-theme="dark"] .citation-action {
   color: #a9c5f2;
+}
+
+@media (max-width: 620px) {
+  .citation-detail-header {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 800px) {

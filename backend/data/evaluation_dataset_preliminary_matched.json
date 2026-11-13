@@ -16,32 +16,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL002",
@@ -60,32 +45,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL003",
@@ -104,32 +74,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL004",
@@ -148,32 +103,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL005",
@@ -192,32 +132,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL006",
@@ -236,32 +161,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL007",
@@ -280,32 +190,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL008",
@@ -324,32 +219,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL009",
@@ -368,32 +248,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL010",
@@ -412,32 +277,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL011",
@@ -456,32 +306,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL012",
@@ -500,32 +335,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL013",
@@ -544,32 +364,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL014",
@@ -588,32 +393,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL015",
@@ -632,32 +422,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL016",
@@ -676,32 +451,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL017",
@@ -720,32 +480,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL018",
@@ -764,32 +509,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL019",
@@ -808,32 +538,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL020",
@@ -852,32 +567,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL021",
@@ -896,32 +596,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL022",
@@ -940,32 +625,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL023",
@@ -984,32 +654,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL024",
@@ -1028,32 +683,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL025",
@@ -1072,32 +712,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL026",
@@ -1116,32 +741,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL027",
@@ -1160,32 +770,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL028",
@@ -1205,9 +800,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 119. Giao đất có thu tiền sử dụng đất",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1221,16 +816,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL029",
@@ -1250,32 +843,17 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 120. Cho thuê đất",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "VERIFIED_SOURCE",
-        "ma_doan_candidate": "D_2CC31B7A87",
-        "document_id": "PD_PHAPDIEN",
-        "version": "v1.0",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "Điều 120",
-        "source_page": "Điều 120. Cho thuê đất",
-        "source_excerpt": "Điều 120. Cho thuê đất 1. Nhà n ước cho thuê đất thu ti ền thuê đất một lần cho c ả thời gian thuê ho ặc thu ti ền thuê đất h ằng n ăm đối v ới các tr ường h ợp không thu ộc tr ường h ợp quy định tại Điều 118 và Điều 119 của Luật này. 2. Nhà nước cho thuê đất thu tiền thuê đất một lần cho cả thời gian thuê trong các trường hợp sau đây: a) Sử dụng đất để thực hi ện dự án đầu tư sản xuất nông nghi ệp, lâm nghi ệp, nuôi trồng thủy sản, làm muối; b) Sử dụng đất khu công nghiệp, cụm công nghiệp, khu công nghệ cao, nhà lưu trú công nhân trong khu công nghiệp; đất sử dụng vào mục đích công cộng có mục đích kinh doanh; sử dụng đất thương mại, dịch vụ để hoạt động du lịch, kinh doanh văn phòng; c) Sử dụng đất để xây dựng nhà ở xã hội cho thuê theo quy định của pháp luật về nhà ở. 3. Nhà n ước cho thuê đất thu ti ền thuê đất h ằng n ăm trong các tr ường h ợp sau đây: a) Các trường hợp không thuộc quy định tại khoản 2 Điều này; b) Các tr ường hợp quy định tại khoản 2 Điều này mà có nhu c ầu trả tiền thuê đất hằng năm; c) Đơn v ị s ự nghi ệp công l ập l ựa ch ọn hình th ức thuê đất theo quy định t ại khoản 3 Điều 30 của Luật này. 4. Vi ệc cho thuê đất quy định tại Điều này được th ực hiện theo quy định tại các điều 124, 125 và 126 của Luật này.",
-        "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
-      }
-    ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL030",
@@ -1296,9 +874,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 155. Căn cứ tính ti ền sử dụng đất, tiền thuê đất; thời điểm định giá",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1334,16 +912,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL031",
@@ -1362,32 +938,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL032",
@@ -1406,32 +967,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL033",
@@ -1450,32 +996,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL034",
@@ -1494,32 +1025,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL035",
@@ -1540,9 +1056,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 121. Chuyển mục đích sử dụng đất",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1567,16 +1083,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL036",
@@ -1597,9 +1111,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 123. Thẩm quyền giao đất, cho thuê đất, cho phép chuy ển mục đích",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1624,16 +1138,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL037",
@@ -1652,32 +1164,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL038",
@@ -1697,9 +1194,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 132. Đăng ký lần đầu",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1713,16 +1210,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL039",
@@ -1742,9 +1237,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 135. Nguyên tắc cấp Giấy chứng nhận quyền sử dụng đất, quyền sở",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1791,16 +1286,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL040",
@@ -1822,9 +1315,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 138. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1860,16 +1353,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL041",
@@ -1890,9 +1381,9 @@
     "expected_document_id": "TLCC15686A3BB44DB88A",
     "expected_version": "v1.0",
     "expected_article": "Điều 171. Đất sử dụng ổn định lâu dài",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: TLCC15686A3BB44DB88A, phiên bản v1.0, mã phiên bản PB_CC6C1358.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -1939,16 +1430,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: TLCC15686A3BB44DB88A, phiên bản v1.0, mã phiên bản PB_CC6C1358.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL042",
@@ -1967,32 +1456,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL043",
@@ -2011,32 +1485,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
-    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_ACTIVE_EXPORT",
-    "candidate_sources": [
-      {
-        "source_status": "NO_DIRECT_SOURCE_IN_ACTIVE_EXPORT",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - không có điều khoản khớp trong bản xuất Active/Approved",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại."
-      }
-    ],
-    "preliminary_note": "VERIFIED: đã rà soát bản xuất Active/Approved gồm 364 bản ghi; không tìm thấy điều khoản trực tiếp phù hợp để trả lời câu hỏi. Đây là ca kiểm thử từ chối do thiếu bằng chứng trong corpus hiện tại.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "NO_DIRECT_EVIDENCE_IN_CURRENT_199_CHUNKS",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL044",
@@ -2057,9 +1516,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 95. Điều ki ện được bồi th ường v ề đất khi Nhà n ước thu h ồi đất vì",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -2117,16 +1576,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL045",
@@ -2149,9 +1606,9 @@
     "expected_document_id": "PD_PHAPDIEN",
     "expected_version": "v1.0",
     "expected_article": "Điều 91. Nguyên t ắc b ồi th ường, h ỗ tr ợ, tái định c ư khi Nhà n ước thu",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
-    "preliminary_match_status": "MATCHED_AND_CONTENT_VERIFIED_IN_ACTIVE_EXPORT",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
+    "preliminary_match_status": "CANDIDATE_SOURCE_FOUND_REQUIRES_REVIEW",
     "candidate_sources": [
       {
         "source_status": "VERIFIED_SOURCE",
@@ -2187,16 +1644,14 @@
         "note": "Đoạn nguồn có trong bản xuất Active/Approved; đã dùng để đối chiếu đáp án chuẩn."
       }
     ],
-    "preliminary_note": "Đã tìm thấy và đối chiếu đoạn nguồn thực tế trong bản xuất Active/Approved do người dùng cung cấp. Đáp án chuẩn và các mã đoạn hỗ trợ đã được đồng bộ với evaluation_dataset. VERIFIED: đã đối chiếu nội dung điều khoản và các đoạn tiếp nối trong bản xuất dữ liệu Active/Approved do người dùng cung cấp. Trạng thái xác minh phục vụ bộ kiểm thử; không thay thế phê duyệt pháp lý chính thức. Nguồn chính: PD_PHAPDIEN, phiên bản v1.0, mã phiên bản PB_A6E7970D.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "ThanhCong",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "ThanhCong"
   },
   {
     "id": "EVAL046",
@@ -2214,32 +1669,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - ngoài phạm vi",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
     "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
-    "candidate_sources": [
-      {
-        "source_status": "OUT_OF_SCOPE",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - ngoài phạm vi",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
-      }
-    ],
-    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL047",
@@ -2257,32 +1697,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - ngoài phạm vi",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
     "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
-    "candidate_sources": [
-      {
-        "source_status": "OUT_OF_SCOPE",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - ngoài phạm vi",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
-      }
-    ],
-    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL048",
@@ -2300,32 +1725,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - ngoài phạm vi",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
     "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
-    "candidate_sources": [
-      {
-        "source_status": "OUT_OF_SCOPE",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - ngoài phạm vi",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
-      }
-    ],
-    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL049",
@@ -2343,32 +1753,17 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - ngoài phạm vi",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
     "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
-    "candidate_sources": [
-      {
-        "source_status": "OUT_OF_SCOPE",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - ngoài phạm vi",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
-      }
-    ],
-    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   },
   {
     "id": "EVAL050",
@@ -2386,31 +1781,16 @@
     "expected_document_id": "N/A",
     "expected_version": "N/A",
     "expected_article": "N/A - ngoài phạm vi",
-    "review_status": "VERIFIED",
-    "review_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "review_status": "PENDING_LEGAL_REVIEW",
+    "review_note": "Pending legal-officer review; candidate references are not verified.",
     "preliminary_match_status": "OUT_OF_SCOPE_REFUSAL",
-    "candidate_sources": [
-      {
-        "source_status": "OUT_OF_SCOPE",
-        "ma_doan_candidate": "N/A",
-        "document_id": "N/A",
-        "version": "N/A",
-        "ma_phien_ban": "PB_A6E7970D",
-        "article_candidate": "N/A - ngoài phạm vi",
-        "source_page": "N/A",
-        "source_excerpt": "N/A",
-        "note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai."
-      }
-    ],
-    "preliminary_note": "VERIFIED: câu hỏi được phân loại ngoài phạm vi trợ lý quy chế nhà ở và đất đai.",
+    "preliminary_note": "Preliminary matching is not a legal review; candidate references require legal-officer verification.",
     "retrieval_diagnostics_not_verified": [
       {
         "diagnostic_status": "NOT_USED_AS_GROUND_TRUTH",
         "note": "Similarity scores and retrieval diagnostics are not legal evidence and are not used to establish expected answers or citations."
       }
     ],
-    "expected_status": "TuChoi",
-    "reviewed_by": "DATASET_OWNER",
-    "reviewed_at": "2026-11-08"
+    "expected_status": "TuChoi"
   }
 ]
